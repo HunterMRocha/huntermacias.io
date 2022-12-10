@@ -12,6 +12,9 @@ module.exports = {
       desktop: "1280px",
       laptopl: "1440px",
     },
+    container: {
+      padding: '2.5em',
+    },
     extend: {},
   },
   plugins: [],

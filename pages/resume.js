@@ -6,6 +6,7 @@ import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
 import Button from "../components/Button";
 import { useTheme } from "next-themes";
+
 // Data
 import { name, showResume } from "../data/portfolio.json";
 import { resume } from "../data/portfolio.json";
@@ -25,7 +26,7 @@ const Resume = () => {
   return (
     <>
       {process.env.NODE_ENV === "development" && (
-        <div className="fixed bottom-6 right-6">
+        <div className="fixed bottom-6 right-6 text-blue">
           <Button onClick={() => router.push("/edit")} type={"primary"}>
             Edit Resume
           </Button>
@@ -46,7 +47,7 @@ const Resume = () => {
               } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
             >
               <h1 className="text-3xl font-bold">{name}</h1>
-              <h2 className="text-xl mt-5">{resume.tagline}</h2>
+              <h2 className="text-lg mt-5">{resume.tagline}</h2>
               <h2 className="w-4/5 text-xl mt-5 opacity-50">
                 {resume.description}
               </h2>

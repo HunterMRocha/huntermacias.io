@@ -16,7 +16,7 @@ body {
   position: absolute;
   pointer-events: none;
   z-index: 100;
-  top: -30px;
+  top: -10px;
   height: 40px;
   width: 100vw;
   opacity: 0.5;
