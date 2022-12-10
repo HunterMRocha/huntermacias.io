@@ -1,6 +1,6 @@
 ![thumbnail](https://github.com/HunterMRocha/huntermacias.io/blob/main/blogs-demo.png?raw=true)
 
-### Live - https://react-portfolio-template.netlify.app/
+### Live - https://huntermacias.io/
 
 ### Features - 
 
