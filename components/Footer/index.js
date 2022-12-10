@@ -28,6 +28,9 @@ const Footer = ({}) => {
         <Link href="http://www.huntermacias.io/">
           <a className="underline underline-offset-1">Hunter Macias</a>
         </Link>
+        <Image>
+          
+        </Image>
       </h1>
     </>
   );

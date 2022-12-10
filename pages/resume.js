@@ -127,6 +127,7 @@ const Resume = () => {
             </div>
           </div>
         )}
+        
       </div>
     </>
   );
