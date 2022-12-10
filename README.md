@@ -1,4 +1,4 @@
-![thumbnail](https://user-images.githubusercontent.com/16558205/180779213-ea740975-3df1-460a-a964-0a623ee25872.png)
+![thumbnail](https://github.com/HunterMRocha/huntermacias.io/blob/main/blogs-demo.png?raw=true)
 
 ### Live - https://react-portfolio-template.netlify.app/
 
