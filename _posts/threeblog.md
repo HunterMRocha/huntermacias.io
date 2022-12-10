@@ -1,93 +1,228 @@
 ---
-date: "2022-07-08T11:50:54.000Z"
-title: Three Blog
-tagline: This is a Tagline If you want to add.
+date: "2022-5-7"
+title: NumPy in Python | Set 1 (Introduction)
+tagline: Difficulty - Medium
 preview: >-
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-  when an unknown printer took a galley of type and scrambled it to make a type
-  specimen book.
+  This article will help you get acquainted with the widely used array-processing library in Python, NumPy. What is NumPy? NumPy is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with these arrays. It is the fundamental package for scientific computing with Python.
 image: >-
-  https://images.unsplash.com/photo-1640017955477-75b58521007d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80
+  https://www.machinelearningplus.com/wp-content/uploads/2021/10/Numpy_Feature_Image-min.png
 ---
 
-# Heading One
 
-**Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+### Installation: 
+##### Mac and Linux users can install NumPy via pip command: 
+> pip install numpy
 
-## This is Heading Two
+##### Window Users tutorial coming soon, for now look into anaconda
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+--- 
 
-### This is Heading Three with `inline code`
+## Numpy Arrays
 
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+```python
+# Python program to demonstrate
+# basic array characteristics
+import numpy as np
 
-#### This is Heading Four With Code Block
+# Creating array object
+arr = np.array( [[ 1, 2, 3],
+				[ 4, 2, 5]] )
+
+# Printing type of arr object
+print("Array is of type: ", type(arr))
+
+# Printing array dimensions (axes)
+print("No. of dimensions: ", arr.ndim)
+
+# Printing shape of array
+print("Shape of array: ", arr.shape)
+
+# Printing size (total number of elements) of array
+print("Size of array: ", arr.size)
+
+# Printing type of elements in array
+print("Array stores elements of type: ", arr.dtype)
+```
+
+#### Output:
+
+```text
+Array is of type:  
+No. of dimensions:  2
+Shape of array:  (2, 3)
+Size of array:  6
+Array stores elements of type:  int64
+```
+
+--- 
+
+### Numpy Array Techniques 
+
+```python 
+# Python program to demonstrate
+# array creation techniques
+import numpy as np
+
+# Creating array from list with type float
+a = np.array([[1, 2, 4], [5, 8, 7]], dtype = 'float')
+print ("Array created using passed list:\n", a)
+
+# Creating array from tuple
+b = np.array((1 , 3, 2))
+print ("\nArray created using passed tuple:\n", b)
+
+# Creating a 3X4 array with all zeros
+c = np.zeros((3, 4))
+print ("\nAn array initialized with all zeros:\n", c)
+
+# Create a constant value array of complex type
+d = np.full((3, 3), 6, dtype = 'complex')
+print ("\nAn array initialized with all 6s."
+			"Array type is complex:\n", d)
+
+# Create an array with random values
+e = np.random.random((2, 2))
+print ("\nA random array:\n", e)
+
+# Create a sequence of integers
+# from 0 to 30 with steps of 5
+f = np.arange(0, 30, 5)
+print ("\nA sequential array with steps of 5:\n", f)
+
+# Create a sequence of 10 values in range 0 to 5
+g = np.linspace(0, 5, 10)
+print ("\nA sequential array with 10 values between"
+										"0 and 5:\n", g)
+
+# Reshaping 3X4 array to 2X2X3 array
+arr = np.array([[1, 2, 3, 4],
+				[5, 2, 4, 2],
+				[1, 2, 0, 1]])
+
+newarr = arr.reshape(2, 2, 3)
+
+print ("\nOriginal array:\n", arr)
+print ("Reshaped array:\n", newarr)
+
+# Flatten array
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+flarr = arr.flatten()
+
+print ("\nOriginal array:\n", arr)
+print ("Fattened array:\n", flarr)
 
 ```
 
-# Auto-generated based on the server's hostname.
-# Set this to the URL used to access the Firezone Web UI.
-default['firezone']['external_url'] = 'https://firezone.example.com'
+#### Output: 
 
-# Specify the path to your SSL cert and private key.
-# If set to nil (default), a self-signed cert will be generated for you.
-default['firezone']['ssl']['certificate'] = '/path/to/cert.pem'
-default['firezone']['ssl']['certificate_key'] = '/path/to/key.pem'
+```text
+Array created using passed list:
+ [[ 1.  2.  4.]
+ [ 5.  8.  7.]]
 
+Array created using passed tuple:
+ [1 3 2]
+
+An array initialized with all zeros:
+ [[ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]
+ [ 0.  0.  0.  0.]]
+
+An array initialized with all 6s. Array type is complex:
+ [[ 6.+0.j  6.+0.j  6.+0.j]
+ [ 6.+0.j  6.+0.j  6.+0.j]
+ [ 6.+0.j  6.+0.j  6.+0.j]]
+
+A random array:
+ [[ 0.46829566  0.67079389]
+ [ 0.09079849  0.95410464]]
+
+
+A sequential array with steps of 5:
+ [ 0  5 10 15 20 25]
+
+A sequential array with 10 values between 0 and 5:
+ [ 0.          0.55555556  1.11111111  1.66666667  2.22222222  2.77777778
+  3.33333333  3.88888889  4.44444444  5.        ]
+
+Original array:
+ [[1 2 3 4]
+ [5 2 4 2]
+ [1 2 0 1]]
+Reshaped array:
+ [[[1 2 3]
+  [4 5 2]]
+
+ [[4 2 1]
+  [2 0 1]]]
+
+Original array:
+ [[1 2 3]
+ [4 5 6]]
+Fattened array:
+ [1 2 3 4 5 6]
 ```
 
-##### Heading Five Code With Max Height
+--- 
 
+### Indexing in Numpy
+
+```python
+# Python program to demonstrate
+# indexing in numpy
+import numpy as np
+ 
+# An exemplar array
+arr = np.array([[-1, 2, 0, 4],
+                [4, -0.5, 6, 0],
+                [2.6, 0, 7, 8],
+                [3, -7, 4, 2.0]])
+ 
+# Slicing array
+temp = arr[:2, ::2]
+print ("Array with first 2 rows and alternate"
+                    "columns(0 and 2):\n", temp)
+ 
+# Integer array indexing example
+temp = arr[[0, 1, 2, 3], [3, 2, 1, 0]]
+print ("\nElements at indices (0, 3), (1, 2), (2, 1),"
+                                    "(3, 0):\n", temp)
+ 
+# boolean array indexing example
+cond = arr > 0 # cond is a boolean array
+temp = arr[cond]
+print ("\nElements greater than 0:\n", temp)
 ```
 
-# Auto-generated based on the server's hostname.
-# Set this to the URL used to access the Firezone Web UI.
-default['firezone']['external_url'] = 'https://firezone.example.com'
+#### Output: 
 
-# Specify the path to your SSL cert and private key.
-# If set to nil (default), a self-signed cert will be generated for you.
-default['firezone']['ssl']['certificate'] = '/path/to/cert.pem'
-default['firezone']['ssl']['certificate_key'] = '/path/to/key.pem'
+```text
+Array with first 2 rows and alternatecolumns(0 and 2):
+ [[-1.  0.]
+ [ 4.  6.]]
 
-# Auto-generated based on the server's hostname.
-# Set this to the URL used to access the Firezone Web UI.
-default['firezone']['external_url'] = 'https://firezone.example.com'
+Elements at indices (0, 3), (1, 2), (2, 1),(3, 0):
+ [ 4.  6.  0.  3.]
 
-# Specify the path to your SSL cert and private key.
-# If set to nil (default), a self-signed cert will be generated for you.
-default['firezone']['ssl']['certificate'] = '/path/to/cert.pem'
-default['firezone']['ssl']['certificate_key'] = '/path/to/key.pem'
-
+Elements greater than 0:
+ [ 2.   4.   4.   6.   2.6  7.   8.   3.   4.   2. ]
 ```
 
-## BLockquote
+--- 
 
-> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+## Table of Contents
 
-## Ordered List with horizontal line
-
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
-
----
-
-## Unordered List With Horizontal line
-
-- First item
-- Second item
-- Third item
-- Fourth item
+1. Installation
+2. Numpy Array
+3. Numpy Array Techniques
+4. Indexing in Numpy
 
 ---
 
 ## Links
 
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+Source: [Numpy Set 1](https://www.geeksforgeeks.org/numpy-in-python-set-1-introduction/).
 
 ## Images
 
-![An old rock in the desert](https://images.unsplash.com/photo-1654475677192-2d869348bb4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+![NUMPY](https://www.machinelearningplus.com/wp-content/uploads/2021/10/Numpy_Feature_Image-min.png)

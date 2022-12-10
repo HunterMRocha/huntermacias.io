@@ -1,12 +1,12 @@
 ---
-date: '2022-07-08T11:50:54.000Z'
+date: '2020-7-9'
 title: Python OpenCV – Dense Optical Flow
 tagline: Prerequisites - Python OpenCV, Grayscaling
 preview: >-
   Optical flow is the motion of objects between the consecutive frames of the sequence, caused by the relative motion between the camera and the object. It can be of two types-Sparse Optical flow and Dense Optical flow.
 
 image: >-
-  https://media.geeksforgeeks.org/wp-content/uploads/20200605154139/dense1.png
+  https://i.stack.imgur.com/MVRdq.png
 ---
 
 ## Dense Optical flow
@@ -47,4 +47,4 @@ Source [Dense Optical Flow](https://www.geeksforgeeks.org/python-opencv-dense-op
 
 ## Images
 
-![An old rock in the desert](https://images.unsplash.com/photo-1654475677192-2d869348bb4c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)
+![An old rock in the desert](https://i.stack.imgur.com/MVRdq.png)

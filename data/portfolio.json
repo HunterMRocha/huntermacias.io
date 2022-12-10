@@ -55,9 +55,9 @@
         {
             "id": "4",
             "title": "Project Four",
-            "description": "Marketing",
-            "imageSrc": "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-            "url": "http://chetanverma.com/"
+            "description": "Modern Stack React App (Next.js + TailwindCSS)",
+            "imageSrc": "https://github.com/HunterMRocha/react-portfolio-template/blob/main/blogs-demo.png?raw=true",
+            "url": "http://huntermacias.io/"
         },
         {
             "id": "5",
@@ -103,30 +103,37 @@
         "experiences": [
             {
                 "id": "1",
-                "dates": "March 2022 - Present",
-                "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Bullet One, Bullet Two"
+                "dates": "June 2020 - Present",
+                "type": "Part Time",
+                "position": "Coding Coach",
+                "bullets": "Develop various curriculums in: Python / Scratch  / Web Design, Guide students through the UML modeling language, Instruct students during 1:1 sessions by using a project-based learning approach in order to build interest skill and excitement"
             },
             {
-                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-                "dates": "July 2020 - March 2022",
+                "id": "2",
+                "dates": "June 2021 - Sep 2021",
                 "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+                "position": "Full Stack Developer at Firebird",
+                "bullets": "Developed and deployed React application, Developed web scraping program using Selenium, Tasked with scrapping data for over 100 different companies, Implemented login system using PHP"
+            },
+            {
+                "id": "2",
+                "dates": "Dec. 2020",
+                "type": "Student Project",
+                "position": "Recommendation Engine - ML",
+                "bullets": "Designed and implemented a music recommending application, Final Project for a Introduction to Machine Learning "
             }
         ],
         "education": {
-            "universityName": "University X",
-            "universityDate": "2016-2020",
-            "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            "universityName": "University of San Francisco",
+            "universityDate": "2018-2022",
+            "universityPara": "Computer Science "
         },
         "languages": [
             "Javascript",
             "HTML5",
             "CSS",
             "Python",
-            "Go"
+            "Java"
         ],
         "frameworks": [
             "React",
