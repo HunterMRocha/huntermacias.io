@@ -71,29 +71,30 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Work</Button>
                   <Button onClick={handleAboutScroll}>About</Button>
+
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
+
                   {showResume && (
                     <Button
-                      onClick={() =>
-                        window.open("huntermacias20@gmail.com")
-                      }
-                    >
+                      onClick={() => window.open("huntermacias20@gmail.com")}>
                       Resume
                     </Button>
                   )}
 
-                  <Button
-                    onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}
-                  >
+                  <Button onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
                     YouTube
                   </Button>
+
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
                   <Button onClick={() => router.push("/")} classes="first:ml-1">
                     Home
+                  </Button>
+                  <Button onClick={() => router.push("/")} classes="first:ml-1">
+                    About
                   </Button>
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
@@ -162,6 +163,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         ) : (
           <div className="flex">
             <Button onClick={() => router.push("/")}>Home</Button>
+            <Button onClick={() => router.push("/")}>About</Button>
             {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
