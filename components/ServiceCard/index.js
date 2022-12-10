@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
-const ServiceCard = ({ name, description }) => {
+const ServiceCard = ({ name, description, price }) => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState();
 
@@ -19,6 +19,9 @@ const ServiceCard = ({ name, description }) => {
         {description
           ? description
           : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "}
+      </p>
+      <p className="mt-8 opacity-60 text-sm">
+        {price ? price : "contact for pricing"}
       </p>
     </div>
   );

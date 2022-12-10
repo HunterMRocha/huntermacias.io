@@ -85,9 +85,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("huntermacias20@gmail.com")}
+                    onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}
                   >
-                    Contact
+                    YouTube
                   </Button>
                 </div>
               ) : (
@@ -108,9 +108,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("huntermacias20@gmail.com")}
+                    onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}
                   >
-                    Contact
+                    YouTube
                   </Button>
                 </div>
               )}
@@ -145,8 +145,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("huntermacias20@gmail.com")}>
-              Contact
+            <Button onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
+              YouTube
             </Button>
             {mounted && theme && data.darkMode && (
               <Button
@@ -174,8 +174,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("huntermacias20@gmail.com")}>
-              Contact
+            <Button onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
+              YouTube
             </Button>
 
             {mounted && theme && data.darkMode && (

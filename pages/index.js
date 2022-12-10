@@ -63,6 +63,7 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
+
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
             <h1
@@ -92,9 +93,9 @@ export default function Home() {
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
-        </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          {/* <h1 className="text-2xl text-bold">Work.</h1> */}
+            </div>
+              <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
+              {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
@@ -110,13 +111,14 @@ export default function Home() {
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          {/* <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1> */}
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
+          <h1 className="tablet:m-10 text-2xl text-bold">Teaching Services</h1>
+          <div className="mt-5 tablet:m-8 grid grid-cols-1 laptop:grid-cols-2 gap-8">
             {data.services.map((service, index) => (
               <ServiceCard
                 key={index}
                 name={service.title}
                 description={service.description}
+                price={service.price}
               />
             ))}
           </div>

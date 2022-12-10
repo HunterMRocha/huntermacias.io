@@ -1,8 +1,8 @@
 {
     "name": "Hunter Macias",
     "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Hunter Macias - Aspiring Software Engineer",
-    "headerTaglineThree": "Educator and Freelance Developer",
+    "headerTaglineTwo": "I'm Hunter Macias - Aspiring Software Developer",
+    "headerTaglineThree": "Educator and Freelancer",
     "headerTaglineFour": "Based in San Francisco, CA.",
     "showCursor": false,
     "showBlog": true,
@@ -26,8 +26,8 @@
         },
         {
             "id": "4",
-            "title": "Email",
-            "link": "huntermacias20@gmail.com"
+            "title": "YouTube",
+            "link": "https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos"
         }
     ],
     "projects": [
@@ -62,41 +62,45 @@
         {
             "id": "5",
             "title": "Project Five",
-            "description": "Development",
-            "imageSrc": "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+            "description": "Machine Learning & A.I. - Snake Game",
+            "imageSrc": "https://st4.depositphotos.com/1401766/22862/v/1600/depositphotos_228621786-stock-illustration-doodle-download-bar-coming-soon.jpg",
             "url": "http://chetanverma.com/"
         },
         {
             "id": "6",
             "title": "Project Six",
             "description": "Design & Development",
-            "imageSrc": "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
+            "imageSrc": "https://st4.depositphotos.com/1401766/22862/v/1600/depositphotos_228621786-stock-illustration-doodle-download-bar-coming-soon.jpg",
             "url": "http://chetanverma.com/"
         }
     ],
     "services": [
         {
             "id": "1",
-            "title": "Art Direction",
-            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+            "title": "Game Development 👾",
+            "description": "We help with the creation and development of 2D/3D games using python. Learn how to think like a game designer and bring all your ideas to life!",
+            "price":"package: $29.99/hr"
         },
         {
             "id": "2",
-            "title": "Branding",
-            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+            "title": "Programming Fundamentals 🖥️",
+            "description": "We design personalized curriculums based on your interests and skillset.",
+            "price": "package: $24.99/hr"
         },
         {
             "id": "3",
-            "title": "Web Design",
-            "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+            "title": "Machine Learning & Artificial Inteligence 🚀",
+            "description": "Go Zero-to-Hero with our ML/AI course",
+            "price": "package: $44.99/hr"
         },
         {
             "id": "4",
-            "title": "3D Design",
-            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+            "title": "Research & Design ✨",
+            "description": "Learn how to research like a software developer and how to use popular industry design frameworks.",
+            "price": "package: $34.99/hr"
         }
     ],
-    "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "aboutpara": "Hi there -- I'm Hunter! I’m interested in learning more about ML/AI, algorithms, game development, and most importantly I’m interested in developing my skills. I hope to work for companies that value continual learning, a friendly work environment. During my free time, I create game development YouTube videos and teach others how to code. Outside of my professional work, I love being outdoors and socializing with others.",
     "resume": {
         "tagline": "👋  I'm a software engineer, product designer.",
         "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
