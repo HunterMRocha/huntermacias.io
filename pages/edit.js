@@ -213,7 +213,7 @@ const Edit = () => {
               ></input>
             </div>
             <div className="mt-5 flex items-center">
-              <label className="w-1/5 text-sx opacity-50">
+              <label className="w-1/5 text-lg opacity-50">
                 Header Tagline One
               </label>
               <input

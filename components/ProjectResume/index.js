@@ -14,7 +14,7 @@ const ProjectResume = ({ dates, type, position, bullets }) => {
         {bulletsLocal && bulletsLocal.length > 0 && (
           <ul className="list-disc">
             {bulletsLocal.map((bullet, index) => (
-              <li key={index} className="text-sm my-1 opacity-70">
+              <li key={index} className="text-sm my-1 opacity-100">
                 {bullet}
               </li>
             ))}
