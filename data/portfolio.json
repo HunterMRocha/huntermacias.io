@@ -33,35 +33,35 @@
 	"projects": [
 		{
 			"id": "1",
-			"title": "Project  0001",
+			"title": "Project - 0001",
 			"description": "Game Development - Minecraft Clone",
 			"imageSrc": "https://media-exp1.licdn.com/dms/image/C5622AQF8ubCg7oZx9A/feedshare-shrink_2048_1536/0/1670285417361?e=1673481600&v=beta&t=Fk914eQ2-n1uoDtP_R9YVEyIQ-xLOqkzXeVihg3jzNA",
 			"url": "https://github.com/HunterMRocha/Minecraft-clone"
 		},
 		{
 			"id": "2",
-			"title": "Project 0010",
+			"title": "Project - 0010",
 			"description": "Game Development - Pacman Recreation",
 			"imageSrc": "https://github.com/HunterMRocha/pacman/blob/main/Screen%20Shot%202022-12-10%20at%208.59.14%20AM.png?raw=true",
 			"url": "https://github.com/HunterMRocha/pacman"
 		},
 		{
 			"id": "3",
-			"title": "Project 0011",
+			"title": "Project - 0011",
 			"description": "Game Development - Spave Invaders",
 			"imageSrc": "https://github.com/HunterMRocha/Space-Invaders/blob/main/sv-demo.png?raw=true",
 			"url": "https://github.com/HunterMRocha/Space-Invaders"
 		},
 		{
 			"id": "4",
-			"title": "Project 0100",
+			"title": "Project - 0100",
 			"description": "Modern Stack React App (Next.js + TailwindCSS)",
 			"imageSrc": "https://github.com/HunterMRocha/react-portfolio-template/blob/main/blogs-demo.png?raw=true",
 			"url": "http://huntermacias.io/"
 		},
 		{
 			"id": "5",
-			"title": "Project 0101",
+			"title": "Project - 0101",
 			"description": "Machine Learning & A.I. - Snake Game",
 			"imageSrc": "https://st4.depositphotos.com/1401766/22862/v/1600/depositphotos_228621786-stock-illustration-doodle-download-bar-coming-soon.jpg",
 			"url": "http://huntermacias.io/"

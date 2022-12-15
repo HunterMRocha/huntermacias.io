@@ -1,7 +1,7 @@
 export default [
 	{
 	  type: 'Basic',
-	  price: '$ 3.99',
+	  price: '$ 6.99',
 	  benefits: "Discord Server Access+"
 	  
 	},

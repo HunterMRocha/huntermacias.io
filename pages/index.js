@@ -147,7 +147,9 @@ export default function Home() {
           <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become a Sponsor - Coming Soon! </h1>
           <Container>
             <Row> 
-              <div className="p-6 laptop:mt-12 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-6 laptop:w-5/5"> 
+              <div 
+              className=
+              "mt-5 tablet:m-5 grid tablet:gap-15 tablet:grid-cols-2 laptop:grid-cols-3 gap-4 mob:grid-cols-1 mob:gap-16 desktop:gap-14 desktop:ml-40 desktop:p-10"> 
                 {subdata.map((type, index) => (
                     <SubscriptionCard
                       key={index}
