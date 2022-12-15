@@ -115,7 +115,7 @@ export default function Home() {
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
               {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
-          <h1 className="tablet:m-2 text-4xl text-bold">Projects</h1>
+          <h1 className="tablet:m-2 text-4xl text-bold text-center">Projects</h1>
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
               <WorkCard
@@ -130,7 +130,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <h1 className="tablet:m-2 text-4xl text-bold">Teaching Services</h1>
+          <h1 className="tablet:m-2 text-4xl text-bold text-center">Teaching Services</h1>
           <div className="mt-5 tablet:m-8 grid grid-cols-1 laptop:grid-cols-2 gap-8">
             {data.services.map((service, index) => (
               <ServiceCard
@@ -144,11 +144,11 @@ export default function Home() {
         </div>
 
           {/* subscriptions services */}
-          <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="tablet:m-2 text-4xl text-bold ">Become a Sponsor - Coming Soon! </h1>
+        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
+          <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become a Sponsor - Coming Soon! </h1>
           <Container>
             <Row> 
-              <div className="mt-5 p-6 laptop:mt-12 grid grid-cols-1 tablet:grid-cols-3 .col-md- gap-6 laptop:w-5/5"> 
+              <div className="p-6 laptop:mt-12 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-6 laptop:w-5/5"> 
                 {subdata.map((type, index) => (
                     <SubscriptionCard
                       key={index}
@@ -159,14 +159,7 @@ export default function Home() {
                 ))}
               </div>
             </Row>
-
-            {/* <SubscriptionCard type="Basic Sponsorship" price="$ 1.99"/> 
-            <SubscriptionCard type="Premium Sponsorship" price="$ 8.99"/> 
-            <SubscriptionCard type="Pro Sponsorship" price="$ 24.99" />  */}
-          
-
           </Container>
-          
         </div>
 
         
