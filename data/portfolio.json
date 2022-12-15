@@ -1,1 +1,146 @@
-{"name":"Hunter Macias","headerTaglineOne":"Hello 👋","headerTaglineTwo":"I'm Hunter Macias - Aspiring Software Developer","headerTaglineThree":"Educator and Freelancer","headerTaglineFour":"Based in San Francisco, CA.","showCursor":false,"showBlog":false,"darkMode":true,"showResume":true,"socials":[{"id":"1","title":"Github","link":"https://github.com/HunterMRocha"},{"id":"2","title":"LinkedIn","link":"https://www.linkedin.com/in/huntermacias"},{"id":"3","title":"Twitter","link":"https://mobile.twitter.com/huntermacias_"},{"id":"4","title":"YouTube","link":"https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos"}],"projects":[{"id":"1","title":"Project  0001","description":"Game Development - Minecraft Clone","imageSrc":"https://media-exp1.licdn.com/dms/image/C5622AQF8ubCg7oZx9A/feedshare-shrink_2048_1536/0/1670285417361?e=1673481600&v=beta&t=Fk914eQ2-n1uoDtP_R9YVEyIQ-xLOqkzXeVihg3jzNA","url":"https://github.com/HunterMRocha/Minecraft-clone"},{"id":"2","title":"Project 0010","description":"Game Development - Pacman Recreation","imageSrc":"https://github.com/HunterMRocha/pacman/blob/main/Screen%20Shot%202022-12-10%20at%208.59.14%20AM.png?raw=true","url":"https://github.com/HunterMRocha/pacman"},{"id":"3","title":"Project 0011","description":"Game Development - Spave Invaders","imageSrc":"https://github.com/HunterMRocha/Space-Invaders/blob/main/sv-demo.png?raw=true","url":"https://github.com/HunterMRocha/Space-Invaders"},{"id":"4","title":"Project 0100","description":"Modern Stack React App (Next.js + TailwindCSS)","imageSrc":"https://github.com/HunterMRocha/react-portfolio-template/blob/main/blogs-demo.png?raw=true","url":"http://huntermacias.io/"},{"id":"5","title":"Project 0101","description":"Machine Learning & A.I. - Snake Game","imageSrc":"https://st4.depositphotos.com/1401766/22862/v/1600/depositphotos_228621786-stock-illustration-doodle-download-bar-coming-soon.jpg","url":"http://huntermacias.io/"}],"services":[{"id":"1","title":"Game Development 👾","description":"We help with the creation and development of 2D/3D games using python. Learn how to think like a game designer and bring all your ideas to life!","price":"package: $29.99/hr"},{"id":"2","title":"Programming Fundamentals 🖥️","description":"We design personalized curriculums based on your interests and skillset.","price":"package: $24.99/hr"},{"id":"3","title":"Machine Learning & Artificial Inteligence 🚀","description":"Go Zero-to-Hero with our ML/AI course","price":"package: $44.99/hr"},{"id":"4","title":"Research & Design ✨","description":"Learn how to research like a software developer and how to use popular industry design frameworks.","price":"package: $34.99/hr"}],"aboutpara":"Hi there -- I'm Hunter! I’m interested in learning more about ML/AI, algorithms, game development, and most importantly I’m interested in developing my skills. I hope to work for companies that value continual learning, a friendly work environment. During my free time, I create game development YouTube videos and teach others how to code. Outside of my professional work, I love being outdoors and socializing with others.","resume":{"tagline":"👋  I'm a software engineer, product designer.","description":"I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.","experiences":[{"id":"1","dates":"June 2020 - Present","type":"Part Time","position":"Coding Coach","bullets":"Develop various curriculums in: Python / Scratch  / Web Design, Guide students through the UML modeling language, Instruct students during 1:1 sessions by using a project-based learning approach in order to build interest skill and excitement"},{"id":"2","dates":"June 2021 - Sep 2021","type":"Full Time","position":"Full Stack Developer at Firebird","bullets":"Developed and deployed React application, Developed web scraping program using Selenium, Tasked with scrapping data for over 100 different companies, Implemented login system using PHP"},{"id":"2","dates":"Dec. 2020","type":"Student Project","position":"Recommendation Engine - ML","bullets":"Designed and implemented a music recommending application, Final Project for a Introduction to Machine Learning "}],"education":{"universityName":"University of San Francisco","universityDate":"2018-2022","universityPara":"Computer Science "},"languages":["Javascript","HTML5","CSS","Python","Java"],"frameworks":["React","Typescript","NodeJs"],"others":["Figma","AdobeXD","AWS"]}}
+{
+	"name": "Hunter Macias",
+	"headerTaglineOne": "Hello 👋",
+	"headerTaglineTwo": "I'm Hunter Macias - Aspiring Software Developer",
+	"headerTaglineThree": "Educator and Freelancer",
+	"headerTaglineFour": "Based in San Francisco, CA.",
+	"showCursor": false,
+	"showBlog": false,
+	"darkMode": true,
+	"showResume": true,
+	"socials": [
+		{
+			"id": "1",
+			"title": "Github",
+			"link": "https://github.com/HunterMRocha"
+		},
+		{
+			"id": "2",
+			"title": "LinkedIn",
+			"link": "https://www.linkedin.com/in/huntermacias"
+		},
+		{
+			"id": "3",
+			"title": "Twitter",
+			"link": "https://mobile.twitter.com/huntermacias_"
+		},
+		{
+			"id": "4",
+			"title": "YouTube",
+			"link": "https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos"
+		}
+	],
+	"projects": [
+		{
+			"id": "1",
+			"title": "Project  0001",
+			"description": "Game Development - Minecraft Clone",
+			"imageSrc": "https://media-exp1.licdn.com/dms/image/C5622AQF8ubCg7oZx9A/feedshare-shrink_2048_1536/0/1670285417361?e=1673481600&v=beta&t=Fk914eQ2-n1uoDtP_R9YVEyIQ-xLOqkzXeVihg3jzNA",
+			"url": "https://github.com/HunterMRocha/Minecraft-clone"
+		},
+		{
+			"id": "2",
+			"title": "Project 0010",
+			"description": "Game Development - Pacman Recreation",
+			"imageSrc": "https://github.com/HunterMRocha/pacman/blob/main/Screen%20Shot%202022-12-10%20at%208.59.14%20AM.png?raw=true",
+			"url": "https://github.com/HunterMRocha/pacman"
+		},
+		{
+			"id": "3",
+			"title": "Project 0011",
+			"description": "Game Development - Spave Invaders",
+			"imageSrc": "https://github.com/HunterMRocha/Space-Invaders/blob/main/sv-demo.png?raw=true",
+			"url": "https://github.com/HunterMRocha/Space-Invaders"
+		},
+		{
+			"id": "4",
+			"title": "Project 0100",
+			"description": "Modern Stack React App (Next.js + TailwindCSS)",
+			"imageSrc": "https://github.com/HunterMRocha/react-portfolio-template/blob/main/blogs-demo.png?raw=true",
+			"url": "http://huntermacias.io/"
+		},
+		{
+			"id": "5",
+			"title": "Project 0101",
+			"description": "Machine Learning & A.I. - Snake Game",
+			"imageSrc": "https://st4.depositphotos.com/1401766/22862/v/1600/depositphotos_228621786-stock-illustration-doodle-download-bar-coming-soon.jpg",
+			"url": "http://huntermacias.io/"
+		}
+	],
+	"services": [
+		{
+			"id": "1",
+			"title": "Game Development 👾",
+			"description": "We help with the creation and development of 2D/3D games using python. Learn how to think like a game designer and bring all your ideas to life!",
+			"price": "package: $29.99/hr"
+		},
+		{
+			"id": "2",
+			"title": "Programming Fundamentals 🖥️",
+			"description": "We design personalized curriculums based on your interests and skillset.",
+			"price": "package: $24.99/hr"
+		},
+		{
+			"id": "3",
+			"title": "Machine Learning & Artificial Inteligence 🚀",
+			"description": "Go Zero-to-Hero with our ML/AI course",
+			"price": "package: $44.99/hr"
+		},
+		{
+			"id": "4",
+			"title": "Research & Design ✨",
+			"description": "Learn how to research like a software developer and how to use popular industry design frameworks.",
+			"price": "package: $34.99/hr"
+		}
+	],
+	"aboutpara": "Hi there -- I'm Hunter! I’m interested in learning more about ML/AI, algorithms, game development, and most importantly I’m interested in developing my skills. I hope to work for companies that value continual learning, a friendly work environment. During my free time, I create game development YouTube videos and teach others how to code. Outside of my professional work, I love being outdoors and socializing with others.",
+	"resume": {
+		"tagline": "👋  I'm a software engineer, product designer.",
+		"description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+		"experiences": [
+			{
+				"id": "1",
+				"dates": "June 2020 - Present",
+				"type": "Part Time",
+				"position": "Coding Coach",
+				"bullets": "Develop various curriculums in: Python / Scratch  / Web Design, Guide students through the UML modeling language, Instruct students during 1:1 sessions by using a project-based learning approach in order to build interest skill and excitement"
+			},
+			{
+				"id": "2",
+				"dates": "June 2021 - Sep 2021",
+				"type": "Full Time",
+				"position": "Full Stack Developer at Firebird",
+				"bullets": "Developed and deployed React application, Developed web scraping program using Selenium, Tasked with scrapping data for over 100 different companies, Implemented login system using PHP"
+			},
+			{
+				"id": "2",
+				"dates": "Dec. 2020",
+				"type": "Student Project",
+				"position": "Recommendation Engine - ML",
+				"bullets": "Designed and implemented a music recommending application, Final Project for a Introduction to Machine Learning "
+			}
+		],
+		"education": {
+			"universityName": "University of San Francisco",
+			"universityDate": "2018-2022",
+			"universityPara": "Computer Science "
+		},
+		"languages": [
+			"Javascript",
+			"HTML5",
+			"CSS",
+			"Python",
+			"Java"
+		],
+		"frameworks": [
+			"React",
+			"Typescript",
+			"NodeJs"
+		],
+		"others": [
+			"Figma",
+			"AdobeXD",
+			"AWS"
+		]
+	}
+}
