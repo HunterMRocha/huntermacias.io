@@ -7,7 +7,7 @@ import Socials from "../components/Socials";
 // import Button from "../components/Button";
 import { useTheme } from "next-themes";
 import { Button, Spacer } from "@nextui-org/react";
-import { EditIcon } from './EditIcon';
+// import { EditIcon } from './EditIcon';
 
 // Data
 import { name, showResume } from "../data/portfolio.json";
@@ -32,7 +32,7 @@ const Resume = () => {
           {/* <Button onClick={() => router.push("/edit")} type={"primary"}>
             Edit Resume
           </Button> */}
-          <Button onClick={() => router.push("/edit")} icon={<EditIcon fill="currentColor" />} color="secondary" flat>
+          <Button onClick={() => router.push("/edit")} color="secondary" flat>
             Edit My Resume
           </Button>
         </div>
