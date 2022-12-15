@@ -149,7 +149,7 @@ export default function Home() {
             <Row> 
               <div 
               className=
-              "mt-5 tablet:m-5 grid tablet:gap-15 tablet:grid-cols-2 laptop:grid-cols-3 gap-4 mob:grid-cols-1 mob:gap-16 desktop:gap-14 desktop:ml-40 desktop:p-10"> 
+              "mt-5 tablet:m-5 grid tablet:gap-15 tablet:grid-cols-2 laptop:grid-cols-3 gap-4 mob:grid-cols-1 mob:gap-16 desktop:gap-20 desktop:ml-40 desktop:p-10"> 
                 {subdata.map((type, index) => (
                     <SubscriptionCard
                       key={index}

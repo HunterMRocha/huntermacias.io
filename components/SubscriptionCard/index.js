@@ -7,7 +7,7 @@ const SubscriptionCard = ({ type, price, benefits }) => {
   return (
 	<Grid.Container>
 		<Grid sm={12}>
-			<Card css={{ mw: "400px" }}>
+			<Card isHoverable="true" isPressable="true" css={{ mw: "400px" }}>
 				<Card.Header>
 					<Text size={22} color="GoldenRod" b>{type + ' Sponshorship'}</Text>
 				</Card.Header>
