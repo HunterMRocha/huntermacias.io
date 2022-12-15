@@ -11,9 +11,8 @@ import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import SubscriptionCard from "../components/SubscriptionCard";
-import { Container, Row, Col, Grid } from '@nextui-org/react';
-import { Card, Text } from "@nextui-org/react";
-// import SponsorButton from "../components/SponsorButton";
+import { Card, Container, Row, Text} from '@nextui-org/react';
+
 // Local Data
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
