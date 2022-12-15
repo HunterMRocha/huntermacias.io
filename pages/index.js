@@ -11,7 +11,10 @@ import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import SubscriptionCard from "../components/SubscriptionCard";
-import { Card, Container, Row, Text} from '@nextui-org/react';
+import { Card, Container, Row, Col, Text} from '@nextui-org/react';
+import FeaturedSponsors from "../components/FeaturedSponsors";
+
+import { Table, Tooltip, User } from "@nextui-org/react";
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -55,6 +58,10 @@ export default function Home() {
     );
   };
 
+
+
+
+
   useIsomorphicLayoutEffect(() => {
     stagger(
       [textOne.current, textTwo.current, textThree.current, textFour.current],
@@ -62,6 +69,8 @@ export default function Home() {
       { y: 0, x: 0, transform: "scale(1)" }
     );
   }, []);
+
+
 
   return (
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
@@ -144,12 +153,12 @@ export default function Home() {
 
           {/* subscriptions services */}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become a Sponsor - Coming Soon! </h1>
+          <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become A Sponsor - Coming Soon ! </h1>
           <Container>
             <Row> 
               <div 
               className=
-              "mt-5 tablet:m-5 grid tablet:gap-15 tablet:grid-cols-2 laptop:grid-cols-3 gap-4 mob:grid-cols-1 mob:gap-16 desktop:gap-20 desktop:ml-40 desktop:p-10"> 
+              "mt-5 grid tablet:m-5 tablet:gap-15 tablet:pb-10 tablet:grid-cols-2 laptop:grid-cols-3 laptop:ml-25 laptop:pb-20 gap-4 mob:grid-cols-1 mob:gap-16 mob:pb-10 desktop:gap-20 desktop:ml-40 desktop:p-10"> 
                 {subdata.map((type, index) => (
                     <SubscriptionCard
                       key={index}
@@ -161,6 +170,8 @@ export default function Home() {
               </div>
             </Row>
           </Container>
+          <FeaturedSponsors />
+ 
         </div>
 
         

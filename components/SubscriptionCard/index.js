@@ -7,16 +7,16 @@ const SubscriptionCard = ({ type, price, benefits }) => {
   return (
 	<Grid.Container>
 		<Grid sm={12}>
-			<Card isHoverable="true" isPressable="true" css={{ mw: "400px" }}>
+			<Card isHoverable="true" isPressable="true" css={{ backgroundColor: "#1F2937", mw: "400px" }}>
 				<Card.Header>
-					<Text size={22} color="GoldenRod" b>{type + ' Sponshorship'}</Text>
+					<Text size={22} color="#EF4444" b>{type + ' - Sponsorship'}</Text>
 				</Card.Header>
 
 				<Card.Divider />
 					<Container>
-						<Card.Body css={{ height: '10vw', width: '30vm'}}>
+						<Card.Body css={{ height: '16vw', width: '30vm'}}>
 							<Row>
-							<Text size={18} b i >Benfits Include: </Text>
+							<Text color="#EF4444" size={18} i b >Benefits Include: </Text>
 							</Row>
 
 							
@@ -25,7 +25,7 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 								{/* <SiDiscord color='MediumBlue' size={20}/>  */}
 								</Col>
 								<Col>
-									<Text size={16}>{benefits}</Text>
+									<Text color="#38BDF8" b size={16}>{benefits}</Text>
 								</Col>
 								
 							</Row>
@@ -35,7 +35,7 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 									<Col css={{width: "40px"}}>
 										 {/* <SiInstagram color='Salmon' size={20}/> */}
 										  </Col>
-									<Col> <Text size={16}>Instagram Story and Post </Text> </Col>
+									<Col> <Text b color="#F472B6" size={16}>Instagram Story and Post </Text> </Col>
 								</Row>
 							)}
 
@@ -44,7 +44,7 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 									<Col css={{width: "40px"}}> 
 									{/* <SiInstagram color='Salmon' size={20}/> */}
 									 </Col>
-									<Col> <Text size={16}>Instagram Story and Post </Text> </Col>
+									<Col> <Text b color="#F472B6" size={16}>Instagram Story and Post </Text> </Col>
 								</Row>
 							)}		
 							
@@ -55,7 +55,7 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 										 {/* <SiYoutube color='FireBrick' size={20}/> */}
 										  </Col>
 									<Col>
-										<Text size={16}>YouTube Ad - 30 seconds</Text>
+										<Text b color="#E11D48" size={16}>YouTube Ad - 30 seconds</Text>
 									</Col>
 									
 								</Row>
@@ -68,7 +68,7 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 								{/* <FcLike color='Salmon' size={20}/>  */}
 								</Col>
 								<Col>
-									<Text size={16}>Custom Company Spot on Site</Text>
+									<Text b color="#EAB308" size={16}>Custom Ad displayed on site</Text>
 								</Col>
 							</Row>
 					
