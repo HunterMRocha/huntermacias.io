@@ -10,19 +10,13 @@ import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
-
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
-  MDBBtn,
-  MDBInput
-} from 'mdb-react-ui-kit';
-
+import SubscriptionCard from "../components/SubscriptionCard";
+import { Container, Row, Col, Grid } from '@nextui-org/react';
+import { Card, Text } from "@nextui-org/react";
+// import SponsorButton from "../components/SponsorButton";
 // Local Data
 import data from "../data/portfolio.json";
+import subdata from "../data/sub_data"
 
 export default function Home() {
   // Ref
@@ -50,6 +44,18 @@ export default function Home() {
     });
   };
 
+  const MockItem = ({ text }) => {
+    return (
+      <Card css={{ h: "$20", $$cardColor: '$colors$primary' }}>
+        <Card.Body>
+          <Text h6 size={15} color="white" css={{ m: 0 }}>
+            {text}
+          </Text>
+        </Card.Body>
+      </Card>
+    );
+  };
+
   useIsomorphicLayoutEffect(() => {
     stagger(
       [textOne.current, textTwo.current, textThree.current, textFour.current],
@@ -63,7 +69,9 @@ export default function Home() {
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.name}</title>
+        
       </Head>
+      
 
       <div className="gradient-circle"></div>
       <div className="gradient-circle-bottom"></div>
@@ -73,9 +81,9 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
-
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
+            
             <h1
               ref={textOne}
               className="text-3xl tablet:text-3xl laptop:text-3xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
@@ -107,6 +115,7 @@ export default function Home() {
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
               {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
+          <h1 className="tablet:m-2 text-4xl text-bold">Projects</h1>
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
               <WorkCard
@@ -133,21 +142,53 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+          {/* subscriptions services */}
+          <div className="mt-10 laptop:mt-40 p-2 laptop:p-0">
+          <h1 className="tablet:m-2 text-4xl text-bold ">Become a Sponsor - Coming Soon! </h1>
+          <Container>
+            <Row> 
+              <div className="mt-5 p-6 laptop:mt-12 grid grid-cols-1 tablet:grid-cols-3 .col-md- gap-6 laptop:w-5/5"> 
+                {subdata.map((type, index) => (
+                    <SubscriptionCard
+                      key={index}
+                      type={type.type}
+                      price={type.price}
+                      benefits={type.benefits}
+                    />
+                ))}
+              </div>
+            </Row>
+
+            {/* <SubscriptionCard type="Basic Sponsorship" price="$ 1.99"/> 
+            <SubscriptionCard type="Premium Sponsorship" price="$ 8.99"/> 
+            <SubscriptionCard type="Pro Sponsorship" price="$ 24.99" />  */}
+          
+
+          </Container>
+          
+        </div>
+
+        
         {/* This button should not go into production */}
-        {/* {process.env.NODE_ENV === "development" && (
+        {process.env.NODE_ENV === "development" && (
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
               <Button type="primary">Edit Data</Button>
             </Link>
           </div>
-        )} */}
+        )}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-3xl text-bold">About</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          <h1 className="tablet:m-2 text-4xl text-bold">About</h1>
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-4/5 pb-20">
             {data.aboutpara}
           </p>
         </div>
-        <Header />
+
+      
+
+
+        {/* <Header /> */}
 
         
       </div>

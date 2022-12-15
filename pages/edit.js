@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 import Header from "../components/Header";
 import { v4 as uuidv4 } from "uuid";
 import { useTheme } from "next-themes";
+import { Button, Grid } from "@nextui-org/react";
 
 // Data
 import yourData from "../data/portfolio.json";
@@ -153,7 +154,7 @@ const Edit = () => {
       <div className="mt-10">
         <div className={`${theme === "dark" ? "bg-transparent" : "bg-white"}`}>
           <div className="flex items-center justify-between">
-            <h1 className="text-4xl">Dashboard</h1>
+            <h1 className="text-6xl mb-4">Dashboard</h1>
             <div className="flex items-center">
               <Button onClick={saveData} type="primary">
                 Save
@@ -161,38 +162,44 @@ const Edit = () => {
             </div>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center space-x-6">
             <Button
+              ghost
               onClick={() => setCurrentTabs("HEADER")}
               type={currentTabs === "HEADER" && "primary"}
             >
               Header
             </Button>
             <Button
+              ghost
               onClick={() => setCurrentTabs("PROJECTS")}
               type={currentTabs === "PROJECTS" && "primary"}
             >
               Projects
             </Button>
             <Button
+              ghost
               onClick={() => setCurrentTabs("SERVICES")}
               type={currentTabs === "SERVICES" && "primary"}
             >
               Services
             </Button>
             <Button
+              ghost
               onClick={() => setCurrentTabs("ABOUT")}
               type={currentTabs === "ABOUT" && "primary"}
             >
               About
             </Button>
             <Button
+              ghost
               onClick={() => setCurrentTabs("SOCIAL")}
               type={currentTabs === "SOCIAL" && "primary"}
             >
               Social
             </Button>
             <Button
+              ghost
               onClick={() => setCurrentTabs("RESUME")}
               type={currentTabs === "RESUME" && "primary"}
             >
@@ -200,6 +207,8 @@ const Edit = () => {
             </Button>
           </div>
         </div>
+
+
         {/* HEADER */}
         {currentTabs === "HEADER" && (
           <div className="mt-10">
@@ -266,14 +275,17 @@ const Edit = () => {
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">Blog</label>
-              <div className="w-4/5 ml-10 flex items-center">
+              <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
+                  ghost
                   onClick={() => setData({ ...data, showBlog: true })}
                   type={data.showBlog && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
+                  ghost
+                  color="error"
                   onClick={() => setData({ ...data, showBlog: false })}
                   classes={
                     !data.showBlog && "bg-red-500 text-white hover:bg-red-600"
@@ -285,14 +297,17 @@ const Edit = () => {
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">Dark Mode</label>
-              <div className="w-4/5 ml-10 flex items-center">
+              <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
+                  ghost
                   onClick={() => setData({ ...data, darkMode: true })}
                   type={data.darkMode && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
+                  ghost
+                  color="error"
                   onClick={() => setData({ ...data, darkMode: false })}
                   classes={
                     !data.darkMode && "bg-red-500 text-white hover:bg-red-600"
@@ -304,14 +319,16 @@ const Edit = () => {
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">Show Resume</label>
-              <div className="w-4/5 ml-10 flex items-center">
+              <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
+                  ghost
                   onClick={() => setData({ ...data, showResume: true })}
                   type={data.showResume && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
+                  ghost color="error"
                   onClick={() => setData({ ...data, showResume: false })}
                   classes={
                     !data.showResume && "bg-red-500 text-white hover:bg-red-600"
@@ -323,14 +340,17 @@ const Edit = () => {
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">Custom Cursor</label>
-              <div className="w-4/5 ml-10 flex items-center">
+              <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
+                  ghost
                   onClick={() => setData({ ...data, showCursor: true })}
                   type={data.showCursor && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
+                  ghost
+                  color="error"
                   onClick={() => setData({ ...data, showCursor: false })}
                   classes={
                     !data.showCursor && "bg-red-500 text-white hover:bg-red-600"
@@ -347,10 +367,12 @@ const Edit = () => {
           <>
             <div className="mt-10">
               {data.projects.map((project, index) => (
-                <div className="mt-10" key={project.id}>
+                <div className="mt-10 space-y-4" key={project.id}>
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{project.title}</h1>
                     <Button
+                      ghost
+                      color="error"
                       onClick={() => deleteProject(project.id)}
                       type="primary"
                     >
@@ -424,7 +446,7 @@ const Edit = () => {
             </div>
 
             <div className="my-10">
-              <Button onClick={addProject} type="primary">
+              <Button ghost onClick={addProject} type="primary" color="success">
                 Add Project +
               </Button>
             </div>
@@ -435,10 +457,12 @@ const Edit = () => {
           <>
             <div className="mt-10">
               {data.services.map((service, index) => (
-                <div key={service.id}>
+                <div className="mt-10 space-y-4" key={service.id}>
                   <div className="flex items-center justify-between">
                     <h1 className="text-2xl">{service.title}</h1>
                     <Button
+                      ghost
+                      color="error"
                       onClick={() => deleteService(service.id)}
                       type="primary"
                     >
@@ -479,12 +503,14 @@ const Edit = () => {
               ))}
             </div>
             <div className="my-10">
-              <Button onClick={addService} type="primary">
+              <Button ghost color="success" onClick={addService} type="primary">
                 Add Service +
               </Button>
             </div>
           </>
         )}
+
+        {/* about */}
         {currentTabs === "ABOUT" && (
           <div className="mt-10">
             <h1 className="text-2xl">About</h1>
@@ -495,14 +521,18 @@ const Edit = () => {
             ></textarea>
           </div>
         )}
+
+        {/* Socials */}
         {currentTabs === "SOCIAL" && (
           <div className="mt-10">
             {data.socials.map((social, index) => (
               <>
                 <div key={social.id}>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mb-10">
                     <h1 className="text-2xl">{social.title}</h1>
                     <Button
+                      ghost
+                      color='error'
                       onClick={() => deleteSocials(social.id)}
                       type="primary"
                     >
@@ -542,15 +572,17 @@ const Edit = () => {
               </>
             ))}
             <div className="my-10">
-              <Button onClick={addSocials} type="primary">
+              <Button ghost color='success' onClick={addSocials} type="primary">
                 Add Social +
               </Button>
             </div>
           </div>
         )}
+
+        {/* RESUME */}
         {currentTabs === "RESUME" && (
           <div className="mt-10">
-            <h1>Main</h1>
+            <h1>Resume</h1>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-sx opacity-50">Tagline</label>
               <input
@@ -565,7 +597,7 @@ const Edit = () => {
                 type="text"
               ></input>
             </div>
-            <div className="flex items-center mt-5">
+            <div className="flex items-center space-y-3">
               <label className="w-1/5 text-lg opacity-50">Description</label>
               <textarea
                 value={data.resume.description}
@@ -581,12 +613,14 @@ const Edit = () => {
             <hr className="my-10"></hr>
 
             <h1>Experiences</h1>
-            <div className="mt-10">
+            <div className="mt-7 space-y-3">
               {data.resume.experiences.map((experiences, index) => (
-                <div className="mt-5" key={experiences.id}>
-                  <div className="flex items-center justify-between">
+                <div className="mt-5 space-y-3 mb-10" key={experiences.id}>
+                  <div className="flex items-center justify-between mt-10">
                     <h1 className="text-2xl">{experiences.position}</h1>
                     <Button
+                      ghost
+                      color="error"
                       // onClick={() => deleteProject(project.id)}
                       type="primary"
                     >
@@ -608,7 +642,7 @@ const Edit = () => {
                       type="text"
                     ></input>
                   </div>
-                  <div className="flex items-center mt-2">
+                  <div className="flex items-center ">
                     <label className="w-1/5 text-lg opacity-50">Type</label>
                     <input
                       value={experiences.type}
@@ -657,7 +691,7 @@ const Edit = () => {
               ))}
             </div>
             <div className="my-10">
-              <Button onClick={handleAddExperiences} type="primary">
+              <Button ghost color='success' onClick={handleAddExperiences} type="primary">
                 Add Experience +
               </Button>
             </div>
@@ -729,9 +763,9 @@ const Edit = () => {
             <div className="mt-10">
               <div className="flex">
                 <label className="w-1/5 text-lg opacity-50">Languages</label>
-                <div className="w-4/5 ml-10 flex flex-col">
+                <div className="w-4/5 ml-10 flex flex-col space-y-3">
                   {data.resume.languages.map((language, index) => (
-                    <div key={index} className="flex">
+                    <div key={index} className="flex space-x-4">
                       <input
                         value={language}
                         onChange={(e) => {
@@ -751,6 +785,8 @@ const Edit = () => {
                         type="text"
                       ></input>
                       <Button
+                        ghost
+                        color="error"
                         onClick={() =>
                           setData({
                             ...data,
@@ -768,6 +804,8 @@ const Edit = () => {
                     </div>
                   ))}
                   <Button
+                    auto ghost
+                    color="success"
                     type="primary"
                     classes="hover:scale-100"
                     onClick={() =>
@@ -775,21 +813,21 @@ const Edit = () => {
                         ...data,
                         resume: {
                           ...data.resume,
-                          languages: [...data.resume.languages, "Added"],
+                          languages: [...data.resume.languages, "Edit me 🚀 "],
                         },
                       })
                     }
                   >
-                    Add +
+                    Add Language +
                   </Button>
                 </div>
               </div>
               <hr className="my-10"></hr>
               <div className="flex">
                 <label className="w-1/5 text-lg opacity-50">Frameworks</label>
-                <div className="w-4/5 ml-10 flex flex-col">
+                <div className="w-4/5 ml-10 flex flex-col space-y-3">
                   {data.resume.frameworks.map((framework, index) => (
-                    <div key={index} className="flex">
+                    <div key={index} className="flex space-x-4">
                       <input
                         value={framework}
                         onChange={(e) => {
@@ -809,6 +847,8 @@ const Edit = () => {
                         type="text"
                       ></input>
                       <Button
+                        ghost
+                        color="error"
                         onClick={() =>
                           setData({
                             ...data,
@@ -826,28 +866,30 @@ const Edit = () => {
                     </div>
                   ))}
                   <Button
+                    ghost
+                    color="success"
                     onClick={() =>
                       setData({
                         ...data,
                         resume: {
                           ...data.resume,
-                          frameworks: [...data.resume.frameworks, "Added"],
+                          frameworks: [...data.resume.frameworks, "Edit me 🚀 "],
                         },
                       })
                     }
                     type="primary"
                     classes="hover:scale-100"
                   >
-                    Add +
+                    Add Framework +
                   </Button>
                 </div>
               </div>
               <hr className="my-10"></hr>
               <div className="flex">
                 <label className="w-1/5 text-lg opacity-50">Others</label>
-                <div className="w-4/5 ml-10 flex flex-col">
+                <div className="w-4/5 ml-10 flex flex-col space-y-3 mb-40">
                   {data.resume.others.map((other, index) => (
-                    <div key={index} className="flex">
+                    <div key={index} className="flex space-x-4">
                       <input
                         value={other}
                         onChange={(e) => {
@@ -867,6 +909,8 @@ const Edit = () => {
                         type="text"
                       ></input>
                       <Button
+                        ghost
+                        color="error"
                         onClick={() =>
                           setData({
                             ...data,
@@ -884,19 +928,21 @@ const Edit = () => {
                     </div>
                   ))}
                   <Button
+                    ghost
+                    color="success"
                     onClick={() =>
                       setData({
                         ...data,
                         resume: {
                           ...data.resume,
-                          others: [...data.resume.others, "Added"],
+                          others: [...data.resume.others, "Edit me 🚀"],
                         },
                       })
                     }
                     type="primary"
                     classes="hover:scale-100"
                   >
-                    Add +
+                    Add Other +
                   </Button>
                 </div>
               </div>

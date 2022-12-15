@@ -4,8 +4,10 @@ import Cursor from "../components/Cursor";
 import Header from "../components/Header";
 import ProjectResume from "../components/ProjectResume";
 import Socials from "../components/Socials";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 import { useTheme } from "next-themes";
+import { Button, Spacer } from "@nextui-org/react";
+import { EditIcon } from './EditIcon';
 
 // Data
 import { name, showResume } from "../data/portfolio.json";
@@ -26,9 +28,12 @@ const Resume = () => {
   return (
     <>
       {process.env.NODE_ENV === "development" && (
-        <div className="fixed bottom-6 right-6 text-blue">
-          <Button onClick={() => router.push("/edit")} type={"primary"}>
+        <div className="fixed bottom-10 right-12">
+          {/* <Button onClick={() => router.push("/edit")} type={"primary"}>
             Edit Resume
+          </Button> */}
+          <Button onClick={() => router.push("/edit")} icon={<EditIcon fill="currentColor" />} color="secondary" flat>
+            Edit My Resume
           </Button>
         </div>
       )}
