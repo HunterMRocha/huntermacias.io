@@ -21,8 +21,9 @@ const Checkout = ({ type, price, benefits }) => {
   const [stripeError, setStripeError] = useState(null);
   const [isLoading, setLoading] = useState(false);
 
+
   const item = {
-    price: "price_1MFWGiGKJO6noGmdHOSsyycU",
+    price: price,
     quantity: 1
   };
 
@@ -124,13 +125,14 @@ const Checkout = ({ type, price, benefits }) => {
 				{/* subscribe button $ */}
 				<Card.Footer>
 					<Row justify="flex-end">
-						<Button 
+						
+						<Button
 							onClick={redirectToCheckout}
 							disabled={isLoading}
 							className="hover:tracking-wider" 
 							style={{ fontSize: 20, color: "MistyRose" }} 
 							size="lg"
-							>{price} 
+							>{type} 
 						</Button>
 					</Row>
 				</Card.Footer>

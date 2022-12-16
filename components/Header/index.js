@@ -389,7 +389,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             </Button>
             <Spacer x={0.5} />
             <Button ghost auto onClick={handler}>
-              Loginggggggg
+              Login
             </Button>
             <Spacer x={0.5} />
             <Modal
