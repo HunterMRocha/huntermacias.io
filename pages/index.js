@@ -11,6 +11,7 @@ import Button from "../components/Button";
 import Link from "next/link";
 import Cursor from "../components/Cursor";
 import SubscriptionCard from "../components/SubscriptionCard";
+import Checkout from "../components/Checkout"
 import { Card, Container, Row, Col, Text} from '@nextui-org/react';
 import FeaturedSponsors from "../components/FeaturedSponsors";
 
@@ -160,7 +161,7 @@ export default function Home() {
               className=
               "mt-5 grid tablet:m-5 tablet:gap-15 tablet:pb-10 tablet:grid-cols-2 laptop:grid-cols-3 laptop:ml-25 laptop:pb-20 gap-4 mob:grid-cols-1 mob:gap-16 mob:pb-10 desktop:gap-20 desktop:ml-40 desktop:p-10"> 
                 {subdata.map((type, index) => (
-                    <SubscriptionCard
+                    <Checkout 
                       key={index}
                       type={type.type}
                       price={type.price}
@@ -173,6 +174,10 @@ export default function Home() {
           <FeaturedSponsors />
  
         </div>
+
+        {/* <div>
+            <Checkout />
+        </div> */}
 
         
         {/* This button should not go into production */}

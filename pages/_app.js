@@ -1,13 +1,18 @@
 import "../styles/globals.css";
 import { ThemeProvider } from "next-themes";
+import { SSRProvider } from 'react-bootstrap';
 
 
 const App = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider>
-      <Component {...pageProps} />
-      
-    </ThemeProvider>
+    <SSRProvider>
+      <ThemeProvider>
+        <Component {...pageProps} />
+        
+      </ThemeProvider>
+
+
+    </SSRProvider>
     
     
   );

@@ -3,4 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  nextConfig,
+
+  env: {
+    STRIPE_TEST_KEY: process.env.STRIPE_TEST_KEY
+  }
+
+};

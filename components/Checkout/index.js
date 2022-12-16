@@ -1,28 +1,54 @@
-import React from "react";
-import { Card, Container, Col, Grid, Image, Text, Button, Row } from "@nextui-org/react";
-// import { useSession, signIn, signOut } from "next-auth"
-// import { SiDiscord, SiInstagram, SiYoutube } from "react-icons/Si";
-// import { FcLike } from "react-icons/Fc";
-
+import React, { useState } from "react";
+// import CardIcon from "../images/credit-card.svg";
+// import ProductImage from "../images/product-image.jpg";
 import { loadStripe } from "@stripe/stripe-js";
-// import axios from 'axios';
-// const stripePromise = loadStripe(process.env.stripe_test_key);
+
+
+import { Card, Container, Col, Grid, Image, Text, Button, Row } from "@nextui-org/react";
 
 
 
-// const createCheckoutSession = async () => {
-// 	const stripe = await stripePromise; 
+let stripePromise;
 
-// 	// call backend to create a checkout session 
-// 	const checkoutSession = await axios.post("../../pages/api/create-checkout-session", 
-// 	{
-// 		items:[{"sub":33}],
-// 	})
-// };
+const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe('pk_test_51MFN9EGKJO6noGmdAmWtYT6MzBPeiR9ztsFzgzH1EpYMV7e5zReClQKaJC33rZo7T8ZSHBOzGssXfkUPj8YnVUbd00sPwWdWvo');
+  }
+  return stripePromise;
+};
 
+const Checkout = ({ type, price, benefits }) => {
+  const [stripeError, setStripeError] = useState(null);
+  const [isLoading, setLoading] = useState(false);
 
-const SubscriptionCard = ({ type, price, benefits }) => {
+  const item = {
+    price: "price_1MFWGiGKJO6noGmdHOSsyycU",
+    quantity: 1
+  };
+
+  const checkoutOptions = {
+    lineItems: [item],
+    mode: "payment",
+    successUrl: 'https://www.huntermacias.io',
+    cancelUrl: 'https://www.huntermacias.io'
+  };
+
+  const redirectToCheckout = async () => {
+    setLoading(true);
+    console.log("redirectedToCheckout");
+
+    const stripe = await getStripe();
+    const { error } = await stripe.redirectToCheckout(checkoutOptions);
+
+    console.log("Stripe Checkout error", error);
+    if (error) setStripeError(error.message);
+    setLoading(false);
+  };
+
+  if (stripeError) alert(stripeError);
+
   return (
+	<>
 	<Grid.Container>
 		<Grid sm={12}>
 			<Card isHoverable="true" isPressable="true" css={{ backgroundColor: "#1F2937", mw: "400px" }}>
@@ -99,11 +125,8 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 				<Card.Footer>
 					<Row justify="flex-end">
 						<Button 
-							role='link' 
-							
-
-
-							
+							onClick={redirectToCheckout}
+							disabled={isLoading}
 							className="hover:tracking-wider" 
 							style={{ fontSize: 20, color: "MistyRose" }} 
 							size="lg"
@@ -115,7 +138,8 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 			</Card>
 		</Grid>
 	</Grid.Container>
+	</>
   );
 };
 
-export default SubscriptionCard;
+export default Checkout;

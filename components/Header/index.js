@@ -389,7 +389,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             </Button>
             <Spacer x={0.5} />
             <Button ghost auto onClick={handler}>
-              Login
+              Loginggggggg
             </Button>
             <Spacer x={0.5} />
             <Modal
@@ -531,3 +531,4 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 };
 
 export default Header;
+
