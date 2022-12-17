@@ -455,6 +455,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showBlog && (
               <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
             )}
+            <Spacer x={0.5} />
             {showResume && (
               <Button
                 auto ghost
