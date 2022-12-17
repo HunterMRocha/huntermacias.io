@@ -21,7 +21,7 @@ import { Table, Tooltip, User } from "@nextui-org/react";
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
 
-import ReactGA from "react-ga"
+// import ReactGA from "react-ga"
 
 export default function Home() {
 
@@ -35,9 +35,9 @@ export default function Home() {
   const textFour = useRef();
 
   // google analytics 
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname);
-  }); 
+  // useEffect(() => {
+  //   ReactGA.pageview(window.location.pathname);
+  // }); 
  
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -77,7 +77,7 @@ export default function Home() {
   }, []);
 
 
-  return (
+  return (    
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       
       {data.showCursor && <Cursor />}

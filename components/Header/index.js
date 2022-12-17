@@ -16,6 +16,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   const { name, showBlog, showResume } = data;
 
+  const [email, setEmail] = useState('none');
+  const [password, setPassword] = useState('noneP');
+
+  const onChange = event => {
+    setEmail({email:event.target.value});
+    console.log("email: ", email); 
+  
+  }
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -203,6 +212,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               {/* Modal Body */}
               <Modal.Body>
                 <Input
+                  label='email'
                   clearable bordered fullWidth color="primary" size="lg" placeholder="Email" 
                   contentLeft={<Mail fill="currentColor" />}
                 />
@@ -279,6 +289,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     {/* Modal Body */}
                     <Modal.Body>
                       <Input
+                       label='email'
                         clearable bordered fullWidth color="primary" size="lg" placeholder="Email" 
                         contentLeft={<Mail fill="currentColor" />}
                       />
@@ -320,6 +331,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     {/* Modal Body */}
                     <Modal.Body>
                       <Input
+                       label='email'
                         clearable bordered fullWidth color="primary" size="lg" placeholder="Email" 
                         contentLeft={<Mail fill="currentColor" />}
                       />
@@ -410,6 +422,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               {/* Modal Body */}
               <Modal.Body>
                 <Input
+                 label='email'
                   clearable bordered fullWidth color="primary" size="lg" placeholder="Email" 
                   contentLeft={<Mail fill="currentColor" />}
                 />
@@ -491,6 +504,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               {/* Modal Body */}
               <Modal.Body>
                 <Input
+                 label='email'
                   clearable bordered fullWidth color="primary" size="lg" placeholder="Email" 
                   contentLeft={<Mail fill="currentColor" />}
                 />

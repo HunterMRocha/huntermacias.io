@@ -1,12 +1,12 @@
 ---
-date: '2020-7-9'
+date: 2020-7-9
 title: Python OpenCV – Dense Optical Flow
-tagline: Prerequisites - Python OpenCV, Grayscaling
+tagline: 'Prerequisites - Python OpenCV, Grayscaling'
 preview: >-
-  Optical flow is the motion of objects between the consecutive frames of the sequence, caused by the relative motion between the camera and the object. It can be of two types-Sparse Optical flow and Dense Optical flow.
-
-image: >-
-  https://i.stack.imgur.com/MVRdq.png
+  Optical flow is the motion of objects between the consecutive frames of the
+  sequence, caused by the relative motion between the camera and the object. It
+  can be of two types-Sparse Optical flow and Dense Optical flow.
+image: 'https://i.stack.imgur.com/MVRdq.png'
 ---
 
 ## Dense Optical flow
@@ -16,28 +16,6 @@ image: >-
 ## Franeback Method
 
 **The first step is that the method approximates the windows of image frames by a quadratic polynomial with the help of the polynomial expansion transform. Next, by observing how the polynomial transforms under the state of motion. i.e. to estimate displacement fields. Dense optical flow is computed, after a series of refinements.**
-
-
-
-#### This is Heading Four With Code Block
-
-
-
-## Ordered List with horizontal line
-
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
-
----
-
-## Unordered List With Horizontal line
-
-- First item
-- Second item
-- Third item
-- Fourth item
 
 ---
 
