@@ -8,8 +8,15 @@ import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css'
+import { Auth } from 'aws-amplify';
 
-const Blog = ({ posts }) => {
+import awsExports from './aws-exports';
+// console.log(awsExports)
+Auth.configure(awsExports);
+
+function Blog ({ posts }) {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
   const router = useRouter();
@@ -61,6 +68,7 @@ const Blog = ({ posts }) => {
       alert("This thing only works in development mode.");
     }
   };
+  // <Authenticator>
   return (
     showBlog.current && (
       <>
@@ -128,6 +136,7 @@ const Blog = ({ posts }) => {
       </>
     )
   );
+
 };
 
 export async function getStaticProps() {
@@ -147,4 +156,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Blog;
+export default withAuthenticator(Blog);
