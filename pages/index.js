@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
@@ -21,7 +21,11 @@ import { Table, Tooltip, User } from "@nextui-org/react";
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
 
+import ReactGA from "react-ga"
+
 export default function Home() {
+
+
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -30,6 +34,11 @@ export default function Home() {
   const textThree = useRef();
   const textFour = useRef();
 
+  // google analytics 
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+  }); 
+ 
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
@@ -59,10 +68,6 @@ export default function Home() {
     );
   };
 
-
-
-
-
   useIsomorphicLayoutEffect(() => {
     stagger(
       [textOne.current, textTwo.current, textThree.current, textFour.current],
@@ -72,13 +77,12 @@ export default function Home() {
   }, []);
 
 
-
   return (
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
+      
       {data.showCursor && <Cursor />}
       <Head>
         <title>{data.name}</title>
-        
       </Head>
       
 
@@ -90,6 +94,7 @@ export default function Home() {
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
+        
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
             

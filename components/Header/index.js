@@ -30,6 +30,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   return (
     <>
+    
       <Popover className="block tablet:hidden mt-8">
         {({ open }) => (
           <>
