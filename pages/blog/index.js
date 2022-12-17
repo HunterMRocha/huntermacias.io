@@ -8,12 +8,13 @@ import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+// import { Authenticator } from "aws-amplify/ui-react";
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Auth } from 'aws-amplify';
 
-import awsExports from '../aws-exports.js';
-// console.log(awsExports)
+import awsExports from './../../data/aws-exports';
+
 Auth.configure(awsExports);
 
 function Blog ({ posts }) {
