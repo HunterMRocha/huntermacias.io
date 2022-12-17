@@ -362,13 +362,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           {name}.
         </h1>
 
+
+
         {/* bottom buttons */}
         {!isBlog ? (
           <div className="flex">
             <Button ghost auto onClick={handleWorkScroll}>Work</Button>
             <Spacer x={0.5} />
             <Button ghost auto onClick={handleAboutScroll}>About</Button>
-           
+            <Spacer x={0.5} />
             {showBlog && (
               <Button ghost auto onClick={() => router.push("/blog")}>Blog</Button>
             )}

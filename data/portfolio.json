@@ -5,7 +5,7 @@
 	"headerTaglineThree": "Educator and Freelancer",
 	"headerTaglineFour": "Based in San Francisco, CA.",
 	"showCursor": false,
-	"showBlog": false,
+	"showBlog": true,
 	"darkMode": true,
 	"showResume": true,
 	"socials": [
