@@ -96,29 +96,29 @@ export default function Home() {
         />
         
         <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
+          <div className="mt-5 mob:w-full text-2xl tablet:p-2 p-1 px-2">
             
             <h1
               ref={textOne}
-              className="text-3xl tablet:text-3xl laptop:text-3xl laptop:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+              className=" laptop:text-5xl w-full text-bold tablet:text-4xl mob:text-xl mob:text-center w-4/5 laptop:w-5/5"
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="text-3xl tablet:text-4xl laptop:text-5xl laptop:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="laptop:text-3xl w-full py-2 px-2 mob:text-lg laptop:w-5/5 mob:py-1 mob:text-center"
             >
               {data.headerTaglineTwo}
             </h1>
             <h1
               ref={textThree}
-              className="text-3xl tablet:text-4xl laptop:text-5xl laptop:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="laptop:text-2xl w-full py-2 px-2 mob:text-lg laptop:w-5/5 px-2 mob:text-center mob:py-1"
             >
               {data.headerTaglineThree}
             </h1>
             <h1
               ref={textFour}
-              className="text-3xl tablet:text-4xl laptop:text-5xl laptop:text-5xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="laptop:text-xl w-full px-2 py-1 mob:text-sm laptop:w-5/5 mob:text-center"
             >
               {data.headerTaglineFour}
             </h1>
