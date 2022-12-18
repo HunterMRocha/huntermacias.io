@@ -24,7 +24,7 @@ const SubscriptionCard = ({ type, price, benefits }) => {
 							
 							<Row>
 								<Col > 
-								<SiDiscord color='MediumBlue' size={20}/> 
+								{/* <SiDiscord color='MediumBlue' size={20}/>  */}
 								</Col>
 								<Col>
 									<Text b size={16}>{benefits}</Text>
