@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // import CardIcon from "../images/credit-card.svg";
 // import ProductImage from "../images/product-image.jpg";
 import { loadStripe } from "@stripe/stripe-js";
-
+import { useTheme } from "next-themes";
 
 import { Card, Container, Col, Grid, Image, Text, Button, Row } from "@nextui-org/react";
 
@@ -16,6 +16,7 @@ const getStripe = () => {
   }
   return stripePromise;
 };
+
 
 const Checkout = ({ type, price, benefits }) => {
   const [stripeError, setStripeError] = useState(null);
@@ -48,20 +49,35 @@ const Checkout = ({ type, price, benefits }) => {
 
   if (stripeError) alert(stripeError);
 
+
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+
   return (
-	<>
-	<Grid.Container>
+	  
+	  <>
+	
+	
+	<Grid.Container >
 		<Grid sm={12}>
-			<Card isHoverable="true" isPressable="true" css={{ backgroundColor: "#1F2937", mw: "400px" }}>
+		<div className={`w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300 ${
+		mounted && theme === "dark" ? "hover:bg-slate-800" : "hover:bg-slate-50 "
+	  } hover:scale-105 link`}
+	>
+			<Card isHoverable="true" isPressable="true" css={{ mw: "400px" }}>
 				<Card.Header>
-					<Text size={22} color="#EF4444" b>{type + ' - Sponsorship'}</Text>
+					<Text size={22} b>{type + ' - Sponsorship'}</Text>
 				</Card.Header>
 
 				<Card.Divider />
-					<Container>
+					<Container >
 						<Card.Body css={{ height: '16vw', width: '30vm'}}>
 							<Row>
-							<Text color="#EF4444" size={18} i b >Benefits Include: </Text>
+							<Text size={18} i b >Benefits Include: </Text>
 							</Row>
 
 							
@@ -70,7 +86,7 @@ const Checkout = ({ type, price, benefits }) => {
 								{/* <SiDiscord color='MediumBlue' size={20}/>  */}
 								</Col>
 								<Col>
-									<Text color="#38BDF8" b size={16}>{benefits}</Text>
+									<Text b size={16}>{benefits}</Text>
 								</Col>
 								
 							</Row>
@@ -80,7 +96,7 @@ const Checkout = ({ type, price, benefits }) => {
 									<Col css={{width: "40px"}}>
 										 {/* <SiInstagram color='Salmon' size={20}/> */}
 										  </Col>
-									<Col> <Text b color="#F472B6" size={16}>Instagram Story and Post </Text> </Col>
+									<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
 								</Row>
 							)}
 
@@ -89,7 +105,7 @@ const Checkout = ({ type, price, benefits }) => {
 									<Col css={{width: "40px"}}> 
 									{/* <SiInstagram color='Salmon' size={20}/> */}
 									 </Col>
-									<Col> <Text b color="#F472B6" size={16}>Instagram Story and Post </Text> </Col>
+									<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
 								</Row>
 							)}		
 							
@@ -100,7 +116,7 @@ const Checkout = ({ type, price, benefits }) => {
 										 {/* <SiYoutube color='FireBrick' size={20}/> */}
 										  </Col>
 									<Col>
-										<Text b color="#E11D48" size={16}>YouTube Ad - 30 seconds</Text>
+										<Text b size={16}>YouTube Ad - 30 seconds</Text>
 									</Col>
 									
 								</Row>
@@ -113,7 +129,7 @@ const Checkout = ({ type, price, benefits }) => {
 								{/* <FcLike color='Salmon' size={20}/>  */}
 								</Col>
 								<Col>
-									<Text b color="#EAB308" size={16}>Custom Ad displayed on site</Text>
+									<Text b size={16}>Custom Ad displayed on site</Text>
 								</Col>
 							</Row>
 					
@@ -130,7 +146,7 @@ const Checkout = ({ type, price, benefits }) => {
 							onClick={redirectToCheckout}
 							disabled={isLoading}
 							className="hover:tracking-wider" 
-							style={{ fontSize: 20, color: "MistyRose" }} 
+							style={{ fontSize: 20 }} 
 							size="lg"
 							>{type} 
 						</Button>
@@ -138,6 +154,7 @@ const Checkout = ({ type, price, benefits }) => {
 				</Card.Footer>
 
 			</Card>
+	</div>
 		</Grid>
 	</Grid.Container>
 	</>
