@@ -127,7 +127,7 @@ export default function Home() {
               {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
           <h1 className="tablet:m-2 text-4xl text-bold text-center">Projects</h1>
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-4">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
@@ -162,7 +162,8 @@ export default function Home() {
           <Container>
             
               <div 
-              className="mt-5 tablet:m-8 grid mob:grid-cols-1 tablet:grid-cols-2 laptop:justify-center laptop:grid-cols-3 gap-8"
+              className="mt-5 mob:min-h-full mob:mb-14 mob:grid-cols-1 mob:gap-y-10 tablet:m-8 grid tablet:grid-cols-2 
+                        laptop:justify-center laptop:grid-cols-3 gap-8"
               > 
                 {subdata.map((type, index) => (
                     <Checkout 
