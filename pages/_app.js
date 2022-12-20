@@ -6,22 +6,22 @@ import { SSRProvider } from 'react-bootstrap';
 // ReactGA.initialize(TRACKING_ID);
 import '@aws-amplify/ui-react/styles.css'
 import { AmplifyProvider } from '@aws-amplify/ui-react';
-import Amplify from 'aws-amplify';
+// import Amplify from 'aws-amplify';
 
-// import config from './aws-exports';
+// import config from 'aws-exports';
 
-// Amplify.configure(config);
+// Auth.configure(config);
 
-import ReactDOM from 'react-dom/client';
+// import ReactDOM from 'react-dom/client';
 
 const App = ({ Component, pageProps }) => {
   return (
-    <SSRProvider>
+    <AmplifyProvider>
       <ThemeProvider>
         <Component {...pageProps} />
       </ThemeProvider>
     
-    </SSRProvider>
+    </AmplifyProvider>
     
   );
 };
