@@ -17,6 +17,7 @@ import FeaturedSponsors from "../components/FeaturedSponsors";
 
 import { Table, Tooltip, User } from "@nextui-org/react";
 
+
 // Local Data
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"

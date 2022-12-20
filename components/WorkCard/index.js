@@ -3,7 +3,7 @@ import React from "react";
 const WorkCard = ({ img, name, description, onClick }) => {
   return (
     <div
-      className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
+      className="outline hover:outline-green-300 outline-green-300/10 overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
       onClick={onClick}
     >
       <div
@@ -16,7 +16,7 @@ const WorkCard = ({ img, name, description, onClick }) => {
           src={img}
         ></img>
       </div>
-      <h1 className="mt-5 text-4xl font-medium">
+      <h1 className="hover:text-emerald-400 text-emerald-500 mt-5 text-4xl">
         {name ? name : "Project Name"}
       </h1>
       <h2 className="text-md opacity-50">
