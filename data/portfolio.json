@@ -36,35 +36,40 @@
 			"title": "Project - 0001",
 			"description": "Game Development - Minecraft Clone",
 			"imageSrc": "https://media-exp1.licdn.com/dms/image/C5622AQF8ubCg7oZx9A/feedshare-shrink_2048_1536/0/1670285417361?e=1673481600&v=beta&t=Fk914eQ2-n1uoDtP_R9YVEyIQ-xLOqkzXeVihg3jzNA",
-			"url": "https://github.com/HunterMRocha/Minecraft-clone"
+			"url": "https://github.com/HunterMRocha/Minecraft-clone",
+			"category": ["python", "game-dev"]
 		},
 		{
 			"id": "2",
 			"title": "Project - 0010",
 			"description": "Game Development - Pacman Recreation",
 			"imageSrc": "https://github.com/HunterMRocha/pacman/blob/main/Screen%20Shot%202022-12-10%20at%208.59.14%20AM.png?raw=true",
-			"url": "https://github.com/HunterMRocha/pacman"
+			"url": "https://github.com/HunterMRocha/pacman",
+			"category": ["python", "game-dev"]
 		},
 		{
 			"id": "3",
 			"title": "Project - 0011",
 			"description": "Game Development - Spave Invaders",
 			"imageSrc": "https://github.com/HunterMRocha/Space-Invaders/blob/main/sv-demo.png?raw=true",
-			"url": "https://github.com/HunterMRocha/Space-Invaders"
+			"url": "https://github.com/HunterMRocha/Space-Invaders",
+			"category": ["python", "game-dev"]
 		},
 		{
 			"id": "4",
 			"title": "Project - 0100",
 			"description": "Modern Stack React App (Next.js + TailwindCSS)",
 			"imageSrc": "https://github.com/HunterMRocha/react-portfolio-template/blob/main/blogs-demo.png?raw=true",
-			"url": "http://huntermacias.io/"
+			"url": "http://huntermacias.io/",
+			"category": ["python", "react"]
 		},
 		{
 			"id": "5",
 			"title": "Project - 0101",
 			"description": "Machine Learning & A.I. - Snake Game",
 			"imageSrc": "https://st4.depositphotos.com/1401766/22862/v/1600/depositphotos_228621786-stock-illustration-doodle-download-bar-coming-soon.jpg",
-			"url": "http://huntermacias.io/"
+			"url": "http://huntermacias.io/",
+			"category": ["python", "other", "game-dev"]
 		}
 	],
 	"services": [
@@ -78,19 +83,22 @@
 			"id": "2",
 			"title": "Programming Fundamentals 🖥️",
 			"description": "We design personalized curriculums based on your interests and skillset.",
-			"price": "package: $24.99/hr"
+			"price": "package: $24.99/hr",
+			"category": "Python"
 		},
 		{
 			"id": "3",
 			"title": "Machine Learning & Artificial Inteligence 🚀",
 			"description": "Go Zero-to-Hero with our ML/AI course",
-			"price": "package: $44.99/hr"
+			"price": "package: $44.99/hr",
+			"category": "Python"
 		},
 		{
 			"id": "4",
 			"title": "Research & Design ✨",
 			"description": "Learn how to research like a software developer and how to use popular industry design frameworks.",
-			"price": "package: $34.99/hr"
+			"price": "package: $34.99/hr",
+			"category": "Other"
 		}
 	],
 	"aboutpara": "Hi there -- I'm Hunter! I’m interested in learning more about ML/AI, algorithms, game development, and most importantly I’m interested in developing my skills. I hope to work for companies that value continual learning, a friendly work environment. During my free time, I create game development YouTube videos and teach others how to code. Outside of my professional work, I love being outdoors and socializing with others.",

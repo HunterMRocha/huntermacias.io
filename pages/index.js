@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
@@ -14,6 +14,7 @@ import SubscriptionCard from "../components/SubscriptionCard";
 import Checkout from "../components/Checkout"
 import { Card, Container, Row, Col, Text} from '@nextui-org/react';
 import FeaturedSponsors from "../components/FeaturedSponsors";
+import { Dropdown } from "@nextui-org/react";
 
 import { Table, Tooltip, User } from "@nextui-org/react";
 
@@ -22,6 +23,7 @@ import { Table, Tooltip, User } from "@nextui-org/react";
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
 import { useTheme } from "next-themes";
+import DropdownButton from "../components/DropdownButton/DropdownButton";
 
 // import ReactGA from "react-ga"
 
@@ -36,10 +38,14 @@ export default function Home() {
   const textThree = useRef();
   const textFour = useRef();
 
-  // google analytics 
-  // useEffect(() => {
-  //   ReactGA.pageview(window.location.pathname);
-  // }); 
+  // used to filter projects
+  const [selected, setSelected] = React.useState(new Set(["text"]));
+
+  const selectedValue = React.useMemo(
+    () => Array.from(selected).join(", ").replaceAll("_", " "),
+    [selected]
+  );
+
  
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -126,16 +132,56 @@ export default function Home() {
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
               {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
-          <h1 className="tablet:m-2 text-4xl text-bold text-center">Projects</h1>
+          <div className="flex flex-start space-x-4 tablet:m-2 text-4xl text-bold">
+            <h1>Projects</h1>
+            <div>
+              <Dropdown>
+                  <Dropdown.Button flat ghost color="primary" css={{ tt: "capitalize" }}>
+                      {selectedValue}
+                  </Dropdown.Button>
+                  <Dropdown.Menu
+                      aria-label="Single selection actions"
+                      color="primary"
+                      disallowEmptySelection
+                      selectionMode="single"
+                      selectedKeys={selected}
+                      onSelectionChange={setSelected}
+                  >
+                    
+                        <Dropdown.Item key="all">All</Dropdown.Item>
+                        <Dropdown.Item key="python">Python</Dropdown.Item>
+                        <Dropdown.Item key="react">React</Dropdown.Item>
+                        <Dropdown.Item key="game-dev">Game Dev.</Dropdown.Item>
+                        <Dropdown.Item key="other">Other</Dropdown.Item>
+                      
+                  </Dropdown.Menu>
+              </Dropdown> 
+
+            
+            </div>
+
+          </div>
+          
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-4">
             {data.projects.map((project) => (
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
-              />
+              selected.currentKey === "all" ? (
+                <WorkCard
+                  key={project.id}
+                  img={project.imageSrc}
+                  name={project.title}
+                  description={project.description}
+                  onClick={() => window.open(project.url)}
+                />
+              ) :
+              project.category.includes(selected.currentKey) ? (
+                <WorkCard
+                  key={project.id}
+                  img={project.imageSrc}
+                  name={project.title}
+                  description={project.description}
+                  onClick={() => window.open(project.url)}
+                />
+              ) : null
             ))}
           </div>
         </div>
