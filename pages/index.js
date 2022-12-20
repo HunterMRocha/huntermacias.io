@@ -160,10 +160,10 @@ export default function Home() {
               } shadow-md rounded-md`}>
           <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become A Sponsor - Coming Soon ! </h1>
           <Container>
-            <Row> 
+            
               <div 
-              className=
-              "mt-5 grid tablet:m-5 pl-4 flex justify-between tablet:gap-12 tablet:pb-10 tablet:grid-cols-2 laptop:grid-cols-3 laptop:ml-25 laptop:pb-20 gap-4 mob:grid-cols-1 mob:gap-16 mob:pb-10 desktop:gap-20 desktop:ml-40 desktop:p-10"> 
+              className="mt-5 tablet:m-8 grid mob:grid-cols-1 tablet:grid-cols-2 laptop:justify-center laptop:grid-cols-3 gap-8"
+              > 
                 {subdata.map((type, index) => (
                     <Checkout 
                       key={index}
@@ -173,7 +173,7 @@ export default function Home() {
                     />
                 ))}
               </div>
-            </Row>
+            
           </Container>
  
         </div>

@@ -64,7 +64,7 @@ const Checkout = ({ type, price, benefits }) => {
 	
 	<Grid.Container >
 		<Grid sm={12}>
-		<div className={`w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300 ${
+		<div className={`w-full rounded-lg transition-all ease-out duration-300 ${
 		mounted && theme === "dark" ? "hover:bg-slate-800" : "hover:bg-slate-50 "
 	  } hover:scale-105 link`}
 	>
@@ -147,7 +147,7 @@ const Checkout = ({ type, price, benefits }) => {
 							disabled={isLoading}
 							className="hover:tracking-wider" 
 							style={{ fontSize: 20 }} 
-							size="lg"
+							size="md"
 							>{type} 
 						</Button>
 					</Row>
