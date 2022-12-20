@@ -19,7 +19,7 @@ const BlogEditor = ({ post, close, refresh }) => {
   });
 
   const savePost = async () => {
-    if (process.env.NODE_ENV === "development") {
+    if (process.env.NODE_ENV != "development") {
       await fetch("/api/blog/edit", {
         method: "POST",
         headers: {

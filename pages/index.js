@@ -23,7 +23,6 @@ import { Table, Tooltip, User } from "@nextui-org/react";
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
 import { useTheme } from "next-themes";
-import DropdownButton from "../components/DropdownButton/DropdownButton";
 
 // import ReactGA from "react-ga"
 
@@ -132,7 +131,7 @@ export default function Home() {
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
               {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
-          <div className="flex flex-start space-x-4 tablet:m-2 text-4xl text-bold">
+          <div className="mob:w-full flex flex-start space-x-4 tablet:m-2 text-4xl text-bold">
             <h1>Projects</h1>
             <div>
               <Dropdown>
@@ -232,7 +231,7 @@ export default function Home() {
 
         
         {/* This button should not go into production */}
-        {process.env.NODE_ENV === "development" && (
+        {process.env.NODE_ENV != "development" && (
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
               <Button type="primary">Edit Data</Button>

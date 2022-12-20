@@ -38,7 +38,7 @@ function Blog ({ posts }) {
   }, []);
 
   const createBlog = () => {
-    if (process.env.NODE_ENV === "development") {
+    // if (process.env.NODE_ENV != "development") {
       fetch("/api/blog", {
         method: "POST",
         headers: {
@@ -47,13 +47,13 @@ function Blog ({ posts }) {
       }).then(() => {
         router.reload(window.location.pathname);
       });
-    } else {
-      alert("This thing only works in development mode.");
-    }
+    // } else {
+    //   alert("This thing only works in development mode.");
+    // }
   };
 
   const deleteBlog = (slug) => {
-    if (process.env.NODE_ENV === "development") {
+    if (process.env.NODE_ENV != "development") {
       fetch("/api/blog", {
         method: "DELETE",
         headers: {
@@ -109,7 +109,7 @@ function Blog ({ posts }) {
                     <span className="text-sm mt-5 opacity-25">
                       {ISOToDate(post.date)}
                     </span>
-                    {process.env.NODE_ENV === "development" && mounted && (
+                    {process.env.NODE_ENV != "development" && mounted && (
                       <div className="absolute top-0 right-0">
                         <Button
                           onClick={(e) => {
@@ -127,7 +127,7 @@ function Blog ({ posts }) {
             </div>
           </div>
         </div>
-        {process.env.NODE_ENV === "development" && mounted && (
+        {/** process.env.NODE_ENV === "production"**/ true && mounted && (
           <div className="fixed bottom-6 right-6">
             <Button onClick={createBlog} type={"primary"}>
               Add New Post +{" "}
