@@ -12,7 +12,7 @@ import Link from "next/link";
 import Cursor from "../components/Cursor";
 import SubscriptionCard from "../components/SubscriptionCard";
 import Checkout from "../components/Checkout"
-import { Card, Container, Row, Col, Text} from '@nextui-org/react';
+import { Card, Container, Row, Col, Text, Avatar} from '@nextui-org/react';
 import FeaturedSponsors from "../components/FeaturedSponsors";
 import { Dropdown } from "@nextui-org/react";
 
@@ -84,7 +84,11 @@ export default function Home() {
       
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name}</title>
+        <div>
+          <title>{data.name}</title>
+
+        </div>
+         
       </Head>
       
 
@@ -201,8 +205,8 @@ export default function Home() {
 
           {/* subscriptions services */}
         <div className={`mt-10 laptop:mt-30 laptop:p-2 rounded ${
-                theme === "dark" ? "bg-slate-900" : "bg-white"
-              } shadow-md rounded-md`}>
+                theme === "dark" ? "bg-[#171717]" : "bg-white"
+              } shadow-sm rounded-md`}>
           <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become A Sponsor - Coming Soon ! </h1>
           <Container>
             
@@ -225,19 +229,15 @@ export default function Home() {
         </div>
           <FeaturedSponsors className='pt-4' />
 
-        {/* <div>
-            <Checkout />
-        </div> */}
-
         
         {/* This button should not go into production */}
-        {process.env.NODE_ENV != "development" && (
+        {/* {process.env.NODE_ENV != "development" && ( */}
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
               <Button type="primary">Edit Data</Button>
             </Link>
           </div>
-        )}
+        {/* )} */}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-2 text-4xl text-bold">About</h1>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-4/5 pb-20">

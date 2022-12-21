@@ -37,7 +37,7 @@ const BlogEditor = ({ post, close, refresh }) => {
         }
       });
     } else {
-      alert("This thing only works in development mode.");
+      alert("This feature is for admin use only. Please contact huntermacias20@gmail.com for inquiries ");
     }
   };
 

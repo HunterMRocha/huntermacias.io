@@ -49,6 +49,7 @@ const Edit = () => {
             "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
 
           url: "http://chetanverma.com/",
+          category: ["all"]
         },
       ],
     });
@@ -211,7 +212,7 @@ const Edit = () => {
 
         {/* HEADER */}
         {currentTabs === "HEADER" && (
-          <div className="mt-10">
+          <div className="mt-8 mob:flex-col mob:w-auto smt-10">
             <div className="flex items-center">
               <label className="w-1/5 text-lg opacity-50">Name</label>
               <input
@@ -410,6 +411,7 @@ const Edit = () => {
                       type="text"
                     ></input>
                   </div>
+
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">
                       Image Source
@@ -426,6 +428,7 @@ const Edit = () => {
                       type="text"
                     ></input>
                   </div>
+
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">url</label>
                     <input
@@ -440,6 +443,23 @@ const Edit = () => {
                       type="text"
                     ></input>
                   </div>
+
+                  {/* <div className="flex items-center mt-2">
+                    <label className="w-1/5 text-lg opacity-50">Category</label>
+                    <input
+                      value={project.url}
+                      onChange={(e) =>
+                        editProjects(index, {
+                          ...project,
+                          category: e.target.value,
+                        })
+                      }
+                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                      type="text"
+                    ></input>
+                  </div> */}
+
+
                   <hr className="my-10"></hr>
                 </div>
               ))}
