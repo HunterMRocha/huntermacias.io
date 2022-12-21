@@ -33,7 +33,7 @@
     "projects": [
         {
             "id": "1",
-            "title": "Minecrafe Recreation",
+            "title": "Minecraft Recreation",
             "description": "Game Development - Minecraft Clone",
             "imageSrc": "https://media-exp1.licdn.com/dms/image/C5622AQF8ubCg7oZx9A/feedshare-shrink_2048_1536/0/1670285417361?e=1673481600&v=beta&t=Fk914eQ2-n1uoDtP_R9YVEyIQ-xLOqkzXeVihg3jzNA",
             "url": "https://github.com/HunterMRocha/Minecraft-clone",
@@ -70,7 +70,7 @@
         {
             "id": "4",
             "title": "Personal Portfolio  - Next.js",
-            "description": "Web Development +TailwindCSS",
+            "description": "Web Development - TailwindCSS",
             "imageSrc": "https://github.com/HunterMRocha/react-portfolio-template/blob/main/blogs-demo.png?raw=true",
             "url": "http://huntermacias.io/",
             "category": [
@@ -82,7 +82,7 @@
         {
             "id": "5",
             "title": "Snake Game + A.I",
-            "description": "Machine Learning & A.I. - Snake Game",
+            "description": "ML / AI - PyGaem + Tensor",
             "imageSrc": "https://hellocodeclub.b-cdn.net/wp-content/uploads/2021/11/snake_game_bitmap.png",
             "url": "http://huntermacias.io/",
             "category": [
