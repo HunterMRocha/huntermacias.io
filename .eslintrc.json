@@ -2,6 +2,6 @@
   "extends": "next/core-web-vitals",
 
   "rules": {
-    "import/no-unresolved": "off",
+    "import/no-unresolved": "off"
   }
 }
