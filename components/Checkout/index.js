@@ -51,7 +51,8 @@ const Checkout = ({ type, price, benefits }) => {
 
 
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState();
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);

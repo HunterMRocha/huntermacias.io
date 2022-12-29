@@ -26,7 +26,7 @@ const BlogPost = ({ post }) => {
   return (
     <>
       <Head>
-        <html lang="en" />
+        {/* <html lang="en" /> */}
         <title>{"Blog - " + post.title}</title>
         <meta name="description" content={post.preview} />
       </Head>
