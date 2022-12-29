@@ -12,9 +12,38 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Auth } from 'aws-amplify';
 import { Image } from "@nextui-org/react";
-import awsExports from './aws-exports';
+// import awsExports from '../../data/aws-exports';
 
-Auth.configure(awsExports);
+Auth.configure(
+  {
+    "aws_project_region": "us-west-2",
+    "aws_cognito_identity_pool_id": "us-west-2:41803657-2682-4c2f-a834-9b4131988348",
+    "aws_cognito_region": "us-west-2",
+    "aws_user_pools_id": "us-west-2_JqkvOx2sc",
+    "aws_user_pools_web_client_id": "4ev8ivporc2rbf4lpdquqf37ld",
+    "oauth": {},
+    "aws_cognito_username_attributes": [
+        "EMAIL"
+    ],
+    "aws_cognito_social_providers": [],
+    "aws_cognito_signup_attributes": [
+        "EMAIL"
+    ],
+    "aws_cognito_mfa_configuration": "OFF",
+    "aws_cognito_mfa_types": [
+        "SMS"
+    ],
+    "aws_cognito_password_protection_settings": {
+        "passwordPolicyMinLength": 8,
+        "passwordPolicyCharacters": []
+    },
+    "aws_cognito_verification_mechanisms": [
+        "EMAIL"
+    ],
+    "aws_user_files_s3_bucket": "huntermaciasio9b99694a2f704a8a8853dd222d53679a01823-staging",
+    "aws_user_files_s3_bucket_region": "us-west-2"
+  }
+);
 
 function Blog ({ posts }) {
   const showBlog = useRef(data.showBlog);
