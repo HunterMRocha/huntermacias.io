@@ -143,7 +143,7 @@ const Checkout = ({ type, price, benefits }) => {
 					<Row justify="flex-end">
 						
 						<Button
-							onClick={redirectToCheckout}
+							onPress={redirectToCheckout}
 							disabled={isLoading}
 							className="hover:tracking-wider" 
 							style={{ fontSize: 20 }} 

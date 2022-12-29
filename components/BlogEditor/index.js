@@ -53,21 +53,21 @@ const BlogEditor = ({ post, close, refresh }) => {
             <div className="flex items-center justify-between">
               <h1 className="text-4xl">{blogVariables.title}</h1>
               <div className="flex items-center">
-                <Button onClick={savePost} type="primary">
+                <Button onPress={savePost} type="primary">
                   Save
                 </Button>
-                <Button onClick={close}>Close</Button>
+                <Button onPress={close}>Close</Button>
               </div>
             </div>
             <div className="flex items-center">
               <Button
-                onClick={() => setCurrentTabs("BLOGDETAILS")}
+                onPress={() => setCurrentTabs("BLOGDETAILS")}
                 type={currentTabs === "BLOGDETAILS" && "primary"}
               >
                 Blog Details
               </Button>
               <Button
-                onClick={() => setCurrentTabs("CONTENT")}
+                onPress={() => setCurrentTabs("CONTENT")}
                 type={currentTabs === "CONTENT" && "primary"}
               >
                 Content

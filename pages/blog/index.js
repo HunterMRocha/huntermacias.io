@@ -8,12 +8,11 @@ import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
-// import { Authenticator } from "aws-amplify/ui-react";
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Auth } from 'aws-amplify';
 import { Image } from "@nextui-org/react";
-import awsExports from './aws-exports';
+import awsExports from '../../data/aws-exports';
 
 Auth.configure(awsExports);
 
@@ -69,21 +68,18 @@ function Blog ({ posts }) {
       alert("This thing only works in development mode.");
     }
   };
+
   // <Authenticator>
   return (
     showBlog.current && (
       <>
-        {data.showCursor && <Cursor />}
+        {/* {data.showCursor && <Cursor />} */}
         <Head>
+          <html lang="en" />
           <title>Blog</title>
         </Head>
-        <div
-          className={`container mx-auto mb-10 ${
-            data.showCursor && "cursor-none"
-          }`}
-        >
 
-          
+        <div className="container mx-auto mb-10">
           <Header isBlog={true}></Header>
           <div className="mt-10">
             <h1

@@ -5,18 +5,13 @@ import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
-import Footer from "../components/Footer";
+
 import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
 import Cursor from "../components/Cursor";
-import SubscriptionCard from "../components/SubscriptionCard";
 import Checkout from "../components/Checkout"
-import { Card, Container, Row, Col, Text, Avatar} from '@nextui-org/react';
+import { Container } from '@nextui-org/react';
 import FeaturedSponsors from "../components/FeaturedSponsors";
 import { Dropdown } from "@nextui-org/react";
-
-import { Table, Tooltip, User } from "@nextui-org/react";
 
 
 // Local Data
@@ -84,6 +79,7 @@ export default function Home() {
       
       {data.showCursor && <Cursor />}
       <Head>
+        {/* <html lang="en" /> */}
         <div>
           <title>{data.name}</title>
 
@@ -173,7 +169,7 @@ export default function Home() {
                   img={project.imageSrc}
                   name={project.title}
                   description={project.description}
-                  onClick={() => window.open(project.url)}
+                  onPress={() => window.open(project.url)}
                 />
               ) :
               project.category.includes(selected.currentKey) ? (
@@ -182,7 +178,7 @@ export default function Home() {
                   img={project.imageSrc}
                   name={project.title}
                   description={project.description}
-                  onClick={() => window.open(project.url)}
+                  onPress={() => window.open(project.url)}
                 />
               ) : null
             ))}
@@ -232,11 +228,11 @@ export default function Home() {
         
         {/* This button should not go into production */}
         {/* {process.env.NODE_ENV != "development" && ( */}
-          <div className="fixed bottom-5 right-5">
+          {/* <div className="fixed bottom-5 right-5">
             <Link href="/edit">
               <Button type="primary">Edit Data</Button>
             </Link>
-          </div>
+          </div> */}
         {/* )} */}
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-2 text-4xl text-bold">About</h1>

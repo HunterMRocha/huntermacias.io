@@ -157,7 +157,7 @@ const Edit = () => {
           <div className="flex items-center justify-between">
             <h1 className="text-6xl mb-4">Dashboard</h1>
             <div className="flex items-center">
-              <Button onClick={saveData} type="primary">
+              <Button onPress={saveData} type="primary">
                 Save
               </Button>
             </div>
@@ -166,42 +166,42 @@ const Edit = () => {
           <div className="flex items-center space-x-6">
             <Button
               ghost
-              onClick={() => setCurrentTabs("HEADER")}
+              onPress={() => setCurrentTabs("HEADER")}
               type={currentTabs === "HEADER" && "primary"}
             >
               Header
             </Button>
             <Button
               ghost
-              onClick={() => setCurrentTabs("PROJECTS")}
+              onPress={() => setCurrentTabs("PROJECTS")}
               type={currentTabs === "PROJECTS" && "primary"}
             >
               Projects
             </Button>
             <Button
               ghost
-              onClick={() => setCurrentTabs("SERVICES")}
+              onPress={() => setCurrentTabs("SERVICES")}
               type={currentTabs === "SERVICES" && "primary"}
             >
               Services
             </Button>
             <Button
               ghost
-              onClick={() => setCurrentTabs("ABOUT")}
+              onPress={() => setCurrentTabs("ABOUT")}
               type={currentTabs === "ABOUT" && "primary"}
             >
               About
             </Button>
             <Button
               ghost
-              onClick={() => setCurrentTabs("SOCIAL")}
+              onPress={() => setCurrentTabs("SOCIAL")}
               type={currentTabs === "SOCIAL" && "primary"}
             >
               Social
             </Button>
             <Button
               ghost
-              onClick={() => setCurrentTabs("RESUME")}
+              onPress={() => setCurrentTabs("RESUME")}
               type={currentTabs === "RESUME" && "primary"}
             >
               Resume
@@ -279,7 +279,7 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
                   ghost
-                  onClick={() => setData({ ...data, showBlog: true })}
+                  onPress={() => setData({ ...data, showBlog: true })}
                   type={data.showBlog && "primary"}
                 >
                   Yes
@@ -287,7 +287,7 @@ const Edit = () => {
                 <Button
                   ghost
                   color="error"
-                  onClick={() => setData({ ...data, showBlog: false })}
+                  onPress={() => setData({ ...data, showBlog: false })}
                   classes={
                     !data.showBlog && "bg-red-500 text-white hover:bg-red-600"
                   }
@@ -301,7 +301,7 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
                   ghost
-                  onClick={() => setData({ ...data, darkMode: true })}
+                  onPress={() => setData({ ...data, darkMode: true })}
                   type={data.darkMode && "primary"}
                 >
                   Yes
@@ -309,7 +309,7 @@ const Edit = () => {
                 <Button
                   ghost
                   color="error"
-                  onClick={() => setData({ ...data, darkMode: false })}
+                  onPress={() => setData({ ...data, darkMode: false })}
                   classes={
                     !data.darkMode && "bg-red-500 text-white hover:bg-red-600"
                   }
@@ -323,14 +323,14 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
                   ghost
-                  onClick={() => setData({ ...data, showResume: true })}
+                  onPress={() => setData({ ...data, showResume: true })}
                   type={data.showResume && "primary"}
                 >
                   Yes
                 </Button>
                 <Button
                   ghost color="error"
-                  onClick={() => setData({ ...data, showResume: false })}
+                  onPress={() => setData({ ...data, showResume: false })}
                   classes={
                     !data.showResume && "bg-red-500 text-white hover:bg-red-600"
                   }
@@ -344,7 +344,7 @@ const Edit = () => {
               <div className="w-4/5 ml-10 flex items-center space-x-4">
                 <Button
                   ghost
-                  onClick={() => setData({ ...data, showCursor: true })}
+                  onPress={() => setData({ ...data, showCursor: true })}
                   type={data.showCursor && "primary"}
                 >
                   Yes
@@ -352,7 +352,7 @@ const Edit = () => {
                 <Button
                   ghost
                   color="error"
-                  onClick={() => setData({ ...data, showCursor: false })}
+                  onPress={() => setData({ ...data, showCursor: false })}
                   classes={
                     !data.showCursor && "bg-red-500 text-white hover:bg-red-600"
                   }
@@ -374,7 +374,7 @@ const Edit = () => {
                     <Button
                       ghost
                       color="error"
-                      onClick={() => deleteProject(project.id)}
+                      onPress={() => deleteProject(project.id)}
                       type="primary"
                     >
                       Delete
@@ -466,7 +466,7 @@ const Edit = () => {
             </div>
 
             <div className="my-10">
-              <Button ghost onClick={addProject} type="primary" color="success">
+              <Button ghost onPress={addProject} type="primary" color="success">
                 Add Project +
               </Button>
             </div>
@@ -483,7 +483,7 @@ const Edit = () => {
                     <Button
                       ghost
                       color="error"
-                      onClick={() => deleteService(service.id)}
+                      onPress={() => deleteService(service.id)}
                       type="primary"
                     >
                       Delete
@@ -523,7 +523,7 @@ const Edit = () => {
               ))}
             </div>
             <div className="my-10">
-              <Button ghost color="success" onClick={addService} type="primary">
+              <Button ghost color="success" onPress={addService} type="primary">
                 Add Service +
               </Button>
             </div>
@@ -553,7 +553,7 @@ const Edit = () => {
                     <Button
                       ghost
                       color='error'
-                      onClick={() => deleteSocials(social.id)}
+                      onPress={() => deleteSocials(social.id)}
                       type="primary"
                     >
                       Delete
@@ -592,7 +592,7 @@ const Edit = () => {
               </>
             ))}
             <div className="my-10">
-              <Button ghost color='success' onClick={addSocials} type="primary">
+              <Button ghost color='success' onPress={addSocials} type="primary">
                 Add Social +
               </Button>
             </div>
@@ -641,7 +641,7 @@ const Edit = () => {
                     <Button
                       ghost
                       color="error"
-                      // onClick={() => deleteProject(project.id)}
+                      // onPress={() => deleteProject(project.id)}
                       type="primary"
                     >
                       Delete
@@ -711,7 +711,7 @@ const Edit = () => {
               ))}
             </div>
             <div className="my-10">
-              <Button ghost color='success' onClick={handleAddExperiences} type="primary">
+              <Button ghost color='success' onPress={handleAddExperiences} type="primary">
                 Add Experience +
               </Button>
             </div>
@@ -807,7 +807,7 @@ const Edit = () => {
                       <Button
                         ghost
                         color="error"
-                        onClick={() =>
+                        onPress={() =>
                           setData({
                             ...data,
                             resume: {
@@ -828,7 +828,7 @@ const Edit = () => {
                     color="success"
                     type="primary"
                     classes="hover:scale-100"
-                    onClick={() =>
+                    onPress={() =>
                       setData({
                         ...data,
                         resume: {
@@ -869,7 +869,7 @@ const Edit = () => {
                       <Button
                         ghost
                         color="error"
-                        onClick={() =>
+                        onPress={() =>
                           setData({
                             ...data,
                             resume: {
@@ -888,7 +888,7 @@ const Edit = () => {
                   <Button
                     ghost
                     color="success"
-                    onClick={() =>
+                    onPress={() =>
                       setData({
                         ...data,
                         resume: {
@@ -931,7 +931,7 @@ const Edit = () => {
                       <Button
                         ghost
                         color="error"
-                        onClick={() =>
+                        onPress={() =>
                           setData({
                             ...data,
                             resume: {
@@ -950,7 +950,7 @@ const Edit = () => {
                   <Button
                     ghost
                     color="success"
-                    onClick={() =>
+                    onPress={() =>
                       setData({
                         ...data,
                         resume: {

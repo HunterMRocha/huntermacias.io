@@ -15,26 +15,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   const { name, showBlog, showResume } = data;
 
-  const [email, setEmail] = useState('none');
-  const [password, setPassword] = useState('noneP');
-
-  const onChange = event => {
-    setEmail({email:event.target.value});
-    console.log("email: ", email); 
-  
-  }
-
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  const [visible, setVisible] = React.useState(false);
-  const handler = () => setVisible(true);
-  
-  const closeHandler = () => {
-    setVisible(false);
-    console.log("closed");
-  };
+ 
 
   return (
     <>
@@ -44,7 +29,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
               <h1
-                onClick={() => router.push("/")}
+                onPress={() => router.push("/")}
                 className="font-medium p-2 laptop:p-0 link"
               >
                 {name}.
@@ -54,7 +39,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 {data.darkMode && (
                   <Button
                     ghost auto
-                    onClick={() =>
+                    onPress={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
@@ -63,6 +48,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
+                      alt=''
                     ></Image>
                   </Button>
                 )}
@@ -79,6 +65,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       ? "cancel.svg"
                       : "cancel-white.svg"
                     }`}
+                    alt=''
                   ></Image>
                 </Popover.Button>
               </div>
@@ -90,23 +77,23 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button auto ghost onClick={handleWorkScroll}>Work</Button>
+                  <Button auto ghost onPress={handleWorkScroll}>Work</Button>
                   <Spacer x={0.5} />
-                  <Button auto ghost onClick={handleAboutScroll}>About</Button>
+                  <Button auto ghost onPress={handleAboutScroll}>About</Button>
                   <Spacer x={0.5} />
                   {showBlog && (
-                    <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button auto ghost onPress={() => router.push("/blog")}>Blog</Button>
                   )}
                   <Spacer x={0.5} />
                   {showResume && (
                     <Button auto
                       ghost 
-                      onClick={() => window.open("huntermacias20@gmail.com")}>
+                      onPress={() => window.open("huntermacias20@gmail.com")}>
                       Resume
                     </Button>
                   )}
                   <Spacer x={0.5} />
-                  <Button ghost auto onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
+                  <Button ghost auto onPress={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
                     YouTube
                   </Button>
                   <Spacer x={0.5} />
@@ -114,22 +101,22 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
-                  <Button ghost auto onClick={() => router.push("/")} classes="first:ml-1">
+                  <Button ghost auto onPress={() => router.push("/")} classes="first:ml-1">
                     Home
                   </Button>
                   <Spacer x={0.5} />
-                  <Button ghost auto onClick={() => router.push("/")} classes="first:ml-1">
+                  <Button ghost auto onPress={() => router.push("/")} classes="first:ml-1">
                     About
                   </Button>
                   <Spacer x={0.5} />
                   {showBlog && (
-                    <Button ghost auto onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button ghost auto onPress={() => router.push("/blog")}>Blog</Button>
                   )}
                    <Spacer x={0.5} />
                   {showResume && (
                     <Button
                       ghost auto 
-                      onClick={() => router.push("/resume")}
+                      onPress={() => router.push("/resume")}
                       classes="first:ml-1"
                     >
                       Resume
@@ -138,7 +125,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Spacer x={0.5} />
                   <Button
                     ghost
-                    onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
+                    onPress={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
                     YouTube
                   </Button>
                   <Spacer x={0.5} />
@@ -155,7 +142,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         } dark:text-white top-0 z-10 tablet:flex`}
       >
         <h1
-          onClick={() => router.push("/")}
+          onPress={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
           {name}.
@@ -166,26 +153,26 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {/* bottom buttons */}
         {!isBlog ? (
           <div className="flex">
-            <Button ghost auto onClick={handleWorkScroll}>Work</Button>
+            <Button ghost auto onPress={handleWorkScroll}>Work</Button>
             <Spacer x={0.5} />
-            <Button ghost auto onClick={handleAboutScroll}>About</Button>
+            <Button ghost auto onPress={handleAboutScroll}>About</Button>
             <Spacer x={0.5} />
             {showBlog && (
-              <Button ghost auto onClick={() => router.push("/blog")}>Blog</Button>
+              <Button ghost auto onPress={() => router.push("/blog")}>Blog</Button>
             )}
             <Spacer x={0.5} />
             {showResume && (
               
               <Button
                 ghost auto
-                onClick={() => router.push("/resume")}
+                onPress={() => router.push("/resume")}
                 classes="first:ml-1"
               >
                 Resume
               </Button>
             )}
             <Spacer x={0.5} />
-            <Button ghost auto onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
+            <Button ghost auto onPress={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
               YouTube
             </Button>
             <Spacer x={0.5} />
@@ -193,29 +180,30 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {mounted && theme && data.darkMode && (
               <Button
                 ghost auto 
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onPress={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 <Image
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  alt=''
                 ></Image>
               </Button>
             )}
           </div>
         ) : (
           <div className="flex">
-            <Button ghost auto onClick={() => router.push("/")}>Home</Button>
+            <Button ghost auto onPress={() => router.push("/")}>Home</Button>
             <Spacer x={0.5} />
-            <Button ghost auto onClick={() => router.push("/")}>About</Button>
+            <Button ghost auto onPress={() => router.push("/")}>About</Button>
             <Spacer x={0.5} />
             {showBlog && (
-              <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
+              <Button auto ghost onPress={() => router.push("/blog")}>Blog</Button>
             )}
             <Spacer x={0.5} />
             {showResume && (
               <Button
                 auto ghost
-                onClick={() => router.push("/resume")}
+                onPress={() => router.push("/resume")}
                 classes="first:ml-1"
               >
                 Resume
@@ -223,17 +211,18 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               
             )}
             <Spacer x={0.5} />
-            <Button auto ghost onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
+            <Button auto ghost onPress={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
               YouTube
             </Button>
             <Spacer x={0.5} />
             {mounted && theme && data.darkMode && (
               <Button auto ghost
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onPress={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 <Image
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
+                  alt=''
                 ></Image>
               </Button>
             )}
