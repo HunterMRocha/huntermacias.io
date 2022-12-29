@@ -16,12 +16,15 @@ import { AmplifyProvider } from '@aws-amplify/ui-react';
 
 const App = ({ Component, pageProps }) => {
   return (
-    <AmplifyProvider>
-      <ThemeProvider>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    
-    </AmplifyProvider>
+    <SSRProvider>
+
+      <AmplifyProvider>
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      
+      </AmplifyProvider>
+    </SSRProvider>
     
   );
 };
