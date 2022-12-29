@@ -12,7 +12,7 @@ import { getAllPosts } from "../../utils/api";
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Auth } from 'aws-amplify';
-
+import { Image } from "@nextui-org/react";
 import awsExports from './../../data/aws-exports';
 
 Auth.configure(awsExports);
@@ -101,11 +101,11 @@ function Blog ({ posts }) {
                     key={post.slug}
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
-                    <img
+                    <Image
                       className="w-full h-60 rounded-lg border hover:border-emerald-300 shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}
-                    ></img>
+                    ></Image>
                     <h2 className="mt-5 text-emerald-300 font-thin text-2xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">

@@ -5,9 +5,8 @@ import React, { useEffect, useState } from "react";
 // import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
-import { Modal, Input, Row, Button, Checkbox, Text, Spacer } from "@nextui-org/react";
-import { Mail } from "./Mail";
-import { Password } from "./Password";
+import { Button, Spacer, Image } from "@nextui-org/react";
+
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -59,17 +58,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
-                    <img
+                    <Image
                       className="h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
-                    ></img>
+                    ></Image>
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <img
+                  <Image
                     className="h-5"
                     src={`/images/${
                       !open
@@ -80,7 +79,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       ? "cancel.svg"
                       : "cancel-white.svg"
                     }`}
-                  ></img>
+                  ></Image>
                 </Popover.Button>
               </div>
             </div>
@@ -196,10 +195,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 ghost auto 
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <img
+                <Image
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
+                ></Image>
               </Button>
             )}
           </div>
@@ -232,10 +231,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <Button auto ghost
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <img
+                <Image
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                ></img>
+                ></Image>
               </Button>
             )}
           </div>

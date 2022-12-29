@@ -1,4 +1,5 @@
 import React from "react";
+import { Image } from "@nextui-org/react";
 
 const WorkCard = ({ img, name, description, onClick }) => {
   return (
@@ -11,11 +12,11 @@ const WorkCard = ({ img, name, description, onClick }) => {
         className="relative mob:h-auto rounded-lg overflow-hidden transition-all ease-out duration-300 "
         style={{ height: "250px" }}
       >
-        <img
+        <Image
           alt={name}
           className="h-full w-full object-cover hover:scale-110 transition-all ease-in duration-600"
           src={img}
-        ></img>
+        ></Image>
       </div>
       <h1 className="hover:text-emerald-400 text-emerald-500 mt-5 text-2xl">
         {name ? name : "Project Name"}
