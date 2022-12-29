@@ -8,11 +8,12 @@ import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+// import { Authenticator } from "aws-amplify/ui-react";
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Auth } from 'aws-amplify';
-import { Image } from "@nextui-org/react";
-import awsExports from '../../data/aws-exports';
+
+import awsExports from './../../data/aws-exports';
 
 Auth.configure(awsExports);
 
@@ -37,7 +38,7 @@ function Blog ({ posts }) {
   }, []);
 
   const createBlog = () => {
-    // if (process.env.NODE_ENV != "development") {
+    if (process.env.NODE_ENV === "development") {
       fetch("/api/blog", {
         method: "POST",
         headers: {
@@ -46,13 +47,13 @@ function Blog ({ posts }) {
       }).then(() => {
         router.reload(window.location.pathname);
       });
-    // } else {
-    //   alert("This thing only works in development mode.");
-    // }
+    } else {
+      alert("This thing only works in development mode.");
+    }
   };
 
   const deleteBlog = (slug) => {
-    if (process.env.NODE_ENV != "development") {
+    if (process.env.NODE_ENV === "development") {
       fetch("/api/blog", {
         method: "DELETE",
         headers: {
@@ -68,27 +69,28 @@ function Blog ({ posts }) {
       alert("This thing only works in development mode.");
     }
   };
-
   // <Authenticator>
   return (
     showBlog.current && (
       <>
-        {/* {data.showCursor && <Cursor />} */}
+        {data.showCursor && <Cursor />}
         <Head>
-          <html lang="en" />
           <title>Blog</title>
         </Head>
-
-        <div className="container mx-auto mb-10">
+        <div
+          className={`container mx-auto mb-10 ${
+            data.showCursor && "cursor-none"
+          }`}
+        >
           <Header isBlog={true}></Header>
           <div className="mt-10">
             <h1
               ref={text}
               className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
             >
-              Tech-Stack 
+              Blog 
             </h1>
-            <p className="mt-2 opacity-50 text-lg"></p>
+            <p className="mt-2 opacity-50 text-lg">compilation of articles </p>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
               {posts &&
                 posts.map((post) => (
@@ -97,17 +99,17 @@ function Blog ({ posts }) {
                     key={post.slug}
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
-                    <Image
-                      className="w-full h-60 rounded-lg border hover:border-emerald-300 shadow-lg object-cover"
+                    <img
+                      className="w-full h-60 rounded-lg shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}
-                    ></Image>
-                    <h2 className="mt-5 text-emerald-300 font-thin text-2xl">{post.title}</h2>
+                    ></img>
+                    <h2 className="mt-5 text-4xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">
                       {ISOToDate(post.date)}
                     </span>
-                    {process.env.NODE_ENV != "development" && mounted && (
+                    {process.env.NODE_ENV === "development" && mounted && (
                       <div className="absolute top-0 right-0">
                         <Button
                           onClick={(e) => {
@@ -125,7 +127,7 @@ function Blog ({ posts }) {
             </div>
           </div>
         </div>
-        {/** process.env.NODE_ENV === "production"**/ true && mounted && (
+        {process.env.NODE_ENV === "development" && mounted && (
           <div className="fixed bottom-6 right-6">
             <Button onClick={createBlog} type={"primary"}>
               Add New Post +{" "}
