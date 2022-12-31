@@ -1,19 +1,38 @@
 import { Card, Col, Row, Button, Link, Text } from "@nextui-org/react";
-import YoutubeComponent from "../YouTubeComponent/YoutubeComponent";
+// import YoutubeComponent from "../YouTubeComponent/YoutubeComponent";
+import YouTube from "react-youtube";
+
+
+const opts = {
+    playerVars: {
+      width: "100%",
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 0,
+      rel: 0
+    }
+  };
+
+
 
 
 export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
+    
   <Card>
     <Card.Body className="bg-emerald-800/20">
         <div className="flex">
-            <YoutubeComponent videoId={videoId} />
-            <div>
-                <h2 className="p-5">Content Overview</h2>
-                <p className="pl-5">Throughout this section you will learn how to...</p>
+            <YouTube
+                containerClassName="video-container"
+                // className="iframe"
+                videoId={videoId}
+                rel="0"
+                opts={opts}
+                />
+            );    
+        </div>
 
-            </div>
-
-
+        <div>
+            <h2 className="p-5">Content Overview</h2>
+            <p className="pl-5">Throughout this section you will learn how to...</p>
         </div>
       
     </Card.Body>
