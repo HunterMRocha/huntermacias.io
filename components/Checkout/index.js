@@ -133,10 +133,11 @@ const Checkout = ({ type, price, benefits }) => {
 					<Row justify="flex-end">
 						
 						<Button
+							color="primary"
 							onPress={redirectToCheckout}
 							disabled={isLoading}
 							className="hover:tracking-wider" 
-							style={{ fontSize: 20 }} 
+							style={{ fontSize: 20, color: 'black' }} 
 							size="md"
 							>{type} 
 						</Button>
