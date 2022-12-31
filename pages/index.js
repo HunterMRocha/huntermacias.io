@@ -13,11 +13,13 @@ import { Container } from '@nextui-org/react';
 import FeaturedSponsors from "../components/FeaturedSponsors";
 import { Dropdown } from "@nextui-org/react";
 
+import Carousel from "react-material-ui-carousel";
 
 // Local Data
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
 import { useTheme } from "next-themes";
+import { VideoCard } from "../components/VideoCard/VideoCard";
 
 // import ReactGA from "react-ga"
 
@@ -33,7 +35,7 @@ export default function Home() {
   const textFour = useRef();
 
   // used to filter projects
-  const [selected, setSelected] = React.useState(new Set(["text"]));
+  const [selected, setSelected] = React.useState(['All']);
 
   const selectedValue = React.useMemo(
     () => Array.from(selected).join(", ").replaceAll("_", " "),
@@ -136,7 +138,10 @@ export default function Home() {
             <h1>Projects</h1>
             <div>
               <Dropdown>
-                  <Dropdown.Button flat ghost color="primary" css={{ tt: "capitalize" }}>
+                  <Dropdown.Button flat ghost color="primary" 
+                      css={{ tt: "capitalize" }}
+                      
+                      >
                       {selectedValue}
                   </Dropdown.Button>
                   <Dropdown.Menu
@@ -224,7 +229,36 @@ export default function Home() {
           </Container>
  
         </div>
-          <FeaturedSponsors className='pt-4' />
+        
+        
+        <FeaturedSponsors className='pt-4' />
+
+
+        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
+          <h1 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h1>
+          
+            <Carousel navButtonsAlwaysVisible={true}>
+              <VideoCard
+                title="PyGame Development: Game Loop & Background"
+                videoLink="https://www.youtube.com/watch?v=ZlgNM1pALrI&list=PL30AETbxgR-feEfqwQxZ-_8s0fcvMQgqJ&index=6"
+                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
+                videoId="ZlgNM1pALrI"
+              />
+              <VideoCard
+                title="PyGame Development: Character Animations"
+                videoLink="https://www.youtube.com/watch?v=sKocm91lKOI"
+                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
+                videoId="9Kh9s9__ywo"
+              />
+              <VideoCard
+                title="PyGame Development: OOP in PyGame"
+                videoLink="https://www.youtube.com/watch?v=sKocm91lKOI"
+                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
+                videoId="0385Um8Z_mc"
+              />
+            </Carousel>
+         
+        </div>
 
         
         {/* This button should not go into production */}
@@ -241,9 +275,6 @@ export default function Home() {
             {data.aboutpara}
           </p>
         </div>
-
-      
-
 
         {/* <Header /> */}
 
