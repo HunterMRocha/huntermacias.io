@@ -78,34 +78,24 @@ const Checkout = ({ type, price, benefits }) => {
 					<Container >
 						<Card.Body css={{ height: '16vw', width: '30vm'}}>
 							<Row>
-							<Text size={18} i b >Benefits Include: </Text>
+								<Text size={18} i b >Benefits Include: </Text>
 							</Row>
 
 							
 							<Row>
-								<Col css={{width: "40px"}}> 
-								{/* <SiDiscord color='MediumBlue' size={20}/>  */}
-								</Col>
 								<Col>
 									<Text b size={16}>{benefits}</Text>
-								</Col>
-								
+								</Col>			
 							</Row>
 
 							{type == "Premium" && (
 								<Row>
-									<Col css={{width: "40px"}}>
-										 {/* <SiInstagram color='Salmon' size={20}/> */}
-										  </Col>
 									<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
 								</Row>
 							)}
 
 							{type == "Pro" && (
 								<Row>
-									<Col css={{width: "40px"}}> 
-									{/* <SiInstagram color='Salmon' size={20}/> */}
-									 </Col>
 									<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
 								</Row>
 							)}		
@@ -113,9 +103,6 @@ const Checkout = ({ type, price, benefits }) => {
 
 							{type == "Pro" && (
 								<Row>
-									<Col css={{width: "40px"}}>
-										 {/* <SiYoutube color='FireBrick' size={20}/> */}
-										  </Col>
 									<Col>
 										<Text b size={16}>YouTube Ad - 30 seconds</Text>
 									</Col>
@@ -126,15 +113,10 @@ const Checkout = ({ type, price, benefits }) => {
 							{/* spot on website */}
 							
 							<Row>
-								<Col css={{width: "40px"}}> 
-								{/* <FcLike color='Salmon' size={20}/>  */}
-								</Col>
 								<Col>
 									<Text b size={16}>Custom Ad displayed on site</Text>
 								</Col>
 							</Row>
-					
-
 						</Card.Body>
 					</Container>
 				<Card.Divider />

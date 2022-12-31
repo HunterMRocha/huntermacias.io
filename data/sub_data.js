@@ -1,21 +1,21 @@
 export default [
 	{
 	  type: 'Basic',
-	  price: 'price_1MFnOKGKJO6noGmd92DQFk55',
+	  price: 'price_1MFPGSGKJO6noGmdTCMX0LYm',
 	  benefits: "Discord Server Access+"
 	  
 	},
 
 	{
 		type: 'Premium',
-		price: 'price_1MFnNCGKJO6noGmdxCwT6Fca',
+		price: 'price_1MFZvEGKJO6noGmdzItpQgGi',
 		benefits: "Discord Server Access+"
 
 	},
 
 	{
 		type: 'Pro',
-		price: 'price_1MFnMWGKJO6noGmdonR9Iit6',
+		price: 'price_1MFa4OGKJO6noGmdKxPN09fX',
 		benefits: "Discord Server Access+"
 	}
 	
