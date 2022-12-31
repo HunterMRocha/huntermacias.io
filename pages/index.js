@@ -209,7 +209,7 @@ export default function Home() {
         <div className={`mt-10 laptop:mt-30 laptop:p-2 rounded ${
                 theme === "dark" ? "bg-[#171717]" : "bg-white"
               } shadow-sm rounded-md`}>
-          <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become A Sponsor - Coming Soon ! </h1>
+          <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become A Sponsor - Now Available ! </h1>
           <Container>
             
               <div 
