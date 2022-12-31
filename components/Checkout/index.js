@@ -5,7 +5,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useTheme } from "next-themes";
 
 import { Card, Container, Col, Grid, Image, Text, Button, Row } from "@nextui-org/react";
-
+import { FaDiscord, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { SiGithubsponsors } from 'react-icons/si';
 
 
 let stripePromise;
@@ -60,9 +61,7 @@ const Checkout = ({ type, price, benefits }) => {
 
   return (
 	  
-	  <>
-	
-	
+	<>
 	<Grid.Container >
 		<Grid sm={12}>
 		<div className={`w-full rounded-lg transition-all ease-out duration-300 ${
@@ -83,36 +82,44 @@ const Checkout = ({ type, price, benefits }) => {
 
 							
 							<Row>
+								<Col><FaDiscord color='MediumBlue' size={20} /> </Col>
 								<Col>
 									<Text b size={16}>{benefits}</Text>
 								</Col>			
 							</Row>
 
-							{type == "Premium" && (
-								<Row>
-									<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
-								</Row>
-							)}
-
-							{type == "Pro" && (
-								<Row>
-									<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
-								</Row>
-							)}		
-							
-
-							{type == "Pro" && (
-								<Row>
-									<Col>
-										<Text b size={16}>YouTube Ad - 30 seconds</Text>
-									</Col>
+								{type == "Premium" && (
 									
-								</Row>
-							)}	
+									<Row>
+										<Col> <FaInstagram color='MediumBlue' size={20} /> </Col>
+										<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
+									</Row>
+								)}
 
-							{/* spot on website */}
+								{type == "Pro" && (
+								
+									<Row>
+										<Col> <FaInstagram color='MediumBlue' size={20} /> </Col>
+										<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
+									</Row>
+								)}		
 							
+
+								{type == "Pro" && (
+									
+									<Row>
+										<Col><FaYoutube color='Firebrick' size={20} /> </Col>
+										<Col>
+											<Text b size={16}>YouTube Ad - 30 seconds</Text>
+										</Col>
+										
+									</Row>
+								)}	
+
+								{/* spot on website */}
+								
 							<Row>
+								<Col><SiGithubsponsors color='Salmon' size={20} /> </Col>
 								<Col>
 									<Text b size={16}>Custom Ad displayed on site</Text>
 								</Col>
@@ -136,10 +143,10 @@ const Checkout = ({ type, price, benefits }) => {
 					</Row>
 				</Card.Footer>
 
-			</Card>
-	</div>
-		</Grid>
-	</Grid.Container>
+					</Card>
+				</div>
+			</Grid>
+		</Grid.Container>
 	</>
   );
 };
