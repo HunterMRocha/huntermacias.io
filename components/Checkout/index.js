@@ -12,7 +12,7 @@ let stripePromise;
 
 const getStripe = () => {
   if (!stripePromise) {
-    stripePromise = loadStripe(process.STRIPE_PUBLIC_KEY);
+    stripePromise = loadStripe('pk_live_51MFN9EGKJO6noGmdS99CkUEdQQ70nqLXMXLWNVcOWbM39qzkzzmh7eqWKkt0432k9LFnxk7WdPSUFPcLya2mA8bv00hWJuEbRp');
   }
   return stripePromise;
 };
