@@ -12,7 +12,7 @@ import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Auth } from 'aws-amplify';
 import { Image } from "@nextui-org/react";
-// import awsExports from '../../data/aws-exports';
+import awsExports from '../../data/aws-exports';
 
 Auth.configure(
   {
@@ -66,6 +66,7 @@ function Blog ({ posts }) {
   }, []);
 
   const createBlog = () => {
+    console.log('creating')
     // if (process.env.NODE_ENV != "development") {
       fetch("/api/blog", {
         method: "POST",
@@ -75,7 +76,8 @@ function Blog ({ posts }) {
       }).then(() => {
         router.reload(window.location.pathname);
       });
-    // } else {
+    // } 
+    // else {
     //   alert("This thing only works in development mode.");
     // }
   };
