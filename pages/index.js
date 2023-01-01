@@ -149,7 +149,7 @@ export default function Home() {
 
           <div className="mob:w-full flex flex-start space-x-4 tablet:m-2 text-4xl text-bold">
             <h1>Projects</h1>
-            <div>
+            {/* <div>
               <Dropdown>
                   <Dropdown.Button flat ghost color="primary" 
                       css={{ tt: "capitalize" }}
@@ -176,7 +176,7 @@ export default function Home() {
               </Dropdown> 
 
             
-            </div>
+            </div> */}
 
           </div>
           
