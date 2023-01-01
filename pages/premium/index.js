@@ -80,11 +80,11 @@ const handleAboutScroll = () => {
                     key={post.slug}
                     onClick={() => Router.push(`/premium/${post.slug}`)}
                   >
-                    <Image
+                    <img
                       className="w-full h-60 rounded-lg border hover:border-emerald-300 shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}
-                    ></Image>
+                    ></img>
                     <h2 className="mt-5 text-emerald-300 font-thin text-2xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-sm">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">

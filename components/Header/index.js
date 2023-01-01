@@ -42,18 +42,18 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
-                    <Image
+                    <img
                       className="h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
                       alt=''
-                    ></Image>
+                    ></img>
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <Image
+                  <img
                     className="h-5"
                     src={`/images/${
                       !open
@@ -65,7 +65,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       : "cancel-white.svg"
                     }`}
                     alt=''
-                  ></Image>
+                  ></img>
                 </Popover.Button>
               </div>
             </div>
@@ -179,11 +179,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 ghost auto 
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <Image
+                <img
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt=''
-                ></Image>
+                ></img>
               </Button>
             )}
           </div>
@@ -216,11 +216,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <Button auto ghost
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <Image
+                <img
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt=''
-                ></Image>
+                ></img>
               </Button>
             )}
           </div>

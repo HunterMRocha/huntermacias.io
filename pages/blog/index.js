@@ -145,11 +145,11 @@ function Blog ({ posts }) {
                     key={post.slug}
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
-                    <Image
+                    <img
                       className="w-full h-60 rounded-lg border hover:border-emerald-300 shadow-lg object-cover"
                       src={post.image}
                       alt={post.title}
-                    ></Image>
+                    ></img>
                      <meta
                         name="description"
                         property="og:image"
