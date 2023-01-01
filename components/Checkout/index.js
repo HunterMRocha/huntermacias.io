@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-// import CardIcon from "../images/credit-card.svg";
-// import ProductImage from "../images/product-image.jpg";
+
 import { loadStripe } from "@stripe/stripe-js";
 import { useTheme } from "next-themes";
 
-import { Card, Container, Col, Grid, Image, Text, Button, Row } from "@nextui-org/react";
+import { Card, Container, Col, Grid, Text, Button, Row } from "@nextui-org/react";
 import { FaDiscord, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { SiGithubsponsors } from 'react-icons/si';
 
@@ -68,8 +67,12 @@ const Checkout = ({ type, price, benefits }) => {
 		mounted && theme === "dark" ? "hover:bg-slate-800" : "hover:bg-slate-50 "
 	  } hover:scale-105 link`}
 	>
-			<Card isHoverable="true" isPressable="true" css={{ mw: "400px" }}>
-				<Card.Header>
+			<Card 
+			className={`w-full rounded-lg transition-all ease-out duration-300 ${
+				mounted && theme === "dark" ? "hover:bg-slate-600" : "hover:bg-slate-50 "
+			  } `}
+			isHoverable="true" isPressable="true" css={{ mw: "400px" }}>
+				<Card.Header >
 					<Text size={22} b>{type + ' - Sponsorship'}</Text>
 				</Card.Header>
 
@@ -77,30 +80,36 @@ const Checkout = ({ type, price, benefits }) => {
 					<Container >
 						<Card.Body css={{ height: '16vw', width: '30vm'}}>
 							<Row>
-								<Text size={18} i b >Benefits Include: </Text>
+								<Text  size={18} i b >Benefits Include: </Text>
 							</Row>
 
 							
 							<Row>
-								<Col><FaDiscord color='MediumBlue' size={20} /> </Col>
-								<Col>
-									<Text b size={16}>{benefits}</Text>
-								</Col>			
+								<div class="grid grid-rows grid-flow-col gap-4">
+									<Col class='row-span-3'><FaDiscord color='MediumBlue' size={20} /> </Col>
+									<Col class='row-span-2 col-span-2'>
+										<Text color="success" b size={16}>{benefits}</Text>
+									</Col>			
+
+								</div>
 							</Row>
 
 								{type == "Premium" && (
-									
 									<Row>
-										<Col> <FaInstagram color='MediumBlue' size={20} /> </Col>
-										<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
+										<div class="grid grid-rows grid-flow-col gap-4">
+											<Col class='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
+											<Col class='row-span-2 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
+										</div>
 									</Row>
+
 								)}
 
 								{type == "Pro" && (
-								
 									<Row>
-										<Col> <FaInstagram color='MediumBlue' size={20} /> </Col>
-										<Col> <Text b size={16}>Instagram Story and Post </Text> </Col>
+										<div class="grid grid-rows grid-flow-col gap-4">
+											<Col class='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
+											<Col class='row-span-3 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
+										</div>
 									</Row>
 								)}		
 							
@@ -108,10 +117,12 @@ const Checkout = ({ type, price, benefits }) => {
 								{type == "Pro" && (
 									
 									<Row>
-										<Col><FaYoutube color='Firebrick' size={20} /> </Col>
-										<Col>
-											<Text b size={16}>YouTube Ad - 30 seconds</Text>
-										</Col>
+										<div class="grid grid-rows grid-flow-col gap-4">
+											<Col class='row-span-3'><FaYoutube color='Firebrick' size={20} /> </Col>
+											<Col class='row-span-3 col-span-2'>
+												<Text color="success" b size={16}>YouTube Ad - 30 seconds</Text>
+											</Col>
+										</div>
 										
 									</Row>
 								)}	
@@ -119,10 +130,12 @@ const Checkout = ({ type, price, benefits }) => {
 								{/* spot on website */}
 								
 							<Row>
-								<Col><SiGithubsponsors color='Salmon' size={20} /> </Col>
-								<Col>
-									<Text b size={16}>Custom Ad displayed on site</Text>
+							<div class="grid grid-rows grid-flow-col gap-4">
+								<Col class='row-span-3'><SiGithubsponsors color='Salmon' size={20} /> </Col>
+								<Col class='row-span-3 col-span-2'>
+									<Text color="success" b size={16}>Custom Ad displayed on site</Text>
 								</Col>
+							</div>
 							</Row>
 						</Card.Body>
 					</Container>
