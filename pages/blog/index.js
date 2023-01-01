@@ -106,19 +106,20 @@ function Blog ({ posts }) {
     showBlog.current && (
       <>
         {/* {data.showCursor && <Cursor />} */}
+    
         <Head>
-          <title>Blog</title>
-          <meta name="description" content="Checkout our cool page" key="desc" />
-          <meta property="og:title" content="Social Title for Cool Page" />
-          <meta
-            property="og:description"
-            content="And a social description for our cool page"
-          />
-          <meta
-            property="og:image"
-            content="https://example.com/images/cool-page.jpg"
-          />
+            <title>Blogs</title>
+            <meta name="twitter:card" content="summary"></meta>
+            <meta 
+            charset="UTF-8"
+            />
+            <meta
+              name="description"
+              property="og:image"
+              content="https://mathspp.com/images/9/f/a/5/b/9fa5b68df6f689ad11703552e3d767e69f1763f3-thumbnail.png"
+            />
         </Head>
+       
 
         <div className="container mx-auto mb-10">
           <Header isBlog={true}></Header>
@@ -143,6 +144,11 @@ function Blog ({ posts }) {
                       src={post.image}
                       alt={post.title}
                     ></Image>
+                     <meta
+                        name="description"
+                        property="og:image"
+                        content={post.image}
+                      />
                     <h2 className="mt-5 text-emerald-300 font-thin text-2xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">

@@ -28,7 +28,17 @@ const BlogPost = ({ post }) => {
       <Head>
         {/* <html lang="en" /> */}
         <title>{"Blog - " + post.title}</title>
-        <meta name="description" content={post.preview} />
+        <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.tagLine} />
+        <meta property="og:image" content={post.image} />
+       
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@huntermacias-io" />
+        <meta name="twitter:creator" content="@HunterMacias" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.tagLine} />
+        <meta name="twitter:image" content={post.image} />
       </Head>
       {data.showCursor && <Cursor />}
 
