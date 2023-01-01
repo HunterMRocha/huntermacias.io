@@ -35,7 +35,7 @@ export default function Home() {
   const textFour = useRef();
 
   // used to filter projects
-  const [selected, setSelected] = React.useState(['All']);
+  const [selected, setSelected] = useState(['All'])
 
   const selectedValue = React.useMemo(
     () => Array.from(selected).join(", ").replaceAll("_", " "),
@@ -157,6 +157,7 @@ export default function Home() {
                       {selectedValue}
                   </Dropdown.Button>
                   <Dropdown.Menu
+                      defaultSelectedKeys='all'
                       aria-label="Single selection actions"
                       color="primary"
                       disallowEmptySelection
@@ -181,7 +182,7 @@ export default function Home() {
           
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-4">
             {data.projects.map((project) => (
-              selected.currentKey === "all" ? (
+              true ? (
                 <WorkCard
                   key={project.id}
                   img={project.imageSrc}
