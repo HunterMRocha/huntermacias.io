@@ -84,10 +84,8 @@ export default function Home() {
       <Head>
         {/* <html lang="en" /> */}
         <title>My Personal Tech Hub</title>
-        <meta property="og:url" content="http://huntermacias.io" />
-        <meta property="og:title" content="My Personal Tech Hub" />
-        <meta property="og:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and different topics in the tech world. I also offer different sponsorship services that you can check out below.  " />
-        <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta charset="utf-8" />
        
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@huntermacias-io" />
@@ -95,13 +93,21 @@ export default function Home() {
         <meta name="twitter:title" content="My Personal Tech Hub" />
         <meta name="twitter:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and different topics in the tech world. I also offer different sponsorship services that you can check out below.  " />
         <meta name="twitter:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg" /> 
+       
+        <meta property="og:url" content="http://huntermacias.io" />
+        <meta property="og:title" content="My Personal Tech Hub" />
+        <meta property="og:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and different topics in the tech world. I also offer different sponsorship services that you can check out below.  " />
+        <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg"/>
+        <meta name="twitter:widgets:new-embed-design" content="on" />
+        <meta name="twitter:widgets:csp" content="on" />
+      
       </Head>
       
 
-      <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
+        <div className="gradient-circle"></div>
+        <div className="gradient-circle-bottom"></div>
 
-      <div className="container mx-auto mb-10">
+        <div className="container mx-auto mb-10">
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}

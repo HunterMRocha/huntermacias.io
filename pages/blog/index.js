@@ -3,7 +3,6 @@ import Router, { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { stagger } from "../../animations";
 import Button from "../../components/Button";
-import Cursor from "../../components/Cursor";
 import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
@@ -66,7 +65,6 @@ function Blog ({ posts }) {
   }, []);
 
   const createBlog = () => {
-    console.log('creating')
     if (process.env.NODE_ENV != "development") {
       fetch("/api/blog", {
         method: "POST",
@@ -109,6 +107,8 @@ function Blog ({ posts }) {
     
         <Head>
             <title>Blogs</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta charset="utf-8" />
             <meta property="og:url" content="http://huntermacias.io/blog"  />
             <meta property="og:title" content="Panda Bit Tech Blog!" />
             <meta property="og:description" content="Create a free account for unlimted access" />
@@ -116,10 +116,14 @@ function Blog ({ posts }) {
           
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content="@huntermacias-io" />
+            <meta name="twitter:widgets:new-embed-design" content="on" />
+            <meta name="twitter:widgets:csp" content="on" />
             <meta name="twitter:creator" content="@HunterMacias" />
             <meta name="twitter:title" content="Panda Bit Tech Blog!"  />
             <meta name="twitter:description" content="Create a free account for unlimted access" />
             <meta name="twitter:image" content="https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg" />
+            <meta name="theme-color" content="#2aa3ef" />
+            <meta name="msapplication-TileColor" content="#2d89ef" />
         </Head>
        
 
@@ -130,7 +134,7 @@ function Blog ({ posts }) {
               ref={text}
               className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
             >
-              Tech-Stack 
+              Blogs
             </h1>
             <p className="mt-2 opacity-50 text-lg"></p>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">

@@ -23,7 +23,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   return (
     <>
-    
       <Popover className="block tablet:hidden mt-8">
         {({ open }) => (
           <>
@@ -88,13 +87,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showResume && (
                     <Button auto
                       ghost 
-                      onClick={() => window.open("huntermacias20@gmail.com")}>
+                      onClick={() => router.push("/resume")}>
                       Resume
                     </Button>
                   )}
                   <Spacer x={0.5} />
-                  <Button ghost auto onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
-                    YouTube
+                  <Button ghost auto onClick={() => router.push("/premium")}>
+                    Panda-Bits
                   </Button>
                   <Spacer x={0.5} />
             <Spacer x={0.5} />
@@ -123,10 +122,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
                   <Spacer x={0.5} />
-                  <Button
-                    ghost
-                    onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
-                    YouTube
+                  <Button ghost auto onClick={() => router.push("/premium")}>
+                    Panda-Bits
                   </Button>
                   <Spacer x={0.5} />
     
@@ -145,7 +142,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          {name}.
+          {name}
         </h1>
 
 
@@ -172,8 +169,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
             <Spacer x={0.5} />
-            <Button ghost auto onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
-              YouTube
+            <Button ghost auto onClick={() => router.push("/premium")}>
+                Panda-Bits
             </Button>
             <Spacer x={0.5} />
           
@@ -211,8 +208,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               
             )}
             <Spacer x={0.5} />
-            <Button auto ghost onClick={() => window.open("https://www.youtube.com/channel/UCehlaH65-4g7NywRWX0MlkA/videos")}>
-              YouTube
+            <Button ghost auto onClick={() => router.push("/premium")}>
+              Panda-Bits
             </Button>
             <Spacer x={0.5} />
             {mounted && theme && data.darkMode && (
