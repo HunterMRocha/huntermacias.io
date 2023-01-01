@@ -82,11 +82,19 @@ export default function Home() {
       
       {data.showCursor && <Cursor />}
       <Head>
-        <div>
-          <title>{data.name}</title>
-
-        </div>
-         
+        {/* <html lang="en" /> */}
+        <title>My Personal Tech Hub</title>
+        <meta property="og:url" content="http://huntermacias.io" />
+        <meta property="og:title" content="My Personal Tech Hub" />
+        <meta property="og:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and different topics in the tech world. I also offer different sponsorship services that you can check out below.  " />
+        <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg"/>
+       
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@huntermacias-io" />
+        <meta name="twitter:creator" content="@HunterMacias" />
+        <meta name="twitter:title" content="My Personal Tech Hub" />
+        <meta name="twitter:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and different topics in the tech world. I also offer different sponsorship services that you can check out below.  " />
+        <meta name="twitter:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg" /> 
       </Head>
       
 
