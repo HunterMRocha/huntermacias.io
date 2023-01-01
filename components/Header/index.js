@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 // import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
-import { Button, Spacer, Image } from "@nextui-org/react";
+import { Button, Spacer } from "@nextui-org/react";
 
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
@@ -76,9 +76,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button auto ghost onClick={handleWorkScroll}>Work</Button>
+                  <Button auto ghost onClick={() => router.push("/")}>Work</Button>
                   <Spacer x={0.5} />
-                  <Button auto ghost onClick={handleAboutScroll}>About</Button>
+                  <Button auto ghost onClick={() => router.push("/")}>About</Button>
                   <Spacer x={0.5} />
                   {showBlog && (
                     <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
@@ -150,9 +150,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {/* bottom buttons */}
         {!isBlog ? (
           <div className="flex">
-            <Button ghost auto onClick={handleWorkScroll}>Work</Button>
+            <Button ghost auto onClick={() => router.push("/")}>Work</Button>
             <Spacer x={0.5} />
-            <Button ghost auto onClick={handleAboutScroll}>About</Button>
+            <Button ghost auto onClick={() => router.push("/")}>About</Button>
             <Spacer x={0.5} />
             {showBlog && (
               <Button ghost auto onClick={() => router.push("/blog")}>Blog</Button>

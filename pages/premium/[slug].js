@@ -6,10 +6,8 @@ import Footer from "../../components/Footer";
 import Head from "next/head";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
-import { useRouter } from "next/router";
 import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
-import { Image } from "@nextui-org/react";
 
 const BlogPost = ({ post }) => {
   const textOne = useRef();
