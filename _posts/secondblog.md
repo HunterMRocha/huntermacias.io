@@ -6,7 +6,7 @@ preview: >-
   Optical flow is the motion of objects between the consecutive frames of the
   sequence, caused by the relative motion between the camera and the object. It
   can be of two types-Sparse Optical flow and Dense Optical flow.
-image: 'https://i.stack.imgur.com/MVRdq.png'
+image: 'https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg'
 ---
 
 ## Dense Optical flow
