@@ -109,15 +109,17 @@ function Blog ({ posts }) {
     
         <Head>
             <title>Blogs</title>
-            <meta name="twitter:card" content="summary"></meta>
-            <meta 
-            charset="UTF-8"
-            />
-            <meta
-              name="description"
-              property="og:image"
-              content="https://mathspp.com/images/9/f/a/5/b/9fa5b68df6f689ad11703552e3d767e69f1763f3-thumbnail.png"
-            />
+            <meta property="og:url" content="http://huntermacias.io/blog"  />
+            <meta property="og:title" content="Panda Bit Tech Blog!" />
+            <meta property="og:description" content="Create a free account for unlimted access" />
+            <meta property="og:image" content="https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg" />
+          
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@huntermacias-io" />
+            <meta name="twitter:creator" content="@HunterMacias" />
+            <meta name="twitter:title" content="Panda Bit Tech Blog!"  />
+            <meta name="twitter:description" content="Create a free account for unlimted access" />
+            <meta name="twitter:image" content="https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg" />
         </Head>
        
 

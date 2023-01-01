@@ -28,7 +28,7 @@ const BlogPost = ({ post }) => {
       <Head>
         {/* <html lang="en" /> */}
         <title>{"Blog - " + post.title}</title>
-        <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
+        <meta property="og:url" content="http://huntermacias.io/blog" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.tagLine} />
         <meta property="og:image" content={post.image} />
