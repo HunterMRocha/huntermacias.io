@@ -120,14 +120,6 @@ function Blog ({ posts }) {
           />
         </Head>
 
-        <ReactTinyLink
-            cardSize="large"
-            showGraphic={true}
-            maxLine={2}
-            minLine={1}
-            url="https://medium.com/" 
-        />
-
         <div className="container mx-auto mb-10">
           <Header isBlog={true}></Header>
           <div className="mt-10">
