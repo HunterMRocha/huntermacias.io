@@ -82,7 +82,6 @@ export default function Home() {
       
       {data.showCursor && <Cursor />}
       <Head>
-        {/* <html lang="en" /> */}
         <div>
           <title>{data.name}</title>
 
@@ -140,7 +139,6 @@ export default function Home() {
               <Dropdown>
                   <Dropdown.Button flat ghost color="primary" 
                       css={{ tt: "capitalize" }}
-                      
                       >
                       {selectedValue}
                   </Dropdown.Button>

@@ -49,6 +49,7 @@
     "react-social-icons": "^5.15.0",
     "react-syntax-highlighter": "^15.5.0",
     "react-textarea-autosize": "^8.3.4",
+    "react-tiny-link": "^3.6.1",
     "react-youtube": "^10.1.0",
     "react-youtube-playlist": "^2.2.8",
     "remark": "^14.0.2",

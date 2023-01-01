@@ -67,7 +67,7 @@ function Blog ({ posts }) {
 
   const createBlog = () => {
     console.log('creating')
-    // if (process.env.NODE_ENV != "development") {
+    if (process.env.NODE_ENV != "development") {
       fetch("/api/blog", {
         method: "POST",
         headers: {
@@ -76,10 +76,10 @@ function Blog ({ posts }) {
       }).then(() => {
         router.reload(window.location.pathname);
       });
-    // } 
-    // else {
-    //   alert("This thing only works in development mode.");
-    // }
+    } 
+    else {
+      alert("This thing only works in development mode.");
+    }
   };
 
   const deleteBlog = (slug) => {
@@ -102,12 +102,31 @@ function Blog ({ posts }) {
   
   // <Authenticator>
   return (
+    
     showBlog.current && (
       <>
         {/* {data.showCursor && <Cursor />} */}
         <Head>
           <title>Blog</title>
+          <meta name="description" content="Checkout our cool page" key="desc" />
+          <meta property="og:title" content="Social Title for Cool Page" />
+          <meta
+            property="og:description"
+            content="And a social description for our cool page"
+          />
+          <meta
+            property="og:image"
+            content="https://example.com/images/cool-page.jpg"
+          />
         </Head>
+
+        <ReactTinyLink
+            cardSize="large"
+            showGraphic={true}
+            maxLine={2}
+            minLine={1}
+            url="https://medium.com/" 
+        />
 
         <div className="container mx-auto mb-10">
           <Header isBlog={true}></Header>
@@ -155,7 +174,7 @@ function Blog ({ posts }) {
             </div>
           </div>
         </div>
-        {/** process.env.NODE_ENV === "production"**/ true && mounted && (
+        {process.env.NODE_ENV === "production" && mounted && (
           <div className="fixed bottom-6 right-6">
             <Button onClick={createBlog} type={"primary"}>
               Add New Post +{" "}
