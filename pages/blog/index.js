@@ -134,7 +134,7 @@ function Blog ({ posts }) {
               ref={text}
               className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
             >
-              Blogs
+              Tech Stack
             </h1>
             <p className="mt-2 opacity-50 text-lg"></p>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
