@@ -8,10 +8,13 @@ import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
+import { useRouter } from "next/router";
 
 const BlogPost = ({ post }) => {
+  const [showEditor, setShowEditor] = useState(false);
   const textOne = useRef();
   const textTwo = useRef();
+  const router = useRouter();
 
   useIsomorphicLayoutEffect(() => {
     stagger([textOne.current, textTwo.current], { y: 30 }, { y: 0 });
@@ -34,13 +37,13 @@ const BlogPost = ({ post }) => {
         <meta name="twitter:image" content={post.image} />
       </Head>
       {data.showCursor && <Cursor />}
-     
+
       <div
         className={`container mx-auto mt-10 ${
           data.showCursor && "cursor-none"
         }`}
       >
-        <Header isBlog={true} />
+        <Header />
         <div className="mt-10 flex flex-col">
           <img
             className="w-full h-96 rounded-lg shadow-lg object-cover"
@@ -63,9 +66,21 @@ const BlogPost = ({ post }) => {
         <ContentSection content={post.content}></ContentSection>
         <Footer />
       </div>
-     
+      {process.env.NODE_ENV === "development" && (
+        <div className="fixed bottom-6 right-6">
+          <button onClick={() => setShowEditor(true)} type={"primary"}>
+            Edit this blog
+          </button>
+        </div>
+      )}
 
-
+      {showEditor && (
+        <BlogEditor
+          post={post}
+          close={() => setShowEditor(false)}
+          refresh={() => router.reload(window.location.pathname)}
+        />
+      )}
     </>
   );
 };

@@ -6,12 +6,15 @@ preview: >-
   Optical flow is the motion of objects between the consecutive frames of the
   sequence, caused by the relative motion between the camera and the object. It
   can be of two types-Sparse Optical flow and Dense Optical flow.
-image: 'https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg'
+image: >- 
+ https://shavztech.com/wp-content/uploads/2022/10/annotation.png
 ---
 
 ## Dense Optical flow
 
 **Dense Optical flow computes the optical flow vector for every pixel of the frame which may be responsible for its slow speed but leading to a better accurate result. It can be used for detecting motion in the videos, video segmentation, learning structure from motion. There can be various kinds of implementations of dense optical flow. The example below will follow the Farneback method along with OpenCV.**
+
+![Alt Text](https://broutonlab.com/ghost/content/images/2021/11/BOOSTING-1.gif)
 
 ## Franeback Method
 
@@ -22,7 +25,8 @@ image: 'https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5Qz
 ## Links
 
 Source [Dense Optical Flow](https://www.geeksforgeeks.org/python-opencv-dense-optical-flow/?ref=lbp).
+Source [A Complete Review of the OpenCV Object Tracking Algorithms](https://broutonlab.com/blog/opencv-object-tracking).
 
-## Images
 
-![An old rock in the desert](https://i.stack.imgur.com/MVRdq.png)
+
+

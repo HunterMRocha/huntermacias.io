@@ -3,8 +3,8 @@ import Router, { useRouter } from "next/router";
 import { useEffect, useRef } from "react";
 import { getAllPosts } from "../../utils/api";
 import { ISOToDate } from "../../utils";
-import { Image } from "@nextui-org/react";
 import Header from "../../components/Header"
+
 
 
 function Pandabits ({ posts }) {
@@ -28,11 +28,12 @@ const handleAboutScroll = () => {
 
   const text = useRef();
   const router = useRouter();
-
   useEffect(() => {
       router.push("/pandabits");
       
   }, []);
+
+
 
   return (
       <>
@@ -91,11 +92,13 @@ const handleAboutScroll = () => {
                     <span className="text-sm mt-5 opacity-25">
                       {ISOToDate(post.date)}
                     </span>
+                    
                   </div>
                 ))}
             </div>
           </div>
         </div>
+      
       </>
     
   );
