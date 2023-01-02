@@ -1,11 +1,13 @@
 import { Card, Col, Row, Button, Link, Text } from "@nextui-org/react";
 // import YoutubeComponent from "../YouTubeComponent/YoutubeComponent";
 import YouTube from "react-youtube";
+import MediaQuery from 'react-responsive'
 
 
 const opts = {
     playerVars: {
       width: "100%",
+      height: "50%",
       // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
       rel: 0
@@ -13,27 +15,31 @@ const opts = {
   };
 
 
-
-
 export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
     
   <Card>
-    <Card.Body className="bg-emerald-800/20">
-        <div className="flex">
+    <Card.Body className=" bg-emerald-800/20 ">
+        <div className="flex mb-10 w-16 h-80">
             <YouTube
-                containerClassName="video-container"
-                // className="iframe"
+                containerClassName="video-container mob:content-start"
+                className="iframe"
                 videoId={videoId}
+                // width="60" height="315"
                 rel="0"
                 opts={opts}
-                />
-            );    
+                />  
         </div>
 
-        <div>
-            <h2 className="p-5">Content Overview</h2>
-            <p className="pl-5">Throughout this section you will learn how to...</p>
-        </div>
+  
+        {/* <div> */}
+          {/* <MediaQuery minWidth={1424}> */}
+            {/* <h2 className="p-5 pt-5">Content Overview</h2>
+            <p className="pl-5">Throughout this section you will learn how to...</p> */}
+          {/* </MediaQuery>  */}
+            {/* <h2 className="p-5">Content Overview</h2>
+            <p className="pl-5">Throughout this section you will learn how to...</p> */}
+        {/* </div> */}
+      
       
     </Card.Body>
     <Card.Footer
@@ -50,6 +56,7 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
         <Col>
           <Row>
             <Col span={3}>
+            <MediaQuery minWidth={765}>
               <Card.Image
                 src="https://i.imgur.com/28Xh6rL.jpeg"
                 css={{ bg: "black", br: "50%" }}
@@ -57,20 +64,25 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
                 width={50}
                 alt="pygame dev"
               />
+            </MediaQuery>
             </Col>
-            <Col css={{ pl: "10px" }}>
-              <Text color="#94f9f0" size={24}>
-                {title}
-              </Text>
-              <Text color="#94f9f0" size={12}>
+            <Col css={{ m: '5px', pl: "10px" }}>
+              <MediaQuery minWidth={765}>
+                <Text color="#94f9f0" size={18}>
+                  {title}
+                </Text>
+              </MediaQuery>
+
+            <Text color="#94f9f0" size={10}>
                 Learn python by building multiple games using the PyGame
                 library.
               </Text>
+            
             </Col>
           </Row>
         </Col>
         <Col>
-          <Row justify="flex-end">
+          <Row justify="flex">
             <a href={videoLink} target="_blank" rel="noreferrer">
               <div>
                 <Button
@@ -81,8 +93,8 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
                 >
                   <Text
                     css={{ color: "inherit" }}
-                    size={14}
-                    weight="bold"
+                    size={12}
+                    weight="semi-bold"
                     transform="uppercase"
                   >
                     Watch Video
@@ -92,7 +104,7 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
             </a>
           </Row>
 
-          <Row justify="flex-end">
+          <Row justify="flex">
             <a href={codeLink} target="_blank" rel="noreferrer">
               <div>
                 <Button

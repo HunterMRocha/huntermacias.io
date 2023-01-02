@@ -68,12 +68,13 @@ const Checkout = ({ type, price, benefits }) => {
 	  } hover:scale-105 link`}
 	>
 			<Card 
-			className={`w-full rounded-lg transition-all ease-out duration-300 ${
+			className={`w-full rounded-lg mob:text-xs transition-all ease-out duration-300 ${
 				mounted && theme === "dark" ? "hover:bg-slate-600" : "hover:bg-slate-50 "
 			  } `}
-			isHoverable="true" isPressable="true" css={{ mw: "400px" }}>
+			isHoverable="true" isPressable="true" css={{ mw: "400px"}}>
 				<Card.Header >
-					<Text size={22} b>{type + ' - Sponsorship'}</Text>
+					<Text 
+						size={22} b>{type + ' - Sponsorship'}</Text>
 				</Card.Header>
 
 				<Card.Divider />
@@ -85,10 +86,10 @@ const Checkout = ({ type, price, benefits }) => {
 
 							
 							<Row>
-								<div className="grid grid-rows grid-flow-col gap-4">
+								<div className="pt-2 grid grid-rows grid-flow-col gap-4">
 									<Col className='row-span-3'><FaDiscord color='MediumBlue' size={20} /> </Col>
 									<Col className='row-span-2 col-span-2'>
-										<Text color="success" b size={16}>{benefits}</Text>
+										<Text color="success" b size={14}>{benefits}</Text>
 									</Col>			
 
 								</div>
@@ -98,7 +99,7 @@ const Checkout = ({ type, price, benefits }) => {
 									<Row>
 										<div className="grid grid-rows grid-flow-col gap-4">
 											<Col className='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
-											<Col className='row-span-2 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
+											<Col className='row-span-2 col-span-2'> <Text color="success" b size={14}>Instagram Story and Post </Text> </Col>
 										</div>
 									</Row>
 
@@ -108,7 +109,7 @@ const Checkout = ({ type, price, benefits }) => {
 									<Row>
 										<div className="grid grid-rows grid-flow-col gap-4">
 											<Col className='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
-											<Col className='row-span-3 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
+											<Col className='row-span-3 col-span-2'> <Text color="success" b size={14}>Instagram Story and Post </Text> </Col>
 										</div>
 									</Row>
 								)}		
@@ -120,7 +121,7 @@ const Checkout = ({ type, price, benefits }) => {
 										<div className="grid grid-rows grid-flow-col gap-4">
 											<Col className='row-span-3'><FaYoutube color='Firebrick' size={20} /> </Col>
 											<Col className='row-span-3 col-span-2'>
-												<Text color="success" b size={16}>YouTube Ad - 30 seconds</Text>
+												<Text color="success" b size={14}>YouTube Ad - 30 seconds</Text>
 											</Col>
 										</div>
 										
@@ -133,7 +134,7 @@ const Checkout = ({ type, price, benefits }) => {
 							<div className="grid grid-rows grid-flow-col gap-4">
 								<Col className='row-span-3'><SiGithubsponsors color='Salmon' size={20} /> </Col>
 								<Col className='row-span-3 col-span-2'>
-									<Text color="success" b size={16}>Custom Ad displayed on site</Text>
+									<Text color="success" b size={14}>Custom Ad displayed on site</Text>
 								</Col>
 							</div>
 							</Row>

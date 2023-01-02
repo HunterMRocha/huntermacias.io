@@ -230,12 +230,12 @@ export default function Home() {
                         laptop:justify-center laptop:grid-cols-3 gap-8"
               > 
                 {subdata.map((type, index) => (
-                    <Checkout 
+                  <Checkout 
                       key={index}
                       type={type.type}
                       price={type.price}
                       benefits={type.benefits}
-                    />
+                  />
                 ))}
               </div>
             
@@ -249,7 +249,8 @@ export default function Home() {
 
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h1>
-          
+            <div className="">
+
             <Carousel navButtonsAlwaysVisible={true}>
               <VideoCard
                 title="PyGame Development: Game Loop & Background"
@@ -270,6 +271,7 @@ export default function Home() {
                 videoId="0385Um8Z_mc"
               />
             </Carousel>
+            </div>
          
         </div>
 
@@ -294,5 +296,5 @@ export default function Home() {
         
       </div>
     </div>
-  );
+  )
 }
