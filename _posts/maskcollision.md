@@ -8,6 +8,10 @@ image: >-
   https://i.ytimg.com/vi/WfqXcyF0_b0/maxresdefault.jpg
 ---
 
+### Author
+
+👤 **Hunter M. Macias**
+
 # Guide
 
 ### Step 1: Basic Game Setup
@@ -188,6 +192,21 @@ while True:
 ```
 ---
 
+## FAQ
+
+>>**Q: What is super().__init__()**
+>>
+>>**A:** The base class for visible game objects. Derived classes will want to override the Sprite.update() and assign a Sprite.image and Sprite.rect attributes. The initializer can accept any number of Group instances to be added to.
+When subclassing the Sprite, be sure to call the super().__init__()
+>>
+>>
+>>**Q: What is the event for loop.**
+>>
+>>**A:** The event for loop is used to check for different pygame events, most commonly the exitting window, mouse, and keyboard events.
+>>
+
+---
+
 #### Note:
 
 ```It's important to check for rectangle collision first and then check mask collision because of performance. When you use masks in pygame to check collision it is an expensive task for the computer to perform. Therefore instead of always checking mask collision we are only going to check mask collision if we register a rectangle collision. This is going to improve our overall game performace greatly since rectangle collision checks do not cost as much processing power to perform```
@@ -195,16 +214,40 @@ while True:
 ---
 
 ## Table of Contents
-
-1. Basic Game Setup
-2. Create a basic Player Class
-3. Create a basic Ovstacle Class
-4. Updating your player and object animation
-5. Changing plaer color on collision - using rectangles
-6. Changing player color on collision - with masks
-7. Improving Performance
-
+>
+>1. Basic Game Setup
+>2. Create a basic Player Class
+>3. Create a basic Ovstacle Class
+>4. Updating your player and object animation
+>5. Changing plaer color on collision - using rectangles
+>6. Changing player color on collision - with masks
+>7. Improving Performance
+>
 ---
+
+## 🤝 Contributing
+
+>Become a content creator! Get in contact with me about posting your material at huntermacias20@gmail.com
+>
+>Feel free to check [blog page](https:huntermacias.io/blog) to create free account for more access to panda bit content.
+
+## Become a Sponsor!!
+
+
+>Sponsorship Includes
+>> Access to discord server
+>>
+>> Instagram story and post
+>>
+>> YouTube Promo - 30 seconds
+>>
+>> Access to over 50 Github Repo projects
+>>
+>> Custom Ad on Site
+>
+>View home page for sponsorship benefits
+>
+>>Sponsor Now ❤️ ❤️ [Click Me Please](https://checkout.stripe.com/c/pay/ppage_1MLodEGKJO6noGmdULANectI#fidkdWxOYHwnPyd1blppbHNgWjA0SENLPEBCTk9KM2tqQmhhVjw8Rm5QQGFUVDI1a3RJXUhdSVJLU2ZKUmdINjx0f25%2Ff2htMmB0Uk5ucTUxNjduPElDa31uMlJhVVZQQ1VmSXxkN2hEPWdzNTVtUk9wQGdXdScpJ2hsYXYnP34nYnBsYSc%2FJzRjN2M0Y2dnKDIyMjwoMTVnYyhkNzE0KGc0MzUzPGFkYT01NjJmYGAyMycpJ2hwbGEnPycyYGZkYTZkNSg8NWBhKDFmZDIoPDMxYCgzNTQwNjQxNWc3YT1gNjxgZjYnKSd2bGEnPydkZjxkNmZhPShhPDdnKDFgYGYoZD1mNCg9ZjYxZzw2PGM0PWcyPTM0ZDEneCknZ2BxZHYnP15YKSdpZHxqcHFRfHVgJz8ndmxrYmlgWmxxYGgnKSd3YGNgd3dgd0p3bGJsayc%2FJ21xcXV2PyoqbXBrcWB3aGRmbGR2K2xqJyknaWpmZGlgJz9rcGlpeCUl) 
 
 ## Links
 
