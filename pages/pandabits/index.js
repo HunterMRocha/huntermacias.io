@@ -71,10 +71,11 @@ const handleAboutScroll = () => {
             >
               Panda-Bits Premium
             </h1>
+            <p className="mx-auto text-xs">5 Free Blogs - Create Free Account for Unlimited Access</p>
             <p className="mt-2 opacity-50 text-lg"></p>
             <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
               {posts &&
-                posts.slice(0, 5).map((post) => (
+                posts.slice(0, posts.length).map((post) => (
                   <div
                     className="cursor-pointer relative"
                     key={post.slug}
