@@ -21,7 +21,7 @@ const BlogPost = ({ post }) => {
     <>
       <Head>
         <title>{"Panda Bits Premium - " + post.title}</title>
-        <meta property="og:url" content="http://huntermacias.io/premium" />
+        <meta property="og:url" content="http://huntermacias.io/pandabits" />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.tagLine} />
         <meta property="og:image" content={post.image} />
