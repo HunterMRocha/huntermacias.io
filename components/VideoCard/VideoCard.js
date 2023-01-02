@@ -1,51 +1,38 @@
 import { Card, Col, Row, Button, Link, Text } from "@nextui-org/react";
-// import YoutubeComponent from "../YouTubeComponent/YoutubeComponent";
 import YouTube from "react-youtube";
 import MediaQuery from 'react-responsive'
-
 
 const opts = {
     playerVars: {
       width: "100%",
-      height: "50%",
+      height: "100%",
       // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
       rel: 0
     }
   };
 
-
 export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
-    
-  <Card>
-    <Card.Body className=" bg-emerald-800/20 ">
-        <div className="flex mb-10 w-16 h-80">
-            <YouTube
-                containerClassName="video-container mob:content-start"
-                className="iframe"
-                videoId={videoId}
-                // width="60" height="315"
-                rel="0"
-                opts={opts}
-                />  
-        </div>
-
-  
-        {/* <div> */}
-          {/* <MediaQuery minWidth={1424}> */}
-            {/* <h2 className="p-5 pt-5">Content Overview</h2>
-            <p className="pl-5">Throughout this section you will learn how to...</p> */}
-          {/* </MediaQuery>  */}
-            {/* <h2 className="p-5">Content Overview</h2>
-            <p className="pl-5">Throughout this section you will learn how to...</p> */}
-        {/* </div> */}
+  <Card
+    css={{ mw: "675px" }}>
+      <Card.Body className=" bg-emerald-800/20 ">
+          <div className="flex mb-10 w-16 h-80">
+              <YouTube
+                  containerClassName="video-container"
+                  className="iframe"
+                  videoId={videoId}
+                  rel="0"
+                  opts={opts}
+                  />  
+          </div>
       
       
-    </Card.Body>
+      </Card.Body>
     <Card.Footer
+      className="relative mob:absolute"
       isBlurred
       css={{
-        position: "relative",
+        // position: "relative",
         bgBlur: "#0f111466",
         borderTop: "$borderWeights$light solid $gray800",
         bottom: 0,
@@ -74,15 +61,14 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
               </MediaQuery>
 
             <Text color="#94f9f0" size={10}>
-                Learn python by building multiple games using the PyGame
-                library.
+                #python #react #codingbits #pandabits
               </Text>
             
             </Col>
           </Row>
         </Col>
         <Col>
-          <Row justify="flex">
+          <Row justify="flex-end">
             <a href={videoLink} target="_blank" rel="noreferrer">
               <div>
                 <Button
@@ -104,7 +90,7 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
             </a>
           </Row>
 
-          <Row justify="flex">
+          <Row justify="flex-end">
             <a href={codeLink} target="_blank" rel="noreferrer">
               <div>
                 <Button

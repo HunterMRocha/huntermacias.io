@@ -7,7 +7,7 @@ import { Image } from "@nextui-org/react";
 import Header from "../../components/Header"
 
 
-function Premium ({ posts }) {
+function Pandabits ({ posts }) {
  // Handling Scroll
  const handleWorkScroll = () => {
   window.scrollTo({
@@ -118,4 +118,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Premium;
+export default Pandabits;

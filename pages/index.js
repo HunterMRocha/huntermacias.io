@@ -24,8 +24,6 @@ import { VideoCard } from "../components/VideoCard/VideoCard";
 // import ReactGA from "react-ga"
 
 export default function Home() {
-
-
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -227,8 +225,7 @@ export default function Home() {
             
               <div 
               className="mt-5 mob:min-h-full mob:mb-14 mob:grid-cols-1 mob:gap-y-10 tablet:m-8 grid tablet:grid-cols-2 
-                        laptop:justify-center laptop:grid-cols-3 gap-8"
-              > 
+                        laptop:justify-center laptop:grid-cols-3 gap-8"> 
                 {subdata.map((type, index) => (
                   <Checkout 
                       key={index}
@@ -243,35 +240,32 @@ export default function Home() {
  
         </div>
         
-        
         <FeaturedSponsors className='pt-4' />
-
 
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h1>
-            <div className="">
+            <Carousel>
+              <VideoCard
+                title="Turtle Graphics Racing Game: Styling & Stats"
+                videoLink="https://www.youtube.com/watch?v=7C2DCauXluY"
+                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
+                videoId="7C2DCauXluY"
+              />
 
-            <Carousel navButtonsAlwaysVisible={true}>
               <VideoCard
-                title="PyGame Development: Game Loop & Background"
-                videoLink="https://www.youtube.com/watch?v=ZlgNM1pALrI&list=PL30AETbxgR-feEfqwQxZ-_8s0fcvMQgqJ&index=6"
+                title="Delete columns to make sorted"
+                videoLink="https://www.youtube.com/watch?v=KZkeuvwRed8"
                 codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="ZlgNM1pALrI"
+                videoId="KZkeuvwRed8"
               />
               <VideoCard
-                title="PyGame Development: Character Animations"
-                videoLink="https://www.youtube.com/watch?v=sKocm91lKOI"
+                title="15 minute Leetcode Challenge"
+                videoLink="https://www.youtube.com/watch?v=DxoEvVBW9P8"
                 codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="9Kh9s9__ywo"
-              />
-              <VideoCard
-                title="PyGame Development: OOP in PyGame"
-                videoLink="https://www.youtube.com/watch?v=sKocm91lKOI"
-                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="0385Um8Z_mc"
+                videoId="DxoEvVBW9P8"
               />
             </Carousel>
-            </div>
+           
          
         </div>
 
