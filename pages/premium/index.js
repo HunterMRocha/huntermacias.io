@@ -30,7 +30,7 @@ const handleAboutScroll = () => {
   const router = useRouter();
 
   useEffect(() => {
-      router.push("/premium");
+      router.push("/pandabits");
       
   }, []);
 
@@ -41,7 +41,7 @@ const handleAboutScroll = () => {
             <title>Panda Bits</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta charset="utf-8" />
-            <meta property="og:url" content="http://huntermacias.io/premium"  />
+            <meta property="og:url" content="http://huntermacias.io/pandabits"  />
             <meta property="og:title" content="Panda Bits!" />
             <meta property="og:description" content="Create a free account for unlimted access" />
             <meta property="og:image" content="https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg" />
@@ -78,7 +78,7 @@ const handleAboutScroll = () => {
                   <div
                     className="cursor-pointer relative"
                     key={post.slug}
-                    onClick={() => Router.push(`/premium/${post.slug}`)}
+                    onClick={() => Router.push(`/pandabits/${post.slug}`)}
                   >
                     <img
                       className="w-full h-60 rounded-lg border hover:border-emerald-300 shadow-lg object-cover"

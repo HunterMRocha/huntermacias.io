@@ -197,23 +197,23 @@
     events "^3.1.0"
     tslib "^1.8.0"
 
-"@aws-amplify/ui-react-core@2.1.6":
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/ui-react-core/-/ui-react-core-2.1.6.tgz#83502d7777430accb5bd29a046a92e01ebe72c65"
-  integrity sha512-vf0F5OewgI4XGWUZ4YAn+R9+HJXSoRwm3VMYebIUoX0MidPOBHPonQrL6IzziRVFXPWuxNcbq2PUtaV0yGOicw==
+"@aws-amplify/ui-react-core@2.1.7":
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/ui-react-core/-/ui-react-core-2.1.7.tgz#11a75770057769a59afb44a807ecacdd68dc7e9a"
+  integrity sha512-DdnMOzN7ZIHI9ypej/3lWhDQNx/9sB0qvnd1OcButHbXf6F+CffDpaiTACUEh2G2+jFOdWTaATNp7UYw8MxRwA==
   dependencies:
-    "@aws-amplify/ui" "5.4.1"
+    "@aws-amplify/ui" "5.4.2"
     "@xstate/react" "3.0.1"
     lodash "4.17.21"
     xstate "^4.33.6"
 
 "@aws-amplify/ui-react@^4.3.1":
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/ui-react/-/ui-react-4.3.1.tgz#11ca5b3a7b85f561a668aa85277a61a48f56da93"
-  integrity sha512-gQkBROs3lT2gdYRxUcW5cKTShMggmCXY0wXVcp0iFRkYoi94wUHrmLPz+wTNH6xBuz23fF/oR9SmmeVMBU2ksQ==
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/ui-react/-/ui-react-4.3.2.tgz#70243ffe875ca4d10f9a27d874716884d0f97d6b"
+  integrity sha512-YQHzC7ZXvH0daPGo5O6BUksmXBlebGy4igY/2q7RsGpqEejVyvtmCun3fMQUqMuOfMouJBLFOa0aAzRXa+ybIA==
   dependencies:
-    "@aws-amplify/ui" "5.4.1"
-    "@aws-amplify/ui-react-core" "2.1.6"
+    "@aws-amplify/ui" "5.4.2"
+    "@aws-amplify/ui-react-core" "2.1.7"
     "@radix-ui/react-accordion" "1.0.0"
     "@radix-ui/react-direction" "1.0.0"
     "@radix-ui/react-dropdown-menu" "1.0.0"
@@ -232,10 +232,10 @@
     tinycolor2 "1.4.2"
     tslib "2.4.1"
 
-"@aws-amplify/ui@5.4.1":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@aws-amplify/ui/-/ui-5.4.1.tgz#8e2ccd8f74b8d02b1d843ef5d92e721737305690"
-  integrity sha512-erq+qlmvy+nIk4zB2jnZ71oN7Pdh408OHc7xfmxi4tZNoK5Wb0EtoCYApngP4sxlF7a/7KyQz1zmppKR/y1moQ==
+"@aws-amplify/ui@5.4.2":
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/@aws-amplify/ui/-/ui-5.4.2.tgz#ca25ba05cf16fe43909164f3f784bb4dd0bf5022"
+  integrity sha512-ei6AJXqMUKGI699sjAeUL8+RWKbZa/N4zxl2Z1CCOD1gt/4HJcIdulvkkeuoePwemCpuYy/PmH8arOiv6QKKhQ==
   dependencies:
     csstype "^3.1.1"
     lodash "4.17.21"
@@ -2558,9 +2558,9 @@
   integrity sha512-AHPmaAx+RYfZz0eYu6Gviiagpmiyw98ySSlQvCUhVGDRtDFe4DBS0x1bSjdF3gqUDYOczB+yYvBTtEylYSdRhg==
 
 "@eslint/eslintrc@^1.2.3":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.4.0.tgz#8ec64e0df3e7a1971ee1ff5158da87389f167a63"
-  integrity sha512-7yfvXy6MWLgWSFsLhz5yH3iQ52St8cdUY6FoGieKkRDVxuxmrNuUetIuu6cmjNWwniUHiWXjxCr5tTXDrbYS5A==
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.4.1.tgz#af58772019a2d271b7e2d4c23ff4ddcba3ccfb3e"
+  integrity sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA==
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -5664,9 +5664,9 @@ cookie@^0.4.0:
   integrity sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==
 
 core-js-pure@^3.25.1:
-  version "3.27.0"
-  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.27.0.tgz#091dce4799a5aad4cfde930ea747b0a1962388c5"
-  integrity sha512-fJml7FM6v1HI3Gkg5/Ifc/7Y2qXcJxaDwSROeZGAZfNykSTvUk94WT55TYzJ2lFHK0voSr/d4nOVChLuNCWNpA==
+  version "3.27.1"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.27.1.tgz#ede4a6b8440585c7190062757069c01d37a19dca"
+  integrity sha512-BS2NHgwwUppfeoqOXqi08mUqS5FiZpuRuJJpKsaME7kJz0xxuk0xkhDdfMIlP/zLa80krBqss1LtD7f889heAw==
 
 core-js@^1.0.0:
   version "1.2.7"
@@ -6377,9 +6377,9 @@ fast-xml-parser@^3.16.0:
     strnum "^1.0.4"
 
 fastq@^1.6.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.14.0.tgz#107f69d7295b11e0fccc264e1fc6389f623731ce"
-  integrity sha512-eR2D+V9/ExcbF9ls441yIuN6TI2ED1Y2ZcA5BmMtJsOkWOFRJQ0Jt0g1UwqXJJVAb+V+umH5Dfr8oh4EVP7VVg==
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.15.0.tgz#d04d07c6a2a68fe4599fea8d2e103a937fae6b3a"
+  integrity sha512-wBrocU2LCXXa+lWBt8RoIRD89Fi8OdABODa/kEnyeyjS5aZO5/GNvI5sEINADqP/h8M29UHTHUb53sUu5Ihqdw==
   dependencies:
     reusify "^1.0.4"
 
@@ -7317,16 +7317,16 @@ json-stable-stringify-without-jsonify@^1.0.1:
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
 json5@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
-  integrity sha512-aKS4WQjPenRxiQsC93MNfjx+nbF4PAdYzmd/1JIj8HYzqfbu86beTuNgXDzPknWk0n0uARlyewZo4s++ES36Ow==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.2.tgz#63d98d60f21b313b77c4d6da18bfa69d80e1d593"
+  integrity sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==
   dependencies:
     minimist "^1.2.0"
 
 json5@^2.2.0, json5@^2.2.1:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.2.tgz#64471c5bdcc564c18f7c1d4df2e2297f2457c5ab"
-  integrity sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 jsonc-parser@^3.0.0:
   version "3.2.0"

@@ -85,9 +85,9 @@ const Checkout = ({ type, price, benefits }) => {
 
 							
 							<Row>
-								<div class="grid grid-rows grid-flow-col gap-4">
-									<Col class='row-span-3'><FaDiscord color='MediumBlue' size={20} /> </Col>
-									<Col class='row-span-2 col-span-2'>
+								<div className="grid grid-rows grid-flow-col gap-4">
+									<Col className='row-span-3'><FaDiscord color='MediumBlue' size={20} /> </Col>
+									<Col className='row-span-2 col-span-2'>
 										<Text color="success" b size={16}>{benefits}</Text>
 									</Col>			
 
@@ -96,9 +96,9 @@ const Checkout = ({ type, price, benefits }) => {
 
 								{type == "Premium" && (
 									<Row>
-										<div class="grid grid-rows grid-flow-col gap-4">
-											<Col class='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
-											<Col class='row-span-2 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
+										<div className="grid grid-rows grid-flow-col gap-4">
+											<Col className='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
+											<Col className='row-span-2 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
 										</div>
 									</Row>
 
@@ -106,9 +106,9 @@ const Checkout = ({ type, price, benefits }) => {
 
 								{type == "Pro" && (
 									<Row>
-										<div class="grid grid-rows grid-flow-col gap-4">
-											<Col class='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
-											<Col class='row-span-3 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
+										<div className="grid grid-rows grid-flow-col gap-4">
+											<Col className='row-span-3'> <FaInstagram color='MediumBlue' size={20} /> </Col>
+											<Col className='row-span-3 col-span-2'> <Text color="success" b size={16}>Instagram Story and Post </Text> </Col>
 										</div>
 									</Row>
 								)}		
@@ -117,9 +117,9 @@ const Checkout = ({ type, price, benefits }) => {
 								{type == "Pro" && (
 									
 									<Row>
-										<div class="grid grid-rows grid-flow-col gap-4">
-											<Col class='row-span-3'><FaYoutube color='Firebrick' size={20} /> </Col>
-											<Col class='row-span-3 col-span-2'>
+										<div className="grid grid-rows grid-flow-col gap-4">
+											<Col className='row-span-3'><FaYoutube color='Firebrick' size={20} /> </Col>
+											<Col className='row-span-3 col-span-2'>
 												<Text color="success" b size={16}>YouTube Ad - 30 seconds</Text>
 											</Col>
 										</div>
@@ -130,9 +130,9 @@ const Checkout = ({ type, price, benefits }) => {
 								{/* spot on website */}
 								
 							<Row>
-							<div class="grid grid-rows grid-flow-col gap-4">
-								<Col class='row-span-3'><SiGithubsponsors color='Salmon' size={20} /> </Col>
-								<Col class='row-span-3 col-span-2'>
+							<div className="grid grid-rows grid-flow-col gap-4">
+								<Col className='row-span-3'><SiGithubsponsors color='Salmon' size={20} /> </Col>
+								<Col className='row-span-3 col-span-2'>
 									<Text color="success" b size={16}>Custom Ad displayed on site</Text>
 								</Col>
 							</div>
