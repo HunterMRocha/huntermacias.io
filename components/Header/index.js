@@ -92,7 +92,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
                   <Spacer x={0.5} />
-                  <Button ghost auto onClick={() => router.push("/premium")}>
+                  <Button ghost auto onClick={() => router.push("/pandabits")}>
                     Panda-Bits
                   </Button>
                   <Spacer x={0.5} />
@@ -122,7 +122,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
                   <Spacer x={0.5} />
-                  <Button ghost auto onClick={() => router.push("/premium")}>
+                  <Button ghost auto onClick={() => router.push("/pandabits")}>
                     Panda-Bits
                   </Button>
                   <Spacer x={0.5} />
@@ -169,7 +169,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
             <Spacer x={0.5} />
-            <Button ghost auto onClick={() => router.push("/premium")}>
+            <Button ghost auto onClick={() => router.push("/pandabits")}>
                 Panda-Bits
             </Button>
             <Spacer x={0.5} />
@@ -208,7 +208,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               
             )}
             <Spacer x={0.5} />
-            <Button ghost auto onClick={() => router.push("/premium")}>
+            <Button ghost auto onClick={() => router.push("/pandabits")}>
               Panda-Bits
             </Button>
             <Spacer x={0.5} />
