@@ -18,6 +18,7 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
       <Card.Body className=" bg-emerald-800/20 ">
           <div className="flex mb-10 w-16 h-80">
               <YouTube
+                  aria-label="youtube video"
                   containerClassName="video-container"
                   className="iframe"
                   videoId={videoId}

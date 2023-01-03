@@ -53,21 +53,21 @@ const BlogEditor = ({ post, close, refresh }) => {
             <div className="flex items-center justify-between">
               <h1 className="text-4xl">{blogVariables.title}</h1>
               <div className="flex items-center">
-                <Button onPress={savePost} type="primary">
+                <Button onClick={savePost} type="primary">
                   Save
                 </Button>
-                <Button onPress={close}>Close</Button>
+                <Button onClick={close}>Close</Button>
               </div>
             </div>
             <div className="flex items-center">
               <Button
-                onPress={() => setCurrentTabs("BLOGDETAILS")}
+                onClick={() => setCurrentTabs("BLOGDETAILS")}
                 type={currentTabs === "BLOGDETAILS" && "primary"}
               >
                 Blog Details
               </Button>
               <Button
-                onPress={() => setCurrentTabs("CONTENT")}
+                onClick={() => setCurrentTabs("CONTENT")}
                 type={currentTabs === "CONTENT" && "primary"}
               >
                 Content
@@ -151,8 +151,9 @@ const BlogEditor = ({ post, close, refresh }) => {
           <div className="mt-10">
             <div className="flex flex-col items-center">
               <label className="w-full text-sx opacity-50">Content</label>
+              <p>All Blogs are written use .md format</p>
               <TextareaAutosize
-                className="w-full h-auto mt-5 p-4 border hover:border-blue-400 rounded-xl shadow-xl"
+                className="w-full h-auto mt-5 p-4 border hover:border-emerald-300 rounded-xl shadow-xl"
                 value={blogContent}
                 onChange={(e) => setBlogContent(e.target.value)}
               ></TextareaAutosize>

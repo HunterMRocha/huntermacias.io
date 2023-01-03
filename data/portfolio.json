@@ -36,73 +36,46 @@
             "title": "Minecrafe Recreation",
             "description": "Game Development - Minecraft Clone",
             "imageSrc": "https://media-exp1.licdn.com/dms/image/C5622AQF8ubCg7oZx9A/feedshare-shrink_2048_1536/0/1670285417361?e=1673481600&v=beta&t=Fk914eQ2-n1uoDtP_R9YVEyIQ-xLOqkzXeVihg3jzNA",
-            "url": "https://github.com/HunterMRocha/Minecraft-clone",
-            "category": [
-                "python",
-                "game-dev",
-                "recreations"
-            ]
+            "url": "https://github.com/HunterMRocha/Minecraft-clone"
+          
         },
         {
             "id": "2",
             "title": "Pacman Recreation",
             "description": "Game Development - PyGame 🐍",
             "imageSrc": "https://i.imgur.com/w4yehQ9.jpeg",
-            "url": "https://github.com/HunterMRocha/pacman",
-            "category": [
-                "python",
-                "game-dev",
-                "recreations"
-            ]
+            "url": "https://github.com/HunterMRocha/pacman"
         },
         {
             "id": "3",
             "title": "Spave Invaders Recreation",
             "description": "Game Development - PyGame 🐍",
             "imageSrc": "https://github.com/HunterMRocha/Space-Invaders/blob/main/sv-demo.png?raw=true",
-            "url": "https://github.com/HunterMRocha/Space-Invaders",
-            "category": [
-                "python",
-                "game-dev",
-                "recreations"
-            ]
+            "url": "https://github.com/HunterMRocha/Space-Invaders"
+           
         },
         {
             "id": "4",
             "title": "Personal Portfolio  - Next.js",
             "description": "Web Development +TailwindCSS",
             "imageSrc": "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg",
-            "url": "http://huntermacias.io/",
-            "category": [
-                "python",
-                "react",
-                "web"
-            ]
+            "url": "http://huntermacias.io/"
+           
         },
         {
             "id": "5",
             "title": "Snake Game + A.I",
             "description": "Machine Learning & A.I. - Snake Game",
             "imageSrc": "https://hellocodeclub.b-cdn.net/wp-content/uploads/2021/11/snake_game_bitmap.png",
-            "url": "http://huntermacias.io/",
-            "category": [
-                "python",
-                "other",
-                "game-dev",
-                "advanced"
-            ]
+            "url": "http://huntermacias.io/"
+           
         },
         {
             "id": "6",
             "title": "Zoom Clone",
             "description": "Web Development - Agora WEB",
             "imageSrc": "data:image/jpeg;base64,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",
-            "url": "https://github.com/HunterMRocha/zoom-clone",
-            "category": [
-                "other",
-                "web",
-                "clones"
-            ]
+            "url": "https://github.com/HunterMRocha/zoom-clone"
         }
     ],
     "services": [
@@ -142,19 +115,26 @@
             {
                 "id": "1",
                 "dates": "June 2020 - Present",
-                "type": "Part Time",
+                "type": "Part-Time",
                 "position": "Coding Coach",
                 "bullets": "Develop various curriculums in: Python / Scratch  / Web Design, Guide students through the UML modeling language, Instruct students during 1:1 sessions by using a project-based learning approach in order to build interest skill and excitement"
             },
             {
                 "id": "2",
                 "dates": "June 2021 - Sep 2021",
-                "type": "Full Time",
-                "position": "Full Stack Developer at Firebird",
+                "type": "Full-Time",
+                "position": "Full Stack Internship at Firebird",
                 "bullets": "Developed and deployed React application, Developed web scraping program using Selenium, Tasked with scrapping data for over 100 different companies, Implemented login system using PHP"
             },
             {
                 "id": "3",
+                "dates": "Jan 2020 - Mar 2022",
+                "type": "Part-Time",
+                "position": "Lead Instructor at Mission Bit",
+                "bullets": "Designed and Implemented first-ever Python course, Lead Instructor for 3 different courses: python web-development and unity game development"
+            },
+            {
+                "id": "4",
                 "dates": "Dec. 2020",
                 "type": "Student Project",
                 "position": "Recommendation Engine - ML",
@@ -163,25 +143,28 @@
         ],
         "education": {
             "universityName": "University of San Francisco",
-            "universityDate": "2018-2022",
+            "universityDate": "2018-2023",
             "universityPara": "Computer Science "
         },
         "languages": [
             "Javascript",
-            "HTML5",
-            "CSS",
             "Python",
+            "HTML5/CSS ",
             "Java"
         ],
         "frameworks": [
-            "React",
+            "ReactJs",
             "Typescript",
-            "NodeJs"
+            "NodeJs",
+            "NextJs"
         ],
         "others": [
             "Figma",
-            "AdobeXD",
-            "AWS"
+            "AWS", 
+            "Firebase",
+            "Netlify",
+            "Web3",
+            "APIs"
         ]
     }
 }

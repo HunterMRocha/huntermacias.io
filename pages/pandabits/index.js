@@ -6,7 +6,6 @@ import { ISOToDate } from "../../utils";
 import Header from "../../components/Header"
 
 
-
 function Pandabits ({ posts }) {
  // Handling Scroll
  const handleWorkScroll = () => {
@@ -68,13 +67,12 @@ const handleAboutScroll = () => {
           <div className="mt-10">
             <h1
               ref={text}
-              className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
+              className="mx-auto mob:p-2 text-bold text-gray-300 text-6xl laptop:text-8xl w-full"
             >
               Panda-Bits Premium
             </h1>
-            <p className="mx-auto text-xs">5 Free Blogs - Create Free Account for Unlimited Access</p>
-            <p className="mt-2 opacity-50 text-lg"></p>
-            <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
+            <p className="mx-auto mob:p-2 text-sm">5 Free Blogs - Create Free Account for Unlimited Access</p>
+            <div className="mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
               {posts &&
                 posts.slice(0, posts.length).map((post) => (
                   <div
@@ -82,11 +80,11 @@ const handleAboutScroll = () => {
                     key={post.slug}
                     onClick={() => Router.push(`/pandabits/${post.slug}`)}
                   >
-                    <img
-                      className="w-full h-60 rounded-lg border hover:border-emerald-300 shadow-lg object-cover"
-                      src={post.image}
-                      alt={post.title}
-                    ></img>
+                        <img
+                          className="w-full h-60 rounded-lg border hover:border-emerald-300 object-cover"
+                          src={post.image}
+                          alt={post.title}
+                        ></img>
                     <h2 className="mt-5 text-emerald-300 font-thin text-2xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-sm">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">

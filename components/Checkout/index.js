@@ -148,7 +148,7 @@ const Checkout = ({ type, price, benefits }) => {
 						
 						<Button
 							color="primary"
-							onPress={redirectToCheckout}
+							onClick={redirectToCheckout}
 							disabled={isLoading}
 							className="hover:tracking-wider" 
 							style={{ fontSize: 20, color: 'black' }} 

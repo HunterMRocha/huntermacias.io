@@ -51,7 +51,9 @@ backgroundImg = pygame.image.load("wallBackground.jpg")
 
 ```
 #### Basic Game Setup - Overview
-```This is the basic simple code need to create a window screen, window title, load images/icon, and create pre-defined variables that we will use to make our game a bit more readable. The pixel variable is the size of the block image i.e 64 pixels.```
+```text
+This is the basic simple code need to create a window screen, window title, load images/icon, and create pre-defined variables that we will use to make our game a bit more readable. The pixel variable is the size of the block image i.e 64 pixels.
+```
 
 ---
 

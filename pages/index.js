@@ -33,12 +33,12 @@ export default function Home() {
   const textFour = useRef();
 
   // used to filter projects
-  const [selected, setSelected] = useState(['All'])
+  // const [selected, setSelected] = useState(['All'])
 
-  const selectedValue = React.useMemo(
-    () => Array.from(selected).join(", ").replaceAll("_", " "),
-    [selected]
-  );
+  // const selectedValue = React.useMemo(
+  //   () => Array.from(selected).join(", ").replace("_", " "),
+  //   [selected]
+  // );
 
  
   // Handling Scroll
@@ -83,7 +83,7 @@ export default function Home() {
         {/* <html lang="en" /> */}
         <title>My Personal Tech Hub</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta charset="utf-8" />
+        <meta charSet="utf-8" />
        
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@huntermacias-io" />
@@ -140,6 +140,15 @@ export default function Home() {
             </h1>
           </div>
 
+          <hr
+            style={{
+              background: 'lime',
+              color: 'lime',
+              borderColor: 'lime',
+              height: '1px',
+            }}
+          />
+
           <Socials className="mt-2 laptop:mt-5" />
             </div>
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
@@ -147,33 +156,6 @@ export default function Home() {
 
           <div className="mob:w-full flex flex-start space-x-4 tablet:m-2 text-4xl text-bold">
             <h1>Projects</h1>
-            {/* <div>
-              <Dropdown>
-                  <Dropdown.Button flat ghost color="primary" 
-                      css={{ tt: "capitalize" }}
-                      >
-                      {selectedValue}
-                  </Dropdown.Button>
-                  <Dropdown.Menu
-                      defaultSelectedKeys='all'
-                      aria-label="Single selection actions"
-                      color="primary"
-                      disallowEmptySelection
-                      selectionMode="single"
-                      selectedKeys={selected}
-                      onSelectionChange={setSelected}
-                  >
-                    
-                        <Dropdown.Item key="all">All</Dropdown.Item>
-                        <Dropdown.Item key="python">Python</Dropdown.Item>
-                        <Dropdown.Item key="react">React</Dropdown.Item>
-                        <Dropdown.Item key="game-dev">Game Dev.</Dropdown.Item>
-                        <Dropdown.Item key="other">Other</Dropdown.Item>
-                      
-                  </Dropdown.Menu>
-              </Dropdown>             
-            </div> */}
-
           </div>
           
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-4">
@@ -184,7 +166,7 @@ export default function Home() {
                   img={project.imageSrc}
                   name={project.title}
                   description={project.description}
-                  onPress={() => window.open(project.url)}
+                  onClick={() => window.open(project.url)}
                 />
               ) :
               project.category.includes(selected.currentKey) ? (
@@ -193,7 +175,7 @@ export default function Home() {
                   img={project.imageSrc}
                   name={project.title}
                   description={project.description}
-                  onPress={() => window.open(project.url)}
+                  onClick={() => window.open(project.url)}
                 />
               ) : null
             ))}
@@ -248,7 +230,7 @@ export default function Home() {
                 videoLink="https://www.youtube.com/watch?v=7C2DCauXluY"
                 codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
                 videoId="7C2DCauXluY"
-              />
+              /> 
 
               <VideoCard
                 title="Delete columns to make sorted"
