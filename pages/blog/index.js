@@ -28,38 +28,38 @@ const Blog = ({ posts }) => {
     setMounted(true);
   }, []);
 
-  const createBlog = () => {
-    if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }).then(() => {
-        router.reload(window.location.pathname);
-      });
-    } else {
-      alert("This thing only works in development mode.");
-    }
-  };
+  // const createBlog = () => {
+  //   if (process.env.NODE_ENV === "development") {
+  //     fetch("/api/blog", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     }).then(() => {
+  //       router.reload(window.location.pathname);
+  //     });
+  //   } else {
+  //     alert("This thing only works in development mode.");
+  //   }
+  // };
 
-  const deleteBlog = (slug) => {
-    if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          slug,
-        }),
-      }).then(() => {
-        router.reload(window.location.pathname);
-      });
-    } else {
-      alert("This thing only works in development mode.");
-    }
-  };
+  // const deleteBlog = (slug) => {
+  //   if (process.env.NODE_ENV === "development") {
+  //     fetch("/api/blog", {
+  //       method: "DELETE",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         slug,
+  //       }),
+  //     }).then(() => {
+  //       router.reload(window.location.pathname);
+  //     });
+  //   } else {
+  //     alert("This thing only works in development mode.");
+  //   }
+  // };
   return (
     showBlog.current && (
       <>
@@ -101,7 +101,7 @@ const Blog = ({ posts }) => {
                     </span>
                     {process.env.NODE_ENV === "development" && mounted && (
                       <div className="absolute top-0 right-0">
-                        <Button
+                        <button
                           onClick={(e) => {
                             deleteBlog(post.slug);
                             e.stopPropagation();
@@ -109,7 +109,7 @@ const Blog = ({ posts }) => {
                           type={"primary"}
                         >
                           Delete
-                        </Button>
+                        </button>
                       </div>
                     )}
                   </div>
@@ -119,9 +119,9 @@ const Blog = ({ posts }) => {
         </div>
         {process.env.NODE_ENV === "development" && mounted && (
           <div className="fixed bottom-6 right-6">
-            <Button onClick={createBlog} type={"primary"}>
+            <button onClick={createBlog} type={"primary"}>
               Add New Post +{" "}
-            </Button>
+            </button>
           </div>
         )}
       </>
