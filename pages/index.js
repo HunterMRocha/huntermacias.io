@@ -21,7 +21,10 @@ import subdata from "../data/sub_data"
 import { useTheme } from "next-themes";
 import { VideoCard } from "../components/VideoCard/VideoCard";
 
-// import ReactGA from "react-ga"
+import ReactGA from "react-ga"
+
+const TRACKING_ID = "G-9PRNXT5E94"
+ReactGA.initialize(TRACKING_ID);
 
 export default function Home() {
   // Ref
@@ -31,15 +34,6 @@ export default function Home() {
   const textTwo = useRef();
   const textThree = useRef();
   const textFour = useRef();
-
-  // used to filter projects
-  // const [selected, setSelected] = useState(['All'])
-
-  // const selectedValue = React.useMemo(
-  //   () => Array.from(selected).join(", ").replace("_", " "),
-  //   [selected]
-  // );
-
  
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -71,9 +65,10 @@ export default function Home() {
   
   useEffect(() => {
     setMounted(true);
+
+    ReactGA.pageview(window.location.pathname);
+    
   }, []);
-
-
 
   return (    
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
