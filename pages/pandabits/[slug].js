@@ -90,7 +90,6 @@ const PandaBitPost = ({ post }) => {
 };
 
 export async function getStaticProps({ params }) {
-  console.log('in')
   const post = getPostBySlug(params.slug, [
     "date",
     "slug",

@@ -37,12 +37,12 @@ const Checkout = ({ type, price, benefits }) => {
 
   const redirectToCheckout = async () => {
     setLoading(true);
-    console.log("redirectedToCheckout");
+    // console.log("redirectedToCheckout");
 
     const stripe = await getStripe();
     const { error } = await stripe.redirectToCheckout(checkoutOptions);
 
-    console.log("Stripe Checkout error", error);
+    // console.log("Stripe Checkout error", error);
     if (error) setStripeError(error.message);
     setLoading(false);
   };

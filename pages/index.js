@@ -75,7 +75,6 @@ export default function Home() {
       
       {data.showCursor && <Cursor />}
       <Head>
-        {/* <html lang="en" /> */}
         <title>My Personal Tech Hub</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
