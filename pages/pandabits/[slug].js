@@ -38,7 +38,7 @@ const PandaBitPost = ({ post }) => {
         <meta name="twitter:creator" content="@HunterMacias" />
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.tagLine} />
-        <meta name="twitter:image" content={post.image} />
+        <meta name="twitter:image" content="https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif" />
       </Head>
       {data.showCursor && <Cursor />}
 

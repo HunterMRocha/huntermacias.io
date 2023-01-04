@@ -44,7 +44,7 @@ const handleAboutScroll = () => {
             <meta property="og:url" content="http://huntermacias.io/pandabits"  />
             <meta property="og:title" content="Panda Bits!" />
             <meta property="og:description" content="Create a free account for unlimted access" />
-            <meta property="og:image" content="https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg" />
+            <meta property="og:image" content="https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif" />
           
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content="@huntermacias-io" />
@@ -53,7 +53,7 @@ const handleAboutScroll = () => {
             <meta name="twitter:creator" content="@HunterMacias" />
             <meta name="twitter:title" content="Panda Bits!"  />
             <meta name="twitter:description" content="Create a free account for unlimted access" />
-            <meta name="twitter:image" content="https://as1.ftcdn.net/v2/jpg/04/90/33/40/1000_F_490334013_RzctVsKvF8h5QzaKvqHAVFK3Mm58EcB1.jpg" />
+            <meta name="twitter:image" content="https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif" />
             <meta name="theme-color" content="#2aa3ef" />
             <meta name="msapplication-TileColor" content="#2d89ef" />
         </Head>
