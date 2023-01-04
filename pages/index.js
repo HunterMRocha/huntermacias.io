@@ -222,7 +222,7 @@ export default function Home() {
             <Carousel>
               {viddata.map((data, id) => (
                 <VideoCard
-                  id={id}
+                  key={id}
                   title={data.title}
                   videoLink={data.videoLink}
                   codeLink={data.codeLink}

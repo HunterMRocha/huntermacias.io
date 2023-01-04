@@ -519,6 +519,11 @@ class Mob(pygame.sprite.Sprite):
 ![Example Output](https://media.giphy.com/media/rZqbm6tgMHog6vL9JP/giphy.gif)
 
 >> Now we have our asteroids and their rotating decently
+>> However since the images are in rectangles and when rectangles rotate
+>> it isn't an ideal rotation we end up running into slight imperfections
+>> 
+>> To demonstrate further here is an additional graphic of the problem we 
+>> are going to tackle next
 
 # Asteroids Tutorial Part 7: Score (and Drawing Text)
 
