@@ -10,15 +10,18 @@
 - Easy To Customize your details With GUI
 - Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
 - Dark Mode
+- Stripe Payments
+- Amplify AWS Auth, used for blog section
+- 
 
 
 ### Sections
 
 - Header
-- Work
 - Services
 - About
-- Contact
+- Panda Bits
+- Resume
 - Markdown Blog
 
 
@@ -26,17 +29,28 @@
 
 - Clone this repo
 - run `yarn`
-- `yarn dev`
+- run `yarn run dev`
 
+### TODOS
+ - [] switch data to sanity
+ - [] update about content
+ - [] update resume content
+ - [] improve sponsor card UI
+ - [] improve youtube video UI section
+ - [] clean up overall code 
 
 ### How To Contribute - 
 
-I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
+I would be very happy to review your PRs and all the awesome things that you can help me make this portfolio an awesome one stop tech hub of resources! 
 
 
 ### Tech Stack Used - 
 - Next.js
 - TailwindCSS
+- Amplify AWS
+- Stripe Payments
+- Netlify Hosting
+
 
 ## Supporting
 Many hours of hard work have gone into this project. Your support will be very appreciated!
