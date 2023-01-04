@@ -43,7 +43,7 @@ const BlogEditor = ({ post, close, refresh }) => {
 
   return (
     <div
-      className={`fixed z-10 w-screen h-screen overflow-auto top-0 flex flex-col items-center ${
+      className={`z-10 w-screen h-screen flex-wrap top-0 flex flex-col items-center ${
         theme === "dark" ? "bg-black" : "bg-white"
       }`}
     >
@@ -51,7 +51,7 @@ const BlogEditor = ({ post, close, refresh }) => {
         <div className="mt-10">
           <div className="z-10 sticky top-12">
             <div className="flex items-center justify-between">
-              <h1 className="text-4xl">{blogVariables.title}</h1>
+              {/* <h1 className="text-4xl">{blogVariables.title}</h1> */}
               <div className="flex items-center">
                 <Button onClick={savePost} type="primary">
                   Save

@@ -18,6 +18,7 @@ import Carousel from "react-material-ui-carousel";
 // Local Data
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
+import viddata from "../data/vid-data"
 import { useTheme } from "next-themes";
 import { VideoCard } from "../components/VideoCard/VideoCard";
 
@@ -219,25 +220,17 @@ export default function Home() {
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h1>
             <Carousel>
-              <VideoCard
-                title="Turtle Graphics Racing Game: Styling & Stats"
-                videoLink="https://www.youtube.com/watch?v=7C2DCauXluY"
-                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="7C2DCauXluY"
-              /> 
+              {viddata.map((data, id) => (
+                <VideoCard
+                  id={id}
+                  title={data.title}
+                  videoLink={data.videoLink}
+                  codeLink={data.codeLink}
+                  videoId={data.videoId}
+                /> 
+              ))}
 
-              <VideoCard
-                title="Delete columns to make sorted"
-                videoLink="https://www.youtube.com/watch?v=KZkeuvwRed8"
-                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="KZkeuvwRed8"
-              />
-              <VideoCard
-                title="15 minute Leetcode Challenge"
-                videoLink="https://www.youtube.com/watch?v=DxoEvVBW9P8"
-                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="DxoEvVBW9P8"
-              />
+            
             </Carousel>
            
          
