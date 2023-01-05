@@ -6,7 +6,8 @@ import React, { useEffect, useState } from "react";
 // Local Data
 import data from "../../data/portfolio.json";
 import { Button, Spacer } from "@nextui-org/react";
-import { Image } from '@nextui-org/react';
+import { Avatar, Image } from '@nextui-org/react';
+
 
 
 
@@ -31,9 +32,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <div className="flex items-center justify-between p-2 laptop:p-0">
               <h1
                 onClick={() => router.push("/")}
-                className="font-medium p-2 laptop:p-0 link"
+                className="p-1 laptop:p-0 link"
               >
-                {name}.
+                <Avatar
+                  size="lg"
+                  src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
+                  color="primary"
+                  bordered
+                  squared
+                  zoomed 
+                />
+                {/* {name}. */}
               </h1>
 
               <div className="flex items-center">
@@ -80,30 +89,31 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button auto ghost onClick={handleWorkScroll}>Home</Button>
+                  <Button auto ghost onClick={() => router.push("/")}>Home</Button>
                   <Spacer x={0.2} />
                   {/* <Button auto ghost onClick={handleAboutScroll}>About</Button>
                   <Spacer x={0.2} /> */}
                   {showBlog && (
-                    <Button auto shadow color="warning" ghost onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button aria-label="blog" auto shadow color="warning" ghost onClick={() => router.push("/blog")}>Blog</Button>
                   )}
                   <Spacer x={0.2} />
                   {showResume && (
                     <Button auto
+                      aria-label="resume"
                       ghost 
                       onClick={() => router.push("/resume")}>
                       Resume
                     </Button>
                   )}
                   <Spacer x={0.2} />
-                  <Button ghost auto onClick={() => router.push("/pandabits")}>
+                  <Button aria-label="pandabits section" ghost auto onClick={() => router.push("/pandabits")}>
                     Panda-Bits
                   </Button>
                   <Spacer x={0.2} />
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
-                  <Button ghost auto onClick={() => router.push("/")} classes="first:ml-1">
+                  <Button aria-label="Home" ghost auto onClick={() => router.push("/")} classes="first:ml-1">
                     Home
                   </Button>
                   <Spacer x={0.5} />
@@ -112,11 +122,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   </Button> */}
                   {/* <Spacer x={0.5} /> */}
                   {showBlog && (
-                    <Button ghost shadow color="warning" auto onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button aria-label="Blog" ghost shadow color="warning" auto onClick={() => router.push("/blog")}>Blog</Button>
                   )}
                    <Spacer x={0.5} />
                   {showResume && (
                     <Button
+                      aria-label="resume"
                       ghost auto 
                       onClick={() => router.push("/resume")}
                       classes="first:ml-1"
@@ -125,7 +136,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     </Button>
                   )}
                   <Spacer x={0.5} />
-                  <Button ghost auto onClick={() => router.push("/pandabits")}>
+                  <Button aria-label="pandabits section" ghost auto onClick={() => router.push("/pandabits")}>
                     Panda-Bits
                   </Button>
                   <Spacer x={0.5} />
@@ -145,7 +156,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          {name}
+          <Avatar
+            size="lg"
+            src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
+            color="primary"
+            bordered
+            squared
+            zoomed 
+          />
         </h1>
 
 
@@ -158,12 +176,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {/* <Button ghost auto onClick={() => router.push("/")}>About</Button> */}
             <Spacer x={0.2} />
             {showBlog && (
-              <Button ghost shadow color="warning" auto onClick={() => router.push("/blog")}>Blog</Button>
+              <Button aria-label="Blog" ghost shadow color="warning" auto onClick={() => router.push("/blog")}>Blog</Button>
             )}
             <Spacer x={0.2} />
             {showResume && (
               
               <Button
+                aria-label="Resume"
                 ghost auto
                 onClick={() => router.push("/resume")}
                 classes="first:ml-1"
@@ -172,13 +191,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
             <Spacer x={0.2} />
-            <Button ghost auto onClick={() => router.push("/pandabits")}>
+            <Button aria-label="pandabits section" ghost auto onClick={() => router.push("/pandabits")}>
                 Panda-Bits
             </Button>
             <Spacer x={0.2} />
           
             {mounted && theme && data.darkMode && (
               <Button
+                aria-label="dark"
                 ghost auto 
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
@@ -193,16 +213,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           </div>
         ) : (
           <div className="flex">
-            <Button ghost auto onClick={() => router.push("/")}>Home</Button>
+            <Button aria-label="Home" ghost auto onClick={() => router.push("/")}>Home</Button>
             <Spacer x={0.2} />
-            <Button ghost auto onClick={() => router.push("/")}>About</Button>
+            <Button aria-label="About" ghost auto onClick={() => router.push("/")}>About</Button>
             <Spacer x={0.2} />
             {showBlog && (
-              <Button auto shadow color="warning" ghost onClick={() => router.push("/blog")}>Blog</Button>
+              <Button aria-label="Blog" auto shadow color="warning" ghost onClick={() => router.push("/blog")}>Blog</Button>
             )}
             <Spacer x={0.2} />
             {showResume && (
               <Button
+                aria-label="Resume"
                 auto ghost
                 onClick={() => router.push("/resume")}
                 classes="first:ml-1"
@@ -212,12 +233,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               
             )}
             <Spacer x={0.2} />
-            <Button ghost auto onClick={() => router.push("/pandabits")}>
+            <Button aria-label="pandabits" ghost auto onClick={() => router.push("/pandabits")}>
               Panda-Bits
             </Button>
             <Spacer x={0.2} />
             {mounted && theme && data.darkMode && (
-              <Button auto ghost
+              <Button aria-label="dark" auto ghost
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 <Image

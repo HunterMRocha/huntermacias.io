@@ -53,20 +53,22 @@ const BlogEditor = ({ post, close, refresh }) => {
             <div className="flex items-center justify-between">
               {/* <h1 className="text-4xl">{blogVariables.title}</h1> */}
               <div className="flex items-center">
-                <Button onClick={savePost} type="primary">
+                <Button aria-label="save" onClick={savePost} type="primary">
                   Save
                 </Button>
-                <Button onClick={close}>Close</Button>
+                <Button aria-label="close" onClick={close}>Close</Button>
               </div>
             </div>
             <div className="flex items-center">
               <Button
+                aria-label="BLOGDETAILS"
                 onClick={() => setCurrentTabs("BLOGDETAILS")}
                 type={currentTabs === "BLOGDETAILS" && "primary"}
               >
                 Blog Details
               </Button>
               <Button
+                aria-label="CONTENT"
                 onClick={() => setCurrentTabs("CONTENT")}
                 type={currentTabs === "CONTENT" && "primary"}
               >
@@ -80,6 +82,7 @@ const BlogEditor = ({ post, close, refresh }) => {
             <div className="mt-5 flex flex-col items-center">
               <label className="w-full text-sx opacity-50">Date</label>
               <DatePicker
+                aria-label="date-picker"
                 selected={new Date(blogVariables.date)}
                 className="w-full mt-2 p-4 hover:border-blue-400 rounded-md shadow-lg border-2"
                 onChange={(date) => {
@@ -153,6 +156,7 @@ const BlogEditor = ({ post, close, refresh }) => {
               <label className="w-full text-sx opacity-50">Content</label>
               <p>All Blogs are written use .md format</p>
               <TextareaAutosize
+                aria-label="text-area"
                 className="w-full h-auto mt-5 p-4 border hover:border-emerald-300 rounded-xl shadow-xl"
                 value={blogContent}
                 onChange={(e) => setBlogContent(e.target.value)}

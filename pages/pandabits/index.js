@@ -22,6 +22,7 @@ function Pandabits ({ posts }) {
             <title>Panda Bits</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta charSet="utf-8" />
+            <html lang="en" />
             <meta property="og:url" content="http://huntermacias.io/pandabits"  />
             <meta property="og:title" content="Panda Bits!" />
             <meta property="og:description" content="Create a free account for unlimted access" />
