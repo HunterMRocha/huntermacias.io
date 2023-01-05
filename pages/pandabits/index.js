@@ -60,6 +60,7 @@ function Pandabits ({ posts }) {
                     onClick={() => Router.push(`/pandabits/${post.slug}`)}
                   >
                     <Image
+                      css={{width:"fill", maxHeight:"175px"}}
                       className="w-full h-30 rounded-lg border hover:border-emerald-300"
                       src={post.image}
                       alt={post.title}

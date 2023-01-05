@@ -6,6 +6,8 @@ import React, { useEffect, useState } from "react";
 // Local Data
 import data from "../../data/portfolio.json";
 import { Button, Spacer } from "@nextui-org/react";
+import { Image } from '@nextui-org/react';
+
 
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
@@ -42,19 +44,20 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
-                    <img
-                      className="h-6"
+                    <Image
+                      css={{width:"20px", height:"20px"}}
+                      className="w-6 h-6"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
                       alt=''
-                    ></img>
+                    ></Image>
                   </Button>
                 )}
 
                 <Popover.Button>
-                  <img
-                    className="h-6"
+                  <Image
+                    css={{width:"30px", height:"30px"}}
                     src={`/images/${
                       !open
                       ? theme === "dark"
@@ -65,25 +68,25 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       : "cancel-white.svg"
                     }`}
                     alt=''
-                  ></img>
+                  ></Image>
                 </Popover.Button>
               </div>
             </div>
             <Popover.Panel
-              className={`absolute right-0 z-10 w-11/12 p-4 ${
+              className={`absolute right-0 z-10 w-6/12 p-4 ${
                 theme === "dark" ? "bg-slate-800" : "bg-white"
-              } shadow-md rounded-md`}
+              } shadow-md rounded-lg`}
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
                   <Button auto ghost onClick={handleWorkScroll}>Work</Button>
-                  <Spacer x={0.5} />
+                  <Spacer x={0.2} />
                   <Button auto ghost onClick={handleAboutScroll}>About</Button>
-                  <Spacer x={0.5} />
+                  <Spacer x={0.2} />
                   {showBlog && (
                     <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
                   )}
-                  <Spacer x={0.5} />
+                  <Spacer x={0.2} />
                   {showResume && (
                     <Button auto
                       ghost 
@@ -91,12 +94,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                       Resume
                     </Button>
                   )}
-                  <Spacer x={0.5} />
+                  <Spacer x={0.2} />
                   <Button ghost auto onClick={() => router.push("/pandabits")}>
                     Panda-Bits
                   </Button>
-                  <Spacer x={0.5} />
-            <Spacer x={0.5} />
+                  <Spacer x={0.2} />
+            <Spacer x={0.2} />
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
@@ -151,13 +154,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {!isBlog ? (
           <div className="flex">
             <Button ghost auto onClick={() => router.push("/")}>Work</Button>
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             <Button ghost auto onClick={() => router.push("/")}>About</Button>
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             {showBlog && (
               <Button ghost auto onClick={() => router.push("/blog")}>Blog</Button>
             )}
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             {showResume && (
               
               <Button
@@ -168,35 +171,36 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 Resume
               </Button>
             )}
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             <Button ghost auto onClick={() => router.push("/pandabits")}>
                 Panda-Bits
             </Button>
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
           
             {mounted && theme && data.darkMode && (
               <Button
                 ghost auto 
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <img
+                <Image
+                  css={{width:"20px", height:"20px"}}
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt=''
-                ></img>
+                ></Image>
               </Button>
             )}
           </div>
         ) : (
           <div className="flex">
             <Button ghost auto onClick={() => router.push("/")}>Home</Button>
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             <Button ghost auto onClick={() => router.push("/")}>About</Button>
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             {showBlog && (
               <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
             )}
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             {showResume && (
               <Button
                 auto ghost
@@ -207,20 +211,21 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
               
             )}
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             <Button ghost auto onClick={() => router.push("/pandabits")}>
               Panda-Bits
             </Button>
-            <Spacer x={0.5} />
+            <Spacer x={0.2} />
             {mounted && theme && data.darkMode && (
               <Button auto ghost
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
-                <img
+                <Image
+                  css={{width:"20px", height:"20px"}}
                   className="h-6"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                   alt=''
-                ></img>
+                ></Image>
               </Button>
             )}
           </div>
