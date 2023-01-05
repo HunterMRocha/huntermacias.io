@@ -11,7 +11,7 @@ import { Image } from '@nextui-org/react';
 
 import { withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
-import awsExports from '../../data/aws-exports';
+// import awsExports from '../../data/aws-exports';
 import { Auth } from 'aws-amplify';
 
 Auth.configure(
