@@ -54,7 +54,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
                 <Popover.Button>
                   <img
-                    className="h-5"
+                    className="h-6"
                     src={`/images/${
                       !open
                       ? theme === "dark"

@@ -7975,6 +7975,11 @@ react-is@^18.0.0, react-is@^18.2.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
   integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
 
+react-lazyload-youtube@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-lazyload-youtube/-/react-lazyload-youtube-1.0.5.tgz#85ad161a627d5b1c3803ae2c6c4754fff8273d6d"
+  integrity sha512-N2Gkf9K33C62jAc47mF7mL9p1glgont8j8QGtnGoKXLaxHeFyBE9OUb7rAO+Wrqqd0Xs4av4u6LAfSiuZBJzcw==
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"

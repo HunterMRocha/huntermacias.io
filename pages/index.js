@@ -107,29 +107,29 @@ export default function Home() {
         />
         
         <div className="laptop:mt-20 mt-10">
-          <div className="mt-5 mob:w-full text-2xl tablet:p-2 p-1 px-2">
+          <div className="mt-5 text-center mob:w-full mob:text-sm tablet:p-2 tablet:text-xl laptop:text-3xl p-1 px-2">
             
             <h1
               ref={textOne}
-              className=" laptop:text-5xl w-full text-bold tablet:text-4xl mob:text-xl mob:text-center w-4/5 laptop:w-5/5"
+              className=""
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="laptop:text-3xl w-full py-2 px-2 mob:text-lg laptop:w-5/5 mob:py-1 mob:text-center"
+              className=""
             >
               {data.headerTaglineTwo}
             </h1>
             <h1
               ref={textThree}
-              className="laptop:text-2xl w-full py-2 px-2 mob:text-lg laptop:w-5/5 px-2 mob:text-center mob:py-1"
+              className=""
             >
               {data.headerTaglineThree}
             </h1>
             <h1
               ref={textFour}
-              className="laptop:text-xl w-full px-2 py-1 mob:text-sm laptop:w-5/5 mob:text-center"
+              className=""
             >
               {data.headerTaglineFour}
             </h1>
@@ -149,11 +149,11 @@ export default function Home() {
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
               {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
-          <div className="mob:w-full flex flex-start space-x-4 tablet:m-2 text-4xl text-bold">
+          <div className="mob:w-full flex flex-start text-4xl text-bold space-x-4 tablet:m-2">
             <h1>Projects</h1>
           </div>
           
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-4">
+          <div className="mt-5 grid grid-cols-1 gap-4 tablet:grid-cols-2 laptop:mt-10 laptop:grid-cols-4">
             {data.projects.map((project) => (
               true ? (
                 <WorkCard

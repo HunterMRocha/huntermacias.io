@@ -4,43 +4,25 @@ import { useEffect, useRef } from "react";
 import { getAllPosts } from "../../utils/api";
 import { ISOToDate } from "../../utils";
 import Header from "../../components/Header"
+import { Image } from '@nextui-org/react';
 
 
 function Pandabits ({ posts }) {
- // Handling Scroll
- const handleWorkScroll = () => {
-  window.scrollTo({
-    top: workRef.current.offsetTop,
-    left: 0,
-    behavior: "smooth",
-  });
-};
-
-const handleAboutScroll = () => {
-  window.scrollTo({
-    top: aboutRef.current.offsetTop,
-    left: 0,
-    behavior: "smooth",
-  });
-};
-
 
   const text = useRef();
   const router = useRouter();
+
   useEffect(() => {
       router.push("/pandabits");
       
   }, []);
 
-
-
   return (
       <>
- 
         <Head>
             <title>Panda Bits</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta charset="utf-8" />
+            <meta charSet="utf-8" />
             <meta property="og:url" content="http://huntermacias.io/pandabits"  />
             <meta property="og:title" content="Panda Bits!" />
             <meta property="og:description" content="Create a free account for unlimted access" />
@@ -60,10 +42,7 @@ const handleAboutScroll = () => {
        
 
         <div className="container mx-auto mb-10">
-        <Header
-          handleWorkScroll={handleWorkScroll}
-          handleAboutScroll={handleAboutScroll}
-        />
+        <Header />
           <div className="mt-10">
             <h1
               ref={text}
@@ -72,7 +51,7 @@ const handleAboutScroll = () => {
               Panda-Bits Premium
             </h1>
             <p className="mx-auto mob:p-2 text-sm">5 Free Blogs - Create Free Account for Unlimited Access</p>
-            <div className="mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
+            <div className="mt-10 grid grid-cols-1 gap-10 tablet:grid-cols-2 laptop:grid-cols-3 justify-between">
               {posts &&
                 posts.slice(0, posts.length).map((post) => (
                   <div
@@ -80,11 +59,12 @@ const handleAboutScroll = () => {
                     key={post.slug}
                     onClick={() => Router.push(`/pandabits/${post.slug}`)}
                   >
-                        <img
-                          className="w-full h-60 rounded-lg border hover:border-emerald-300 object-cover"
-                          src={post.image}
-                          alt={post.title}
-                        ></img>
+                    <Image
+                      className="w-full h-30 rounded-lg border hover:border-emerald-300"
+                      src={post.image}
+                      alt={post.title}
+                      objectFit="cover"
+                    ></Image>
                     <h2 className="mt-5 text-emerald-300 font-thin text-2xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-sm">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">
