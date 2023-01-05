@@ -9,6 +9,13 @@ import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
 import { Image } from '@nextui-org/react';
 
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css'
+import awsExports from '../../data/aws-exports';
+import { Auth } from 'aws-amplify';
+
+Auth.configure(awsExports);
+
 
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
@@ -150,4 +157,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Blog;
+export default withAuthenticator(Blog);

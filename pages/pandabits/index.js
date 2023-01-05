@@ -1,11 +1,10 @@
 import Head from "next/head";
 import Router, { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { getAllPosts } from "../../utils/api";
 import { ISOToDate } from "../../utils";
 import Header from "../../components/Header"
 import { Image } from '@nextui-org/react';
-
 
 function Pandabits ({ posts }) {
 
@@ -71,7 +70,6 @@ function Pandabits ({ posts }) {
                     <span className="text-sm mt-5 opacity-25">
                       {ISOToDate(post.date)}
                     </span>
-                    
                   </div>
                 ))}
             </div>

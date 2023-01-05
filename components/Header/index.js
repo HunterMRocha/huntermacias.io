@@ -39,6 +39,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <div className="flex items-center">
                 {data.darkMode && (
                   <Button
+                    shadow
                     ghost auto
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
@@ -55,7 +56,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   </Button>
                 )}
 
-                <Popover.Button>
+                <Popover.Button >
                   <Image
                     css={{width:"30px", height:"30px"}}
                     src={`/images/${
@@ -79,12 +80,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             >
               {!isBlog ? (
                 <div className="grid grid-cols-1">
-                  <Button auto ghost onClick={handleWorkScroll}>Work</Button>
+                  <Button auto ghost onClick={handleWorkScroll}>Home</Button>
                   <Spacer x={0.2} />
-                  <Button auto ghost onClick={handleAboutScroll}>About</Button>
-                  <Spacer x={0.2} />
+                  {/* <Button auto ghost onClick={handleAboutScroll}>About</Button>
+                  <Spacer x={0.2} /> */}
                   {showBlog && (
-                    <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button auto shadow color="warning" ghost onClick={() => router.push("/blog")}>Blog</Button>
                   )}
                   <Spacer x={0.2} />
                   {showResume && (
@@ -99,7 +100,6 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Panda-Bits
                   </Button>
                   <Spacer x={0.2} />
-            <Spacer x={0.2} />
                 </div>
               ) : (
                 <div className="grid grid-cols-1">
@@ -107,12 +107,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     Home
                   </Button>
                   <Spacer x={0.5} />
-                  <Button ghost auto onClick={() => router.push("/")} classes="first:ml-1">
+                  {/* <Button ghost auto onClick={() => router.push("/")} classes="first:ml-1">
                     About
-                  </Button>
-                  <Spacer x={0.5} />
+                  </Button> */}
+                  {/* <Spacer x={0.5} /> */}
                   {showBlog && (
-                    <Button ghost auto onClick={() => router.push("/blog")}>Blog</Button>
+                    <Button ghost shadow color="warning" auto onClick={() => router.push("/blog")}>Blog</Button>
                   )}
                    <Spacer x={0.5} />
                   {showResume && (
@@ -153,12 +153,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {/* bottom buttons */}
         {!isBlog ? (
           <div className="flex">
-            <Button ghost auto onClick={() => router.push("/")}>Work</Button>
-            <Spacer x={0.2} />
-            <Button ghost auto onClick={() => router.push("/")}>About</Button>
+            <Button ghost auto onClick={() => router.push("/")}>Home</Button>
+            {/* <Spacer x={0.2} /> */}
+            {/* <Button ghost auto onClick={() => router.push("/")}>About</Button> */}
             <Spacer x={0.2} />
             {showBlog && (
-              <Button ghost auto onClick={() => router.push("/blog")}>Blog</Button>
+              <Button ghost shadow color="warning" auto onClick={() => router.push("/blog")}>Blog</Button>
             )}
             <Spacer x={0.2} />
             {showResume && (
@@ -198,7 +198,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <Button ghost auto onClick={() => router.push("/")}>About</Button>
             <Spacer x={0.2} />
             {showBlog && (
-              <Button auto ghost onClick={() => router.push("/blog")}>Blog</Button>
+              <Button auto shadow color="warning" ghost onClick={() => router.push("/blog")}>Blog</Button>
             )}
             <Spacer x={0.2} />
             {showResume && (

@@ -10,23 +10,23 @@ const WorkCard = ({ img, name, description, onClick }) => {
     >
       <div
         className="relative mob:h-auto rounded-lg overflow-hidden transition-all ease-out duration-300 "
-        style={{ height: "150px" }}
+        style={{ height: "165px" }}
       >
         <Image
-          css={{width:"fill", maxHeight:"175px"}}
+          css={{width:"fill"}}
           alt={name}
-          className="h-full w-full object-cover hover:scale-110 transition-all ease-in duration-600"
+          className="hover:scale-110 transition-all ease-in duration-600"
           src={img}
           objectFit="cover"
         ></Image>
       </div>
-      <h1 className="hover:text-emerald-400 text-emerald-500 mt-5 text-2xl">
+      <h1 className="mob:text-lg hover:text-emerald-400 text-emerald-500 mt-5 text-2xl">
         {name ? name : "Project Name"}
       </h1>
       <h2 className="text-sm opacity-50">
         {description ? description : "Description"}
       </h2>
-      <h2 className="text-sm opacity-50">
+      <h2 className="text-xs opacity-50">
         Rating: ⭐⭐⭐⭐⭐
       </h2>
     </div>
