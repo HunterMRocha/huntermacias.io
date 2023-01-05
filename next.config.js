@@ -6,7 +6,6 @@ const nextConfig = {
 
 module.exports = {
   nextConfig,
-  awsExports,
 
   env: {
     // STRIPE_TEST_KEY: process.env.STRIPE_TEST_KEY,
