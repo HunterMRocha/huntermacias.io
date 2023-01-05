@@ -41,6 +41,8 @@ export default function Home() {
 
   const [countUp, setCountUp] = useState(231)
   const [countDown, setCountDown] = useState(4)
+
+  
  
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -77,9 +79,17 @@ export default function Home() {
     
   }, []);
 
+     
+
+
+
   return (    
+
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
-      
+    
+     
+    
+
       {data.showCursor && <Cursor />}
       <Head>
         <title>My Personal Tech Hub</title>
@@ -102,7 +112,9 @@ export default function Home() {
         <meta name="twitter:widgets:csp" content="on" />
       
       </Head>
+     
       
+
 
         <div className="gradient-circle"></div>
         <div className="gradient-circle-bottom"></div>
@@ -147,7 +159,7 @@ export default function Home() {
               height: '1px',
             }}
           />
-
+          
           <Socials className="mob:pl-5 mt-2 laptop:mt-5" />
             </div>
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
@@ -216,6 +228,8 @@ export default function Home() {
               </div>
             
           </Container>
+
+          
  
         </div>
         

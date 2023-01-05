@@ -5,16 +5,26 @@ import { getAllPosts } from "../../utils/api";
 import { ISOToDate } from "../../utils";
 import Header from "../../components/Header"
 import { Image } from '@nextui-org/react';
+import Loading from "../../components/Loading/Loading";
+import RingLoader from "react-spinners/RingLoader"
+import PacmanLoader from "react-spinners/PacmanLoader"
+
 
 function Pandabits ({ posts }) {
 
   const text = useRef();
   const router = useRouter();
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
       router.push("/pandabits");
-      
+      setTimeout(() => {
+        if (loading) {
+          setLoading(false)
+        }
+    }, 4000);
   }, []);
+
 
   return (
       <>
@@ -42,6 +52,15 @@ function Pandabits ({ posts }) {
        
 
         <div className="container mx-auto mb-10">
+        <div className="p-2 mt-4 mob:pt-16 mob:absolute tablet:relative laptop:relative float-right">
+          <RingLoader 
+            aria-label="Spinner"
+            speedMultiplier="0.5" 
+            size={120} 
+            color="#fbbf24" 
+          />
+
+        </div>
         <Header />
           <div className="mt-10">
             <h1
@@ -51,6 +70,17 @@ function Pandabits ({ posts }) {
               Panda-Bits Premium
             </h1>
             <p className="mx-auto mob:p-2 text-sm">5 Free Blogs - Create Free Account for Unlimited Access</p>
+            
+            <div className="w-full opacity-40 pt-28 tablet:text-center laptop:text-center fixed animate-bounce ">
+              <PacmanLoader 
+                aria-label="pacman-anim"
+                speedMultiplier="0.5" 
+                size={150} 
+                color="#fbbf24" 
+              /> 
+
+            </div>
+
             <div className="mt-10 grid grid-cols-1 gap-10 tablet:grid-cols-2 laptop:grid-cols-3 justify-between">
               {posts &&
                 posts.slice(0, posts.length).map((post) => (
