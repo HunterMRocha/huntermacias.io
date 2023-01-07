@@ -2,12 +2,50 @@ import Head from "next/head";
 import Router, { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { stagger } from "../../animations";
-import Button from "../../components/Button";
 import Cursor from "../../components/Cursor";
 import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+import { Image } from '@nextui-org/react';
+
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css'
+// import awsExports from '../../data/aws-exports';
+import { Auth } from 'aws-amplify';
+
+Auth.configure(
+  {
+    "aws_project_region": "us-west-2",
+    "aws_cognito_identity_pool_id": "us-west-2:41803657-2682-4c2f-a834-9b4131988348",
+    "aws_cognito_region": "us-west-2",
+    "aws_user_pools_id": "us-west-2_JqkvOx2sc",
+    "aws_user_pools_web_client_id": "4ev8ivporc2rbf4lpdquqf37ld",
+    "oauth": {},
+    "aws_cognito_username_attributes": [
+        "EMAIL"
+    ],
+    "aws_cognito_social_providers": [],
+    "aws_cognito_signup_attributes": [
+        "EMAIL"
+    ],
+    "aws_cognito_mfa_configuration": "OFF",
+    "aws_cognito_mfa_types": [
+        "SMS"
+    ],
+    "aws_cognito_password_protection_settings": {
+        "passwordPolicyMinLength": 8,
+        "passwordPolicyCharacters": []
+    },
+    "aws_cognito_verification_mechanisms": [
+        "EMAIL"
+    ],
+    "aws_user_files_s3_bucket": "huntermaciasio9b99694a2f704a8a8853dd222d53679a01823-staging",
+    "aws_user_files_s3_bucket_region": "us-west-2"
+  }
+);
+
+
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
@@ -66,6 +104,24 @@ const Blog = ({ posts }) => {
         {data.showCursor && <Cursor />}
         <Head>
           <title>Blog</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta charSet="utf-8" />
+            <html lang="en" />
+            <meta property="og:url" content="http://huntermacias.io/blog"  />
+            <meta property="og:title" content="Tech Blog !" />
+            <meta property="og:description" content="Create a free account for unlimted access" />
+            <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg" />
+          
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@huntermacias-io" />
+            <meta name="twitter:widgets:new-embed-design" content="on" />
+            <meta name="twitter:widgets:csp" content="on" />
+            <meta name="twitter:creator" content="@HunterMacias" />
+            <meta name="twitter:title" content="Tech Blog!"  />
+            <meta name="twitter:description" content="Create a free account for unlimted access" />
+            <meta name="twitter:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg" />
+            <meta name="theme-color" content="#2aa3ef" />
+            <meta name="msapplication-TileColor" content="#2d89ef" />
         </Head>
         <div
           className={`container mx-auto mb-10 ${
@@ -89,11 +145,13 @@ const Blog = ({ posts }) => {
                     key={post.slug}
                     onClick={() => Router.push(`/blog/${post.slug}`)}
                   >
-                    <img
-                      className="w-full h-60 rounded-lg shadow-lg object-cover"
+                    <Image
+                      css={{width:"fill", maxHeight:"175px"}}
+                      className="w-full h-30 rounded-lg shadow-lg"
                       src={post.image}
                       alt={post.title}
-                    ></img>
+                      objectFit="cover"
+                    ></Image>
                     <h2 className="mt-5 text-4xl">{post.title}</h2>
                     <p className="mt-2 opacity-50 text-lg">{post.preview}</p>
                     <span className="text-sm mt-5 opacity-25">
@@ -146,4 +204,4 @@ export async function getStaticProps() {
   };
 }
 
-export default Blog;
+export default withAuthenticator(Blog);

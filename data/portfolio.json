@@ -1,9 +1,9 @@
 {
     "name": "Hunter Macias",
-    "headerTaglineOne": "Welcome Beta Tech-Stackers 🤖",
-    "headerTaglineTwo": "Thank you for your interest in Tech-Stack ! 🖥️",
-    "headerTaglineThree": "Sign Up for access to our blog ⚡",
-    "headerTaglineFour": "Code Compiler Coming Soon...",
+    "headerTaglineOne": "Hunter Macias",
+    "headerTaglineTwo": "Blogs Published Everyday ⚡",
+    "headerTaglineThree": "Freelance Developer - Content Creator 🖥️",
+    "headerTaglineFour": "Weekly Site Updates",
     "showCursor": false,
     "showBlog": true,
     "darkMode": true,
@@ -50,7 +50,7 @@
             "id": "3",
             "title": "Spave Invaders Recreation",
             "description": "Game Development - PyGame 🐍",
-            "imageSrc": "https://github.com/HunterMRocha/Space-Invaders/blob/main/sv-demo.png?raw=true",
+            "imageSrc": "http://kidscancode.org/img/shmup_sample.gif",
             "url": "https://github.com/HunterMRocha/Space-Invaders"
            
         },
@@ -82,7 +82,7 @@
         {
             "id": "1",
             "title": "Game Development 👾",
-            "description": "We help with the creation and development of 2D/3D games using python. Learn how to think like a game designer and bring all your ideas to life!",
+            "description": "Stranded at home with lots of time on your hands? Want to learn something new and exciting? If you‘re like most developers, you’ve probably been kicking around a game design in your head. Now’s the time to give it a try, improve your skills, and have some fun. This tutorial will teach you a few game development concepts using PyGame, which is a cross-platform set of Python modules designed for writing video games.",
             "price": "package: $29.99/hr"
         },
         {
@@ -150,7 +150,9 @@
             "Javascript",
             "Python",
             "HTML5/CSS ",
-            "Java"
+            "Java",
+            "C",
+            "C++"
         ],
         "frameworks": [
             "ReactJs",
@@ -164,7 +166,9 @@
             "Firebase",
             "Netlify",
             "Web3",
-            "APIs"
+            "APIs",
+            "Single Page Apps",
+            "Blockchain"
         ]
     }
 }

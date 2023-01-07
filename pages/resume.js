@@ -87,15 +87,15 @@ const Resume = () => {
                   </p>
                 </div>
               </div>
-              <div className="mt-5">
-                <h1 className="text-2xl font-bold">Skills</h1>
-                <div className="flex mob:flex-col desktop:flex-row justify-between">
+              <div className="mt-5 flex flex-wrap">
+                <h1 className="text-xl font-bold">Skills</h1>
+                <div className="flex flex-wrap mob:flex-col-2 mob:flex-row-2">
                   {data.resume.languages && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Languages</h2>
+                      <h2 className="text-sm">Languages</h2>
                       <ul className="list-disc">
                         {data.resume.languages.map((language) => (
-                          <li key={language} className="ml-5 py-2">
+                          <li key={language} className="ml-5 py-0.5">
                             {language}
                           </li>
                         ))}
@@ -104,11 +104,11 @@ const Resume = () => {
                   )}
 
                   {data.resume.frameworks && (
-                    <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Frameworks</h2>
+                    <div className="mt-2 mob:mt-5 px-6 ">
+                      <h2 className="text-sm">Frameworks</h2>
                       <ul className="list-disc">
                         {data.resume.frameworks.map((framework) => (
-                          <li key={framework} className="ml-5 py-2">
+                          <li key={framework} className="ml-5 py-0.5">
                             {framework}
                           </li>
                         ))}
@@ -118,10 +118,10 @@ const Resume = () => {
 
                   {data.resume.others && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Others</h2>
+                      <h2 className="text-sm">Others</h2>
                       <ul className="list-disc">
                         {data.resume.others.map((other) => (
-                          <li key={other} className="ml-5 py-2">
+                          <li key={other} className="ml-5 py-0.5">
                             {other}
                           </li>
                         ))}

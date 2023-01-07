@@ -12,6 +12,9 @@ module.exports = {
     STRIPE_PUBLIC_KEY:process.env.STRIPE_PUBLIC_KEY
   },
 
+  images: {
+    unoptimized: true,
+  },
 
 
 };

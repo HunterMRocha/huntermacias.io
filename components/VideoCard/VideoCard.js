@@ -1,5 +1,7 @@
 import { Card, Col, Row, Button, Link, Text } from "@nextui-org/react";
-import YouTube from "react-youtube";
+// import YouTube from "react-youtube";
+import  Youtube  from 'react-lazyload-youtube'
+import 'react-lazyload-youtube/dist/index.css'
 import MediaQuery from 'react-responsive'
 
 const opts = {
@@ -15,12 +17,12 @@ const opts = {
 export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
   <Card
     css={{ mw: "675px" }}>
-      <Card.Body className=" bg-emerald-800/20 ">
-          <div className="flex mb-10 w-16 h-80">
-              <YouTube
+      <Card.Body className="bg-emerald-800/20 w-full">
+          <div className="flex content-center mb-10">
+              <Youtube
                   aria-label="youtube video"
-                  containerClassName="video-container"
-                  className="iframe"
+                  // className="iframe"
+                  width="640px" height="480px"
                   videoId={videoId}
                   rel="0"
                   opts={opts}

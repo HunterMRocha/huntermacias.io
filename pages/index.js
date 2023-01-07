@@ -11,13 +11,17 @@ import Cursor from "../components/Cursor";
 import Checkout from "../components/Checkout"
 import { Container } from '@nextui-org/react';
 import FeaturedSponsors from "../components/FeaturedSponsors";
-import { Dropdown } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import ThumbDownIcon from '@material-ui/icons/ThumbDown';
+import Button from '@material-ui/core/Button';
 
 import Carousel from "react-material-ui-carousel";
 
 // Local Data
 import data from "../data/portfolio.json";
 import subdata from "../data/sub_data"
+import viddata from "../data/vid-data"
 import { useTheme } from "next-themes";
 import { VideoCard } from "../components/VideoCard/VideoCard";
 
@@ -34,6 +38,11 @@ export default function Home() {
   const textTwo = useRef();
   const textThree = useRef();
   const textFour = useRef();
+
+  const [countUp, setCountUp] = useState(231)
+  const [countDown, setCountDown] = useState(4)
+
+  
  
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -70,31 +79,42 @@ export default function Home() {
     
   }, []);
 
+     
+
+
+
   return (    
+
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
-      
+    
+     
+    
+
       {data.showCursor && <Cursor />}
       <Head>
         <title>My Personal Tech Hub</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
+        <html lang="en" />
        
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@huntermacias-io" />
         <meta name="twitter:creator" content="@HunterMacias" />
-        <meta name="twitter:title" content="My Personal Tech Hub" />
+        <meta name="twitter:title" content="My Personal Tech Hub 🐼" />
         <meta name="twitter:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and different topics in the tech world. I also offer different sponsorship services that you can check out below.  " />
         <meta name="twitter:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg" /> 
        
         <meta property="og:url" content="http://huntermacias.io" />
         <meta property="og:title" content="My Personal Tech Hub" />
-        <meta property="og:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and different topics in the tech world. I also offer different sponsorship services that you can check out below.  " />
+        <meta property="og:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and related topics in the tech world. I am looking for mentors and sponsors to team up with  " />
         <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg"/>
         <meta name="twitter:widgets:new-embed-design" content="on" />
         <meta name="twitter:widgets:csp" content="on" />
       
       </Head>
+     
       
+
 
         <div className="gradient-circle"></div>
         <div className="gradient-circle-bottom"></div>
@@ -106,29 +126,26 @@ export default function Home() {
         />
         
         <div className="laptop:mt-20 mt-10">
-          <div className="mt-5 mob:w-full text-2xl tablet:p-2 p-1 px-2">
-            
-            <h1
-              ref={textOne}
-              className=" laptop:text-5xl w-full text-bold tablet:text-4xl mob:text-xl mob:text-center w-4/5 laptop:w-5/5"
-            >
+          <div className="mt-5 text-center mob:w-full mob:text-sm tablet:p-2 tablet:text-xl laptop:text-3xl p-1 px-2">
+       
+            <h1 ref={textOne} className="">
               {data.headerTaglineOne}
             </h1>
-            <h1
-              ref={textTwo}
-              className="laptop:text-3xl w-full py-2 px-2 mob:text-lg laptop:w-5/5 mob:py-1 mob:text-center"
-            >
+
+            <h1 ref={textTwo} className="">
               {data.headerTaglineTwo}
             </h1>
+
             <h1
               ref={textThree}
-              className="laptop:text-2xl w-full py-2 px-2 mob:text-lg laptop:w-5/5 px-2 mob:text-center mob:py-1"
+              className=""
             >
               {data.headerTaglineThree}
             </h1>
+
             <h1
               ref={textFour}
-              className="laptop:text-xl w-full px-2 py-1 mob:text-sm laptop:w-5/5 mob:text-center"
+              className=""
             >
               {data.headerTaglineFour}
             </h1>
@@ -142,37 +159,37 @@ export default function Home() {
               height: '1px',
             }}
           />
-
-          <Socials className="mt-2 laptop:mt-5" />
+          
+          <Socials className="mob:pl-5 mt-2 laptop:mt-5" />
             </div>
               <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
               {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
 
-          <div className="mob:w-full flex flex-start space-x-4 tablet:m-2 text-4xl text-bold">
+          <div className="mob:w-full flex flex-start text-4xl text-bold space-x-4 tablet:m-2">
             <h1>Projects</h1>
           </div>
           
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-4 gap-4">
+          <div className="mt-5 grid grid-cols-1 gap-4 tablet:grid-cols-2 laptop:mt-10 laptop:grid-cols-4">
             {data.projects.map((project) => (
               true ? (
                 <WorkCard
+                key={project.id}
+                img={project.imageSrc}
+                name={project.title}
+                description={project.description}
+                onClick={() => window.open(project.url)}
+                />
+                ) :
+                project.category.includes(selected.currentKey) ? (
+                  <WorkCard
                   key={project.id}
                   img={project.imageSrc}
                   name={project.title}
                   description={project.description}
                   onClick={() => window.open(project.url)}
-                />
-              ) :
-              project.category.includes(selected.currentKey) ? (
-                <WorkCard
-                  key={project.id}
-                  img={project.imageSrc}
-                  name={project.title}
-                  description={project.description}
-                  onClick={() => window.open(project.url)}
-                />
-              ) : null
-            ))}
+                  />
+                  ) : null
+                  ))}
           </div>
         </div>
 
@@ -181,12 +198,12 @@ export default function Home() {
           <div className="mt-5 tablet:m-8 grid grid-cols-1 laptop:grid-cols-2 gap-8">
             {data.services.map((service, index) => (
               <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-                price={service.price}
+              key={index}
+              name={service.title}
+              description={service.description}
+              price={service.price}
               />
-            ))}
+              ))}
           </div>
         </div>
 
@@ -211,6 +228,8 @@ export default function Home() {
               </div>
             
           </Container>
+
+          
  
         </div>
         
@@ -219,26 +238,20 @@ export default function Home() {
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h1>
             <Carousel>
-              <VideoCard
-                title="Turtle Graphics Racing Game: Styling & Stats"
-                videoLink="https://www.youtube.com/watch?v=7C2DCauXluY"
-                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="7C2DCauXluY"
-              /> 
+              {viddata.map((data, id) => (
+                <VideoCard
+                  key={id}
+                  title={data.title}
+                  videoLink={data.videoLink}
+                  codeLink={data.codeLink}
+                  videoId={data.videoId}
+                /> 
+              ))}
 
-              <VideoCard
-                title="Delete columns to make sorted"
-                videoLink="https://www.youtube.com/watch?v=KZkeuvwRed8"
-                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="KZkeuvwRed8"
-              />
-              <VideoCard
-                title="15 minute Leetcode Challenge"
-                videoLink="https://www.youtube.com/watch?v=DxoEvVBW9P8"
-                codeLink="https://replit.com/teams/join/jkyuxjdjtpycqfodhzqglsqlqsqvadec-panda-hm"
-                videoId="DxoEvVBW9P8"
-              />
+            
             </Carousel>
+            <Button onClick={() => setCountUp(countUp + 1)}><ThumbUpIcon />{`${countUp === 0 ? ` ` : countUp}`}</Button><Button onClick={() => setCountDown(countDown + 1)}><ThumbDownIcon />{`${countDown === 0 ? ` ` : countDown}`}</Button>
+
            
          
         </div>

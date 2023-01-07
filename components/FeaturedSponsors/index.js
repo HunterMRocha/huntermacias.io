@@ -1,4 +1,4 @@
-import { Table, Tooltip, Row, Col, User, Text } from "@nextui-org/react";
+import { Table, Row, Col, User, Text } from "@nextui-org/react";
 import React from "react";
 
 const columns = [
@@ -39,7 +39,7 @@ const renderCell = (user, columnKey) => {
     switch (columnKey) {
       case "title":
         return (
-          <User size="lg" src={user.avatar} name={cellValue} css={{ p: 10, height: "3vw" }}>
+          <User size="lg" src={user.avatar} alt="sponsor" name={cellValue} css={{ p: 10, height: "3vw" }}>
 			<div> 
 				<Text b size={15} css={{ color: "darkblue", tt: "capitalize" }}> 
 					{user.name}
