@@ -15,7 +15,9 @@ function Loading() {
             />
             <h1 className="text-lg text-white font-bold">Loading...</h1>
         </div>
+        
         <PropagateLoader color="white" size={30} /> 
+      
     </div>
   )
 }

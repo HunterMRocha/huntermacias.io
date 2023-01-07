@@ -1,35 +1,46 @@
-import React from "react";
-import Socials from "../Socials";
-import Link from "next/link";
-import Button from "../Button";
+import {isEmpty, isArray} from 'lodash';
+import Link from 'next/link';
+// import {getIconComponentByName} from '../../utils/icons-map';
+import NewsletterSubscribe from './NewsletterSubscribe';
 
-const Footer = ({}) => {
-  return (
-    <>
-      <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-        <div>
-          <h1 className="tablet:m-10 text-2xl text-bold">Contact</h1>
-          <div className="mt-10">
-           
-            {/* <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              TOGETHER
-            </h1> */}
-            <Button type="primary">Schedule a call</Button>
-            <div className="mt-10">
-              <Socials />
-            </div>
-          </div>
-        </div>
-      </div>
-      <h1 className="text-sm text-bold mt-2 laptop:mt-10 p-2 laptop:p-0">
-        Created by{" "}
-        <Link href="http://www.huntermacias.io/">
-          <a className="underline underline-offset-1">Hunter Macias</a>
-        </Link>
-    
-      </h1>
-    </>
-  );
+const Footer = ( {} ) => {
+	return (
+		<footer className="bg-teal-500 p-6">
+			<div className="flex flex-wrap -mx-1 overflow-hidden text-white">
+
+				{/*Widget One*/}
+				{/* <div className="my-1 px-1 w-full overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
+					<div dangerouslySetInnerHTML={{ __html: sanitize( footer?.sidebarOne ) }}/>
+				</div> */}
+
+				{/*Widget Two*/}
+				{/* <div className="my-1 px-1 w-full overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
+					<div dangerouslySetInnerHTML={{ __html: sanitize( footer?.sidebarTwo ) }}/>
+				</div> */}
+
+				<div className="my-1 px-1 w-full overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
+          {/*Mailchimp Newsletter Subscription*/}
+          <NewsletterSubscribe/>
+          {/* Footer Menus*/}
+					{/* { ! isEmpty( footerMenus ) && isArray( footerMenus ) ? (
+						<ul>
+							{ footerMenus.map( footerMenu => (
+								<li key={footerMenu?.node?.id}>
+									<Link href={footerMenu?.node?.path}>
+										<a>
+											{footerMenu?.node?.label}
+										</a>
+									</Link>
+								</li>
+							) ) }
+						</ul>
+					) : null } */}
+
+				</div>
+			</div>
+
+		</footer>
+	);
 };
 
 export default Footer;

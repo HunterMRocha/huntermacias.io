@@ -10,8 +10,6 @@ import { Button } from "@nextui-org/react";
 // import { EditIcon } from './EditIcon';
 
 // Data
-// import { name, showResume } from "../data/portfolio.json";
-// import { resume } from "../data/portfolio.json";
 import data from "../data/portfolio.json";
 
 const Resume = () => {

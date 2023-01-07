@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
+import Footer from "../components/Footer";
 import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 
@@ -79,17 +80,9 @@ export default function Home() {
     
   }, []);
 
-     
-
-
-
   return (    
-
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
     
-     
-    
-
       {data.showCursor && <Cursor />}
       <Head>
         <title>My Personal Tech Hub</title>
@@ -136,17 +129,11 @@ export default function Home() {
               {data.headerTaglineTwo}
             </h1>
 
-            <h1
-              ref={textThree}
-              className=""
-            >
+            <h1 ref={textThree} className="">
               {data.headerTaglineThree}
             </h1>
 
-            <h1
-              ref={textFour}
-              className=""
-            >
+            <h1 ref={textFour} className="">
               {data.headerTaglineFour}
             </h1>
           </div>
@@ -272,8 +259,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* <Header /> */}
-
+        <Footer /> 
         
       </div>
     </div>

@@ -1,21 +1,22 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default [
 	{
 	  type: 'Basic',
-	  price: 'price_1MFPGSGKJO6noGmdTCMX0LYm',
+	  price: process.env.BASIC_SUB_PRICE_KEY,
 	  benefits: "Discord Server Access+"
 	  
 	},
 
 	{
 		type: 'Premium',
-		price: 'price_1MFZvEGKJO6noGmdzItpQgGi',
+		price: process.env.PREM_SUB_PRICE_KEY,
 		benefits: "Discord Server Access+"
 
 	},
 
 	{
 		type: 'Pro',
-		price: 'price_1MFa4OGKJO6noGmdKxPN09fX',
+		price: process.env.PRO_SUB_PRICE_KEY,
 		benefits: "Discord Server Access+"
 	}
 	
