@@ -75,9 +75,9 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
             <a href={videoLink} target="_blank" rel="noreferrer">
               <div>
                 <Button
+                  aria-label="video-link button"
                   flat
                   auto
-                  rounded-lg
                   css={{ color: "#94f9f0", bg: "#94f9f026" }}
                 >
                   <Text
@@ -97,6 +97,7 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
             <a href={codeLink} target="_blank" rel="noreferrer">
               <div>
                 <Button
+                  aria-label="code link"
                   flat
                   auto
                   rounded

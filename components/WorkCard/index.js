@@ -1,5 +1,6 @@
 import React from "react";
 import { Image } from "@nextui-org/react";
+import MyModal from "../MyModal";
 
 const WorkCard = ({ img, name, description, onClick }) => {
   return (
@@ -29,6 +30,10 @@ const WorkCard = ({ img, name, description, onClick }) => {
       <h2 className="text-xs opacity-50">
         Rating: ⭐⭐⭐⭐⭐
       </h2>
+      <div className="right-0">
+        <MyModal title={name} description={description}/>
+
+      </div>
     </div>
   );
 };

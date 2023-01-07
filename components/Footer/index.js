@@ -19,23 +19,8 @@ const Footer = ( {} ) => {
 				</div> */}
 
 				<div className="my-1 px-1 w-full overflow-hidden sm:w-full lg:w-1/2 xl:w-1/3">
-          {/*Mailchimp Newsletter Subscription*/}
-          <NewsletterSubscribe/>
-          {/* Footer Menus*/}
-					{/* { ! isEmpty( footerMenus ) && isArray( footerMenus ) ? (
-						<ul>
-							{ footerMenus.map( footerMenu => (
-								<li key={footerMenu?.node?.id}>
-									<Link href={footerMenu?.node?.path}>
-										<a>
-											{footerMenu?.node?.label}
-										</a>
-									</Link>
-								</li>
-							) ) }
-						</ul>
-					) : null } */}
-
+					{/*Mailchimp Newsletter Subscription*/}
+					<NewsletterSubscribe/>
 				</div>
 			</div>
 

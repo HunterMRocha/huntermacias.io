@@ -82,7 +82,7 @@ const NewsletterForm = ( { status, message, onValidated }) => {
         </div>
       </div>
       <div className="min-h-42px">
-        <p>Sign up to receive email updates on posts, announcements, promotions, and more </p>
+        <p>Join 60,000 readers and get powerful business analysis delivered straight to your inbox. </p>
         { 'sending' === status ? 
           <div className="flex content-center">
              <Spinner animation="border" role="status">
