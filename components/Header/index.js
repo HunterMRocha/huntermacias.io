@@ -157,12 +157,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
           <Avatar
-            size="lg"
-            src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
-            color="primary"
             bordered
             squared
-            zoomed 
+            color="primary"
+            src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
+             
           />
         </h1>
 

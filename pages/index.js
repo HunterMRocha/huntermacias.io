@@ -26,12 +26,14 @@ import viddata from "../data/vid-data"
 import { useTheme } from "next-themes";
 import { VideoCard } from "../components/VideoCard/VideoCard";
 
+import { withRouter } from "react-router-dom"
 import ReactGA from "react-ga"
 
 const TRACKING_ID = "G-9PRNXT5E94"
 ReactGA.initialize(TRACKING_ID);
 
-export default function Home() {
+
+const Home = () =>  {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
@@ -43,8 +45,6 @@ export default function Home() {
   const [countUp, setCountUp] = useState(231)
   const [countDown, setCountDown] = useState(4)
 
-  
- 
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
@@ -75,6 +75,7 @@ export default function Home() {
   
   useEffect(() => {
     setMounted(true);
+    ReactGA.pageview(window.location.pathname + window.location.search);
 
     ReactGA.pageview(window.location.pathname);
     
@@ -156,27 +157,20 @@ export default function Home() {
             <h1>Projects</h1>
           </div>
           
-          <div className="mt-5 grid grid-cols-1 gap-4 tablet:grid-cols-2 laptop:mt-10 laptop:grid-cols-4">
-            {data.projects.map((project) => (
-              true ? (
-                <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
-                />
-                ) :
-                project.category.includes(selected.currentKey) ? (
-                  <WorkCard
+          <div className="mt-5 grid grid-cols-1 gap-4 tablet:grid-cols-2 laptop:mt-10 laptop:grid-cols-3">
+            
+            {data.projects.map((project) => 
+              (<WorkCard
                   key={project.id}
                   img={project.imageSrc}
                   name={project.title}
                   description={project.description}
+                  modal_description={project.modal_description}
+                  url={project.url}
                   onClick={() => window.open(project.url)}
-                  />
-                  ) : null
-                  ))}
+                />
+              ))
+            }
           </div>
         </div>
 
@@ -215,32 +209,31 @@ export default function Home() {
               </div>
             
           </Container>
-
-          
- 
         </div>
         
         <FeaturedSponsors className='pt-4' />
 
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h1>
-            <Carousel>
-              {viddata.map((data, id) => (
-                <VideoCard
-                  key={id}
-                  title={data.title}
-                  videoLink={data.videoLink}
-                  codeLink={data.codeLink}
-                  videoId={data.videoId}
-                /> 
-              ))}
+          <Carousel>
+            {viddata.map((data, id) => (
+              <VideoCard
+                key={id}
+                title={data.title}
+                videoLink={data.videoLink}
+                codeLink={data.codeLink}
+                videoId={data.videoId}
+              /> 
+            ))} 
+          </Carousel>
 
-            
-            </Carousel>
-            <Button onClick={() => setCountUp(countUp + 1)}><ThumbUpIcon />{`${countUp === 0 ? ` ` : countUp}`}</Button><Button onClick={() => setCountDown(countDown + 1)}><ThumbDownIcon />{`${countDown === 0 ? ` ` : countDown}`}</Button>
+          <Button onClick={() => setCountUp(countUp + 1)}>
+            <ThumbUpIcon />{`${countUp === 0 ? ` ` : countUp}`}
+          </Button>
 
-           
-         
+          <Button onClick={() => setCountDown(countDown + 1)}>
+            <ThumbDownIcon />{`${countDown === 0 ? ` ` : countDown}`}
+          </Button>
         </div>
 
         
@@ -265,3 +258,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default withRouter(Home); 

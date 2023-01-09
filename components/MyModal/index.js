@@ -1,11 +1,16 @@
 import { Modal, useModal, Button, Text } from "@nextui-org/react";
 
-const MyModal = ( { title, description }) => {
+const MyModal = ( { title, description, url }) => {
   const { setVisible, bindings } = useModal();
+
+
+  const handleClick = (url) => {
+    window.open(url)
+  }
 
   return (
     <div className="relative">
-      <div className="absolute right-0 bottom-2">
+      <div className="flex space-x-2 justify-right pt-2">
         <Button size='xs' auto bordered color="success" onPress={() => setVisible(true)}>
           Details
         </Button>
@@ -26,7 +31,7 @@ const MyModal = ( { title, description }) => {
 
         <Modal.Body>
           <Text id="modal-description">
-           {description} Breakdown
+           {description}
           </Text>
         </Modal.Body>
 
@@ -34,7 +39,7 @@ const MyModal = ( { title, description }) => {
           <Button auto flat color="error" onPress={() => setVisible(false)}>
             Close
           </Button>
-          <Button auto flat color="secondary" onPress={() => setVisible(false)}>
+          <Button auto flat color="secondary" onPress={() => handleClick(url)}>
             View Code
           </Button>
         </Modal.Footer>

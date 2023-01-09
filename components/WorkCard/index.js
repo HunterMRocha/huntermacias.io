@@ -2,7 +2,7 @@ import React from "react";
 import { Image } from "@nextui-org/react";
 import MyModal from "../MyModal";
 
-const WorkCard = ({ img, name, description, onClick }) => {
+const WorkCard = ({ img, name, description, modal_description, url, onClick }) => {
   return (
     <div
       className="outline hover:outline-green-300 outline-green-300/20 
@@ -31,10 +31,12 @@ const WorkCard = ({ img, name, description, onClick }) => {
         Rating: ⭐⭐⭐⭐⭐
       </h2>
       <div className="right-0">
-        <MyModal title={name} description={description}/>
+        <MyModal title={name} description={modal_description} url={url}/>
+      </div> 
 
-      </div>
+      <div onClick={onClick} ></div>
     </div>
+      
   );
 };
 
