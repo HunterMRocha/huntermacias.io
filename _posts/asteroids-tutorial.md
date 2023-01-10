@@ -1,14 +1,18 @@
 ---
 date: '2023-01-04T11:20:08.758Z'
 title: Asteroids in PyGame
-tagline: Tutorial coming soon! Below you will find information regarding its each tutorials release
+tagline: >-
+  Tutorial coming soon! Below you will find information regarding its each
+  tutorials release
 preview: >-
- Follow along step-by-step as we build a space shooter asteroids game. Some of the things you'll learn how to do: Player Controls (keyboard), Handling Collisions, Sprite Animations, Sound and Music, Ending the game (and restarting)
-image: >-
-  https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif
+  Follow along step-by-step as we build a space shooter asteroids game. Some of
+  the things you'll learn how to do: Player Controls (keyboard), Handling
+  Collisions, Sprite Animations, Sound and Music, Ending the game (and
+  restarting)
+image: 'https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif'
 ---
 
-# Asteroids Tutorial Part 1: Player Sprite and Controls
+# Asteroids Tutorial Part 1: Player Sprite and Controlss
 >> Code Release Date: Jan 4th, 2023
 >> Video Release Date: Jan 4th, 2023
 
@@ -525,13 +529,327 @@ class Mob(pygame.sprite.Sprite):
 >> To demonstrate further here is an additional graphic of the problem we 
 >> are going to tackle next
 
-# Asteroids Tutorial Part 7: Score (and Drawing Text)
+# Asteroids Tutorial Part 7: Score Display
+
+
+```python
+# ./main.py 
+
+# find font from computer
+# pygame will search your computer and look for closest match to arial 
+font_name = pygame.font.match_font('arial')
+
+# function used to update text on the screen every frame
+def draw_text(surf, text, size, x, y):
+    # create a font
+    font = pygame.font.Font(font_name, size)
+
+    # create a surface for the text to be put on
+    text_surface = font.render(text, True, WHITE)
+    text_rect = text_surface.get_rect()
+    text.rect.midtop = (x, y)
+
+    # put text_surface on screen at the text_rect location
+    surf.blit(text_surface, text_rect)
+    
+    
+
+for i in range(8):
+    m = Mob()
+    all_sprites.add(m)
+    mobs.add(m)
+
+# create a score variable
+score = 0
+
+    # inside game loop
+    # then we want to increase our score when one of our bullets hits a mob
+    for hit in hits:
+        # calculate score based on size of metour
+        score += 50 - hit.radius 
+        m = Mob()
+        all_sprites.add(m)
+        mobs.add(m)
+
+
+
+    screen.fill(BLACK)
+    screen.blit(background, background_rect)
+    all_sprites.draw(screen)
+
+    # draw text on screen 
+    draw_text(screen, str(score), 18, WIDTH / 2, 10) 
+
+```
+
+![Example Score](https://media.giphy.com/media/rZqbm6tgMHog6vL9JP/giphy.gif)
+
+>> The goal of this section is simple. We want to display the score on the screen
 
 # Asteroids Tutorial Part 8: Sound and Music
 
+>> https://www.bfxr.net
+
+
+```python
+# save image from img folder
+img_dir = path.join(path.dirname(__file__), "img")
+
+# save sound from snd folder (use whatever folder you put your sound file in"
+snd_dir = path.join(path.dirname(__file__), "snd")
+
+pygame.init()
+# init your sound mixer (NEED THIS)
+pygame.mixer.init()
+
+
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+    def update(self):
+    
+    def shoot(self):
+        bullet = Bullet(self.rect.centerx, self.rect.top)
+        all_sprites.add(bullet)
+        bullets.add(bullet)
+
+        # play shoot sound inside shoot method
+        shoot_sound.play()
+
+# Load all game graphics 
+...
+...
+...
+
+# Load all game sounds
+shoot_sound = pygame.mixer.Sound(path.join(snd_dir, 'pew.wav')
+expl_sounds = []
+for snd in ['expl3.wav', 'expl6.wav']:
+    expl_sounds.append(pygame.mixer.Sound(path.join(snd_dir, snd)))
+
+# continuously play background music
+pygame.mixer.music.load(path.join(snd_dir, "backgroundMusic.ogg")
+# set background music volume
+pygame.mixer.set_volume(0.4)
+
+# play background music right before game loop
+pygame.mixer.music.play(loops=-1)
+
+
+    # inside game loop
+    for hit in hits:
+        # calculate score based on size of metour
+        score += 50 - hit.radius 
+        # play a random sound from our explosion list
+        random.choice(expl_sounds).play()
+        m = Mob()
+        all_sprites.add(m)
+        mobs.add(m)
+
+
+```
+
 # Asteroids Tutorial Part 9: Shields
 
+```python
+
+# create a function to spawn a new mob
+def new_mob(): 
+    m = Mob()
+    all_sprites.add(m)
+    mobs.add(m)
+
+# create a funciton to draw our players shield
+def draw_shield_bar(surf, x, y, pct):
+    if pct < 0: 
+        pct = 0
+    BAR_LEN = 100
+    BAR_HEIGHT = 10
+    fill = (pct / 100) * BAR_LEN
+    outline_rect = pygame.Rect(x, y, BAR_LEN, BAR_HEIGHT)
+    fill_rect = pygame.Rect(x, y, fill, BAR_HEIGHT)
+    pygame.draw.rect(surf, GREEN fill_rect)
+    pygame.draw.rect(surf, WHITE, outline_rect, 2) 
+
+
+
+class Player(pygame.sprite.Sprite):
+    def __init__(self):
+        # create a shield value 
+        self.shield = 100
+
+    def update(self):
+    def shoot(self):
+
+
+
+
+    # inside game loop
+    for hit in hits:
+        # calculate score based on size of metour
+        score += 50 - hit.radius 
+        # play a random sound from our explosion list
+        random.choice(expl_sounds).play()
+        # m = Mob()
+        # all_sprites.add(m)
+        # mobs.add(m)
+
+        # since we are destorying the metours we need a way to spawn more
+        # so we can put the three lines above in a function and call the function
+        # everytime we need to spawn more mobs
+        new_mob()
+
+
+
+    # check if mob hits a player
+    # change False -> True will destroy the metour when 
+    hits = pygame.sprite.spritecollide(player, mobs, True, pygame.sprite.collide_circle)
+
+    # change if statment to for loop so we can check every single hit
+    for hit in hits: 
+        # do damage on player
+        player.shied -= hit.radius * 2
+        new_mob()
+        if player.shield <= 0:
+            running = False 
+
+     # Draw / render
+     # call draw shield function
+     draw_shield_bar(screen, 5, 5, player.sheild)
+
+
+```
+
 # Asteroids Tutorial Part 10: Explosions
+
+>> Let's create a shoot delay for our player 
+>> once we do this we will setup autofire
+
+```python
+
+class Player(pygame.sprite.Sprite): 
+class Mob(pygame.sprite.Sprite):
+class Bullet(pygame.sprite.Sprite): 
+
+# create a class for our explosions
+class Explosion(pygame.sprite.Sprite): 
+    def __init__(self): 
+        pygame.sprite.Sprite.__init__(self)
+        self.size = size
+        self.image = explosion_anim[self.size][0]
+        self.rect = self.image.get_rect()
+        self.rect.center = center
+        self.frame = 0 
+        self.last_update = pygame.time.get_ticks()
+        self.frame_rate = 50
+
+    def update(self):
+        now = pygame.time.get_ticks()
+        if now - self.last_update > self.frame_rate: 
+            self.last_update = now
+            self.frame += 1
+            if self.frame == len(explosion_anim[self.size]): 
+                self.kill()
+            else:
+                center = self.rect.center
+                self.image = explosion_anim[self.size][self.frame]
+                self.rect = self.image.rect()
+                self.rect.center = center
+
+
+img_dir = path.join(path.dirname(__file__), "img")
+snd_dir = path.join(path.dirname(__file__), "snd")
+
+
+# load explosions - small explosions & big explosions
+explosion_anim = {}
+# add two pairs to our dictionary. lg will store the large explosions, sm will store the small explosions
+explosion_anim['lg'] = []
+explosion_anim['sm'] = []
+for i in range(8): 
+    # get all file names
+    filename = 'regularExplosions{}.png'.formart(i)
+
+    # load img and make black transparent
+    img = pygame.image.load(path.join(img_dir, filename)).convert()
+    img.set_color_key(BLACK)
+
+    # scale images and add to dictionary 
+    img_lg = pygame.transform.scale(img, (75, 75))
+    explosion_anim['lg'].append(img_lg)
+    img_sm = pygame.transform.scale(img, (32, 32))
+    explosion_anim['sm'].append(img_sm)
+
+
+
+class Player(pygame.sprite.Sprite):
+  def __init__(self):
+     # lets add a few more properties to our player 
+     # 250 millisecond delay between shots
+     self.shoot_delay = 250
+
+     # get the time from the last bullet we shot
+     self.last_shot = pygame.time.get_ticks()
+
+  def update(self): 
+    ...
+        if keys[pygame.K_LEFT]: 
+            self.speedx = -5
+        if keys[pygame.K_RIGHT]:
+            self.speedx = 5
+         # now let's check to see if we are triggering the spacebar
+        if keys[pygame.K_SPACE]:
+            self.shoot()
+
+    def shoot(self):  
+        # limit to 1 bullet every 0.25seconds
+        if now - self.last_shot > self.shoot_delay:
+            self.last_shot = now
+            bullet = Bullet(self.rect.centerx, self.rect.top)
+            all_sprites.add(bullet)
+            bullets.add(bullet)
+
+
+
+
+    # inside game loop
+   
+    # check if a bullet hit a mob
+    for hit in hits: 
+        score += 50
+        random.choice(expl_sounds).play()
+
+        # create an explosion everytime we hit a metour
+        expl = Explosion(hit.rect.center, 'lg')
+        all_sprites.add(expl)
+
+    # check if a mob hit the player
+    for hit in hits: 
+        player.shied -= hit.radius * 2
+        # create an explosion everytime we hit a metour
+        expl = Explosion(hit.rect.center, 'sm')
+        all_sprites.add(expl)
+        new_mob()
+        if player.shield <= 0:
+            running = False 
+
+
+     # Draw / render
+     # call draw shield function
+     draw_shield_bar(screen, 5, 5, player.sheild)
+
+   
+
+ 
+    # since we are checking if we're shooting in our update method we can
+    # remove it from the end loop
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+      # elif event.type == pygame.KEYDOWN:
+          # if event.key == pygame.K_SPACE: 
+              # player.shoot()
+    
+```
 
 # Asteroids Tutorial Part 11: Player Lives
 
