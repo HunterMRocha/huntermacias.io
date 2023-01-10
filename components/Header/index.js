@@ -248,6 +248,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   alt=''
                 ></Image>
               </Button>
+
+              
             )}
           </div>
         )}

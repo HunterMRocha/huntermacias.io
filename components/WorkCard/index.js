@@ -2,12 +2,11 @@ import React from "react";
 import { Image } from "@nextui-org/react";
 import MyModal from "../MyModal";
 
-const WorkCard = ({ img, name, description, onClick }) => {
+const WorkCard = ({ img, name, description, modalDescription, url }) => {
   return (
     <div
       className="outline hover:outline-green-300 outline-green-300/20 
         overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
-      onClick={onClick}
     >
       <div
         className="relative mob:h-auto rounded-lg overflow-hidden transition-all ease-out duration-300 "
@@ -31,7 +30,7 @@ const WorkCard = ({ img, name, description, onClick }) => {
         Rating: ⭐⭐⭐⭐⭐
       </h2>
       <div className="right-0">
-        <MyModal title={name} description={description}/>
+        <MyModal title={name} description={description} modalDescription={modalDescription} url={url} />
 
       </div>
     </div>

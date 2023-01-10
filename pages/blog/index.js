@@ -104,24 +104,24 @@ const Blog = ({ posts }) => {
         {data.showCursor && <Cursor />}
         <Head>
           <title>Blog</title>
+          {/* <html lang="en" /> */}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta charSet="utf-8" />
-            <html lang="en" />
-            <meta property="og:url" content="http://huntermacias.io/blog"  />
-            <meta property="og:title" content="Tech Blog !" />
-            <meta property="og:description" content="Create a free account for unlimted access" />
-            <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg" />
-          
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content="@huntermacias-io" />
-            <meta name="twitter:widgets:new-embed-design" content="on" />
-            <meta name="twitter:widgets:csp" content="on" />
-            <meta name="twitter:creator" content="@HunterMacias" />
-            <meta name="twitter:title" content="Tech Blog!"  />
-            <meta name="twitter:description" content="Create a free account for unlimted access" />
-            <meta name="twitter:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg" />
-            <meta name="theme-color" content="#2aa3ef" />
-            <meta name="msapplication-TileColor" content="#2d89ef" />
+          <meta charSet="utf-8" />
+          <meta property="og:url" content="http://huntermacias.io/blog"  />
+          <meta property="og:title" content="Tech Blog !" />
+          <meta property="og:description" content="Create a free account for unlimted access" />
+          <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg" />
+        
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@huntermacias-io" />
+          <meta name="twitter:widgets:new-embed-design" content="on" />
+          <meta name="twitter:widgets:csp" content="on" />
+          <meta name="twitter:creator" content="@HunterMacias" />
+          <meta name="twitter:title" content="Tech Blog!"  />
+          <meta name="twitter:description" content="Create a free account for unlimted access" />
+          <meta name="twitter:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg" />
+          <meta name="theme-color" content="#2aa3ef" />
+          <meta name="msapplication-TileColor" content="#2d89ef" />
         </Head>
         <div
           className={`container mx-auto mb-10 ${
