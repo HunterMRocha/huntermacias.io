@@ -8,16 +8,16 @@ import Head from "next/head";
 
 const App = ({ Component, pageProps }) => {
   return (
+      <AmplifyProvider>
     <SSRProvider>
 
-      <AmplifyProvider>
         <ThemeProvider>
           
           <Component {...pageProps} />
         </ThemeProvider>
       
-      </AmplifyProvider>
     </SSRProvider>
+      </AmplifyProvider>
     
   );
 };

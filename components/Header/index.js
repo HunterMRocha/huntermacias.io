@@ -11,7 +11,7 @@ import { Avatar, Image } from '@nextui-org/react';
 
 
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -30,28 +30,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
-              <h1
-                onClick={() => router.push("/")}
-                className="p-1 laptop:p-0 link"
-              >
-                <Avatar
-                  size="lg"
-                  src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
-                  color="primary"
-                  bordered
-                  squared
-                  zoomed 
-                />
-                {/* {name}. */}
-              </h1>
-
               <div className="flex items-center">
                 {data.darkMode && (
                   <Button
                     shadow
                     ghost auto
                     onClick={() =>
-                      setTheme(theme === "dark" ? "light" : "dark")
+                    setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
                     <Image
@@ -152,19 +137,20 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-        <h1
-          onClick={() => router.push("/")}
-          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
-        >
-          <Avatar
-            size="lg"
-            src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
-            color="primary"
-            bordered
-            squared
-            zoomed 
-          />
-        </h1>
+       
+       <div onClick={() => router.push("/")}>
+        <Avatar
+          aria-label="avatar-icon"
+          size="lg"
+          src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=22"
+          color="primary"
+          bordered
+          squared
+          zoomed 
+        />
+
+       </div>
+       
 
 
 
