@@ -18,7 +18,7 @@ import FeaturedSponsors from "../components/FeaturedSponsors";
 // import Button from '@material-ui/core/Button';
 
 import Carousel from "react-material-ui-carousel";
-import MetaTags from 'react-meta-tags';
+// import MetaTags from 'react-meta-tags';
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -27,10 +27,13 @@ import viddata from "../data/vid-data"
 import { useTheme } from "next-themes";
 import { VideoCard } from "../components/VideoCard/VideoCard";
 
-import ReactGA from "react-ga"
+// import ReactGA from "react-ga"
 
-const TRACKING_ID = "G-9PRNXT5E94"
-ReactGA.initialize(TRACKING_ID);
+// const TRACKING_ID = "G-9PRNXT5E94"
+// ReactGA.initialize(TRACKING_ID);
+// ReactGA.pageview(window.location.pathname + window.location.search); 
+
+
 
 export default function Home() {
   // Ref
@@ -75,7 +78,7 @@ export default function Home() {
   useEffect(() => {
     setMounted(true);
 
-    ReactGA.pageview(window.location.pathname);
+    // ReactGA.pageview(window.location.pathname);
     
   }, []);
 
@@ -100,6 +103,9 @@ export default function Home() {
         <meta property="og:title" content="My Personal Tech Hub" />
         <meta property="og:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and related topics in the tech world. I am looking for mentors and sponsors to team up with  " />
         <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg"/>
+
+        
+        
       </Head>
 
     <div className="gradient-circle"></div>
@@ -141,6 +147,8 @@ export default function Home() {
       />
       
       <Socials className="mob:pl-5 mt-2 laptop:mt-5" />
+
+      
         </div>
           <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
@@ -174,8 +182,10 @@ export default function Home() {
               ))}
       </div>
     </div>
+    
 
     <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+    {/* <iframe  width="100%" height="500px" src="https://replit.com/@hunter-macias/gamedev-asteroids#shmup?embed=true"></iframe> */}
       <h1 className="tablet:m-2 text-4xl text-bold text-center">Contact for Tutoring</h1>
       <div className="mt-5 tablet:m-8 grid grid-cols-1 laptop:grid-cols-2 gap-8">
         {data.services.map((service, index) => (

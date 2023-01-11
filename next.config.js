@@ -18,6 +18,8 @@ module.exports = {
     PREM_SUB_PRICE_KEY:process.env.PREM_SUB_PRICE_KEY,
     BASIC_SUB_PRICE_KEY:process.env.BASIC_SUB_PRICE_KEY,
 
+    REACT_GA_KEY:process.env.REACT_GA_KEY,
+
   },
 
   images: {

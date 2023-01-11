@@ -11,7 +11,7 @@ import { Avatar, Image } from '@nextui-org/react';
 
 
 
-const Header = ({ isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -30,13 +30,28 @@ const Header = ({ isBlog }) => {
         {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
+              <h1
+                onClick={() => router.push("/")}
+                className="p-1 laptop:p-0 link"
+              >
+                <Avatar
+                  size="lg"
+                  src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
+                  color="primary"
+                  bordered
+                  squared
+                  zoomed 
+                />
+                {/* {name}. */}
+              </h1>
+
               <div className="flex items-center">
                 {data.darkMode && (
                   <Button
                     shadow
                     ghost auto
                     onClick={() =>
-                    setTheme(theme === "dark" ? "light" : "dark")
+                      setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
                     <Image
@@ -137,22 +152,19 @@ const Header = ({ isBlog }) => {
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
-       
-       <div onClick={() => router.push("/")}>
-        <Avatar
-          aria-label="avatar-icon"
-          size="lg"
-          src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=22"
-          color="primary"
-          bordered
-          squared
-          zoomed 
-        />
-
-       </div>
-       
-
-
+        <h1
+          onClick={() => router.push("/")}
+          className="font-medium cursor-pointer mob:p-2 laptop:p-0"
+        >
+          <Avatar
+            size="lg"
+            src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=large"
+            color="primary"
+            bordered
+            squared
+            zoomed 
+          />
+        </h1>
 
         {/* bottom buttons */}
         {!isBlog ? (
@@ -245,4 +257,3 @@ const Header = ({ isBlog }) => {
 };
 
 export default Header;
-

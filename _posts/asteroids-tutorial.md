@@ -183,7 +183,7 @@ class Mob(pygame.sprite.Sprite):
 >
 
 ```python
-
+running = True
 while running: 
   # keep loop running at the right speed
   clock.tick(FPS)
@@ -740,7 +740,7 @@ class Explosion(pygame.sprite.Sprite):
         self.rect.center = center
         self.frame = 0 
         self.last_update = pygame.time.get_ticks()
-        self.frame_rate = 50
+        self.frame_rate = 75
 
     def update(self):
         now = pygame.time.get_ticks()
@@ -853,8 +853,380 @@ class Player(pygame.sprite.Sprite):
 
 # Asteroids Tutorial Part 11: Player Lives
 
+>> Adding Explosion  and player lives
+
+
+```python
+
+# create function to draw lives
+def draw_lives(surf, x, y, lives, img):
+  for i in range(lives): 
+    img_rect = img.get_rect()
+    img_rect.x = x + 30 * i
+    img_rect.y = y 
+    surf.blit(img, img_rect)
+
+class Player(pygame.sprite.Sprite):
+  def __init__(self):
+     # add a player lives
+     self.lives = 3
+     self.hidden = False
+     self.hide_timer = pygame.time.get_ticks()
+
+  def update(self): 
+    # unhide if hidden and after 1000 milliseconds
+    if self.hidden and pygame.time.get_ticks() - self.hide_timer > 1000: 
+      self.hidden = False
+      self.rect.centerx = WIDTH / 2
+      self.rect.bottom = HEIGHT - 10 
+
+  # create hide method
+  def hide(self): 
+    self.hidden = True
+    self.hide_timer = pygame.time.get_ticks()
+    self.rect.center = (WIDTH / 2, HEIGHT + 200)
+
+# Load all game sounds
+shoot_sound = pygame.mixer.Sound(path.join(snd_dir, 'pew.wav')
+expl_sounds = []
+for snd in ['expl3.wav', 'expl6.wav']:
+    expl_sounds.append(pygame.mixer.Sound(path.join(snd_dir, snd)))
+
+# load sound for when the player dies
+player_die_sound = pygame.mixer.Sound(snd_dir, 'rumble1.ogg')
+
+pygame.mixer.music.load(path.join(snd_dir, "backgroundMusic.ogg")
+pygame.mixer.set_volume(0.4)
+
+
+background = pygame.image.load(path.join(img_dir, "starfield.png")).convert()
+background_rect = background.get_rect()
+player_img = pygame.image.load(path.join(img_dir, "playerShip1_orange.png")).convert()
+# let's create a mini version of our player to represent how many lives we have
+player_mini_img = pygame.transform.scale(player_img, (25, 19))
+player_mini_img.set_colorkey(BLACK)
+meteor_img = pygame.image.load(path.join(img_dir, "meteorBrown_med1.png")).convert()
+bullet_img = pygame.image.load(path.join(img_dir, "LaserRed16.png")).convert()
+
+all_sprites = pygame.sprite.Group()
+mobs = pygame.sprite.Group()
+
+
+explosion_anim = {}
+explosion_anim['lg'] = []
+explosion_anim['sm'] = []
+# add another animation value to our dictionary
+explosion_anim['player'] = []
+
+# lets add a sprite group for our explosions
+all_sprites = pygame.sprite.Group()
+mobs = pygame.sprite.Group()
+powerups = pygame.sprite.Group()
+
+for i in range(8): 
+    filename = 'regularExplosions{}.png'.formart(i)
+    img = pygame.image.load(path.join(img_dir, filename)).convert()
+    img.set_color_key(BLACK)
+    img_lg = pygame.transform.scale(img, (75, 75))
+    explosion_anim['lg'].append(img_lg)
+    img_sm = pygame.transform.scale(img, (32, 32))
+    explosion_anim['sm'].append(img_sm)
+
+    # load explosion files
+    filename = 'sonicExplosion{}.png'.formart(i)
+    img = pygame.image.load(path.join(img_dir, filename)).convert()
+    img.set_colorkey(BLACK)
+    explosion_anim['player'].append(img)
+
+
+
+
+    # inside game loop
+    
+    for hit in hits: 
+        player.shied -= hit.radius * 2
+        expl = Explosion(hit.rect.center, 'sm')
+        all_sprites.add(expl)
+        new_mob()
+        if player.shield <= 0:
+          player_die_sound.play()
+          # lets add an explosion if the player dies
+          death_explosion = Explosion(player.rect.center, 'player')
+          all_sprites.add(death_explosion)
+          # hide is a build in sprite method
+          player.hide()
+          player.lives -= 1
+          player.shield = 100
+          # no longer want to end the game right here because we want our player explosion to play out 
+          # running = False 
+    
+    # if player died and explosion has finished playing
+    # alive() is a build in sprite method that tells us if a sprite is still alive
+    if not player.lives == 0 and not death_explosion.alive():
+      running = False
+
+
+  # Draw / render
+  draw_lives(screen, WIDTH - 100, 5, player.lives, player_mini_img)
+
+```
+
 # Asteroids Tutorial 12: Powerups
+
+>> Steps:
+>> First we are going to copy our Bullet class to use for our powerups
+>> Then we are going to refactor it to match the code below
+>> We also need to create a dictionary to store all of our power up images
+>> once we load our images we will be able to set our power up iamge
+>> to be a random choice between either a shield or a gun
+
+```python
+# underneath where we have all of our images loaded we are going
+# to add another dictionary that will have all of our power up images 
+powerup_images = {}
+power_images['shield'] = pygame.imgae.load(img_dir, "shield_gold.png")).convert()
+power_images['gun'] = pygame.imgae.load(img_dir, "bolt_gold.png")).convert()
+
+
+# copy Bullet class and rename as Pow
+class Pow(pygame.sprite.Sprite):
+  def __init__(self, x, y):
+    pygame.sprite.Sprite.__init__(self)
+    # power up type will be a random choice
+    self.type = random.choice(['shield', 'gun'])
+
+    # image will be dependent on random choice 
+    self.image = powerup_images[self.type]
+    self.image.fill(WHITE)
+    self.rect = self.image.get_rect()
+    self.rect.center = center
+    # self.rect.bottom = y
+    # self.rect.centerx = x
+    self.speedy = 2
+
+  def update(self):
+    self.rect.y += self.speedy
+    # destroy power up if it goes past the screen
+    if self.rect.top > HEIGHT:
+      self.kill()
+
+  # END OF POWER UP CLASS
+
+  while True:
+    ...
+    # inside game loop
+   
+    # check if a bullet hit a mob
+    for hit in hits: 
+        score += 50
+        random.choice(expl_sounds).play()
+        expl = Explosion(hit.rect.center, 'lg')
+        all_sprites.add(expl)
+
+        # when we shoot an enemy we are going to spawn a powerup 10% of the time
+        if random.random() > 0.9:
+          pow = Pow(hit.rect.center)
+          all_sprites.add(pow)
+          powerups.add(pow)
+
+
+
+    for hit in hits: 
+      player.shied -= hit.radius * 2
+      expl = Explosion(hit.rect.center, 'sm')
+      all_sprites.add(expl)
+      new_mob()
+      if player.shield <= 0:
+        player_die_sound.play()
+        death_explosion = Explosion(player.rect.center, 'player')
+        all_sprites.add(death_explosion)
+        player.hide()
+        player.lives -= 1
+        player.shield = 100
+
+    # check if player gets a power up
+    hits = pygame.sprite.sprtiecollide(player, powerups, True)
+    for hit in hits: 
+      if hit.type == 'shield':
+        player.shield += random.randrange(10, 30)
+        if player.shield >= 100: 
+          player = 100
+
+      # we will continue the gun power up in the next section
+      if hit.type == 'gun':
+        pass 
+
+
+    if player.lives == 0 and not death_explosion.alive():
+      running = False
+     
+        
+
+```
 
 # Asteroids Tutorial 13: Powerups (part 2)
 
+>> Now that we have our power up class and we're able to 
+>> spawn our shield power up. Let's focus on trying to 
+>> implement a gun power up in this section
+
+
+```python
+
+# power up time will last 5 seconds
+POWERUP_TIME = 5000
+
+# Load all game sounds
+shoot_sound = pygame.mixer.Sound(path.join(snd_dir, 'pew.wav')
+
+# now we can load 2 different power up sounds 
+shield = pygame.mixer.Sound(path.join(snd_dir, 'pow4.wav')
+power = pygame.mixer.Sound(path.join(snd_dir, 'pow5.wav')
+
+expl_sounds = []
+for snd in ['expl3.wav', 'expl6.wav']:
+    expl_sounds.append(pygame.mixer.Sound(path.join(snd_dir, snd)))
+player_die_sound = pygame.mixer.Sound(snd_dir, 'rumble1.ogg')
+pygame.mixer.music.load(path.join(snd_dir, "backgroundMusic.ogg")
+pygame.mixer.set_volume(0.4)
+
+
+class Player(pygame.sprite.Sprite):
+  def __init__(self):
+    # add power 
+    self.power = 1 # num of bullets we are shooting
+    self.power_time = pygame.time.get_ticks()
+
+  # create a powerup method that increasess our powerup and sets our timer
+  def powerup(self):
+    self.power += 1
+    self.power_time = pygame.time.get_ticks()
+
+
+   def shoot(self):  
+    # limit to 1 bullet every 0.25seconds
+    if now - self.last_shot > self.shoot_delay:
+        self.last_shot = now
+        if self.power == 1:
+          bullet = Bullet(self.rect.centerx, self.rect.top)
+          all_sprites.add(bullet)
+          bullets.add(bullet)
+        elif self.power >= 2:
+          bullet1 = Bullet(self.rect.left, self.rect.centery)
+          bullet2 = Bullet(self.rect.right, self.rect.centery)
+
+          all_sprites.add(bullet1)
+          all_sprites.add(bullet2)
+          bullets.add(bullet1)
+          bullets.add(bullet1)
+
+    def update(self):
+      if self.power >= 2 and pygame.time.get_ticks() - self.power_time > POWER_TIME: 
+        self.power -= 1
+        self.power_time = pygame.time.get_ticks()
+
+  # END OF PLAYER CLASS
+
+  # check if player gets a power up
+  hits = pygame.sprite.sprtiecollide(player, powerups, True)
+  for hit in hits: 
+    if hit.type == 'shield':
+      player.shield += random.randrange(10, 30)
+      shield_sound.play()
+      if player.shield >= 100: 
+        player = 100
+    if hit.type == 'gun':
+      player.powerup()
+      power_sound.play()
+
+```
 # Asteroids Tutorial 14: Game Over Screen
+
+>> In this final section we will work on the game over screen 
+>> in order to achieve this we need to add two states to our game loop 
+>> below I will go over how to add two different states
+
+```python
+
+def show_gameover():
+  draw_text(screen, "Asteroids By Panda Bits", 36, WIDTH / 3, HEIGHT / 4)
+  draw_text(screen, "Arrow keys move, Space to fire", 22, WIDTH / 2, HEIGHT / 2)
+  draw_text(screen, "Press a key to begin", 18, WIDTH / 2, HEIGHT * 3 / 4)
+  pygame.display.flip()
+  # create an infinite while loop until the user presses the screen 
+  waiting = True
+  while waiting: 
+    clock.tick(FPS)
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT: 
+        pygame.quit()
+      if event.type == pygame.KEYUP:
+        waiting = False
+
+
+
+#create a game_over state variable 
+game_over = False
+running = True
+while running: 
+  if game_over:
+    # show game over screen 
+    show_gameover()
+    # reset everything so we can play again
+    game_over = False
+    all_sprites = pygame.sprite.Group()
+    mobs = pygame.sprite.Group()
+    bullets = pygame.sprite.Group()
+    powerups = pygame.sprite.Group()
+    player = Player()
+    all_sprites.add(player)
+    for i in range(8):
+      newmob()
+
+    score = 0
+
+  clock.tick(FPS)
+
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      running = False
+      
+
+
+    # we also want to change this line
+    # we don't want to end the game when we die
+    # instead we want to change the state of the game
+    if player.lives == 0 and not death_explosion.alive():
+      # running = False
+      game_over = True
+     
+
+
+  all_sprites.update()
+
+```
+>>
+>>
+>> By now you should have a fully functioning asteroids game with the following:
+>> 1. Movement implementation
+>> 2. Shooting implementation
+>> 3. IN-GAME POWER UPS
+  >>>
+  >>>   Power-Up 1: Shield Boost++
+  >>>
+  >>>   Power-Up 2: 2 Guns !
+  >>>
+>> 4. Text Rendering
+>> 5. Consistent Frames Per Second (FPS)
+>> 6. The flexability to customize and personalize
+>> 7. 400+ lines of Code
+>> 8. An amazing template to build your next game !
+>>
+>>
+>> I hope you all enjoyed this tutorial. Please let me know if you would like to see something else.
+>> If you have an idea or got stuck on this tutorial, feel free to reach out. 
+>> 
+>> You can reach me 1:1 by subscribing and emailing me
+>>
+>>
+>>
