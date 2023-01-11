@@ -6,18 +6,16 @@ import { AmplifyProvider } from '@aws-amplify/ui-react';
 import Head from "next/head";
 
 
+
 const App = ({ Component, pageProps }) => {
   return (
-    <SSRProvider>
-
-      <AmplifyProvider>
+    <AmplifyProvider>
+      <SSRProvider>
         <ThemeProvider>
-          
           <Component {...pageProps} />
         </ThemeProvider>
-      
-      </AmplifyProvider>
-    </SSRProvider>
+      </SSRProvider>
+    </AmplifyProvider>
     
   );
 };

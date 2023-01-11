@@ -3,7 +3,7 @@ import { getPostBySlug, getAllPosts } from "../../utils/api";
 import Header from "../../components/Header";
 import ContentSection from "../../components/ContentSection";
 import Footer from "../../components/Footer";
-import Head from "next/head";
+// import Head from "next/head";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 import Button from "../../components/Button";
@@ -11,7 +11,7 @@ import BlogEditor from "../../components/BlogEditor";
 import { useRouter } from "next/router";
 import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
-import { Image } from "@nextui-org/react";
+// import { Image } from "@nextui-org/react";
 
 const BlogPost = ({ post }) => {
   const [showEditor, setShowEditor] = useState(false);
@@ -25,8 +25,8 @@ const BlogPost = ({ post }) => {
 
   return (
     <>
-      <Head>
-        {/* <html lang="en" /> */}
+      {/* <Head>
+        <html lang="en" />
         <title>{"Blog - " + post.title}</title>
         <meta property="og:url" content="http://huntermacias.io/blogs" />
         <meta property="og:title" content={post.title} />
@@ -39,7 +39,7 @@ const BlogPost = ({ post }) => {
         <meta name="twitter:title" content={post.title} />
         <meta name="twitter:description" content={post.tagLine} />
         <meta name="twitter:image" content="https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif" />
-      </Head>
+      </Head> */}
       {data.showCursor && <Cursor />}
 
       <div

@@ -18,8 +18,6 @@ module.exports = {
     PREM_SUB_PRICE_KEY:process.env.PREM_SUB_PRICE_KEY,
     BASIC_SUB_PRICE_KEY:process.env.BASIC_SUB_PRICE_KEY,
     
-    // analytics
-    REACT_GA_TRACKING_CODE:process.env.REACT_GA_TRACKING_CODE,
 
   },
 

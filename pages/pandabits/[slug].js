@@ -25,23 +25,6 @@ const PandaBitPost = ({ post }) => {
 
   return (
     <>
-      <Head>
-        {/* <html lang="en" /> */}
-        <title>{"Blog - " + post.title}</title>
-        <meta property="og:url" content="http://huntermacias.io/blogs" />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.tagLine} />
-        <meta property="og:image" content={post.image} />
-       
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@huntermacias-io" />
-        <meta name="twitter:creator" content="@HunterMacias" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.tagLine} />
-        <meta name="twitter:image" content="https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif" />
-      </Head>
-     
-
       <div
         className={`container mx-auto mt-10`}
       >
