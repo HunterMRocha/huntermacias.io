@@ -35,7 +35,7 @@ function Pandabits ({ posts }) {
             <html lang="en" />
             <meta property="og:url" content="http://huntermacias.io/pandabits"  />
             <meta property="og:title" content="Panda Bits!" />
-            <meta property="og:description" content="Create a free account for unlimted access" />
+            <meta property="og:description" content="Create a free account for unlimted access to coding tutorials, project samples, premium articles and more" />
             <meta property="og:image" content="https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif" />
           
             <meta name="twitter:card" content="summary_large_image" />
@@ -44,7 +44,7 @@ function Pandabits ({ posts }) {
             <meta name="twitter:widgets:csp" content="on" />
             <meta name="twitter:creator" content="@HunterMacias" />
             <meta name="twitter:title" content="Panda Bits!"  />
-            <meta name="twitter:description" content="Create a free account for unlimted access" />
+            <meta name="twitter:description" content="Create a free account for unlimted access to coding tutorials, project samples, premium articles and more" />
             <meta name="twitter:image" content="https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif" />
             <meta name="theme-color" content="#2aa3ef" />
             <meta name="msapplication-TileColor" content="#2d89ef" />
