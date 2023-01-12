@@ -33,10 +33,12 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               <h1
                 onClick={() => router.push("/")}
                 className="p-1 laptop:p-0 link"
-              >
+              >.
                 <Avatar
                   size="lg"
-                  src="https://i.imgur.com/GQ3MeQH_d.webp?"
+                  loading="lazy"
+                  src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
+                  alt='avatar'
                   color="primary"
                   bordered
                   squared
@@ -158,7 +160,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         >
           <Avatar
             size="lg"
-            src="https://i.imgur.com/GQ3MeQH_d.webp?"
+            src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=large"
+            alt='avatar'
             color="primary"
             bordered
             squared             

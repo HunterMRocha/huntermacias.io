@@ -121,17 +121,17 @@ export default function Home() {
           {data.headerTaglineOne}
         </h1>
 
-        <h1 ref={textTwo} className="">
+        <h2 ref={textTwo} className="">
           {data.headerTaglineTwo}
-        </h1>
+        </h2>
 
-        <h1 ref={textThree} className="">
+        <h2 ref={textThree} className="">
           {data.headerTaglineThree}
-        </h1>
+        </h2>
 
-        <h1 ref={textFour} className="">
+        <h2 ref={textFour} className="">
           {data.headerTaglineFour}
-        </h1>
+        </h2>
       </div>
 
       <hr
@@ -148,10 +148,10 @@ export default function Home() {
       
         </div>
           <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          {/* <h1 className="text-2xl text-bold">What I Enjoy </h1> */}
+          {/* <h2 className="text-2xl text-bold">What I Enjoy </h2> */}
 
       <div className="mob:w-full flex flex-start text-4xl text-bold space-x-4 tablet:m-2">
-        <h1>Projects</h1>
+        <h2>Projects</h2>
       </div>
       
       <div className="mt-5 grid grid-cols-1 gap-4 tablet:grid-cols-2 laptop:mt-10 laptop:grid-cols-4">
@@ -183,7 +183,7 @@ export default function Home() {
 
     <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
     {/* <iframe  width="100%" height="500px" src="https://replit.com/@hunter-macias/gamedev-asteroids#shmup?embed=true"></iframe> */}
-      <h1 className="tablet:m-2 text-4xl text-bold text-center">Contact for Tutoring</h1>
+      <h2 className="tablet:m-2 text-4xl text-bold text-center">Contact for Tutoring</h2>
       <div className="mt-5 tablet:m-8 grid grid-cols-1 laptop:grid-cols-2 gap-8">
         {data.services.map((service, index) => (
           <ServiceCard
@@ -199,7 +199,7 @@ export default function Home() {
     <div className={`mt-10 laptop:mt-30 laptop:p-2 rounded ${
             theme === "dark" ? "bg-[#171717]" : "bg-white"
           } shadow-sm rounded-md`}>
-      <h1 className="tablet:m-2 text-4xl text-bold text-center ">Become A Sponsor - Now Available ! </h1>
+      <h2 className="tablet:m-2 text-4xl text-bold text-center ">Become A Sponsor - Now Available ! </h2>
       <Container>
           <div 
           className="mt-5 mob:min-h-full mob:mb-14 mob:grid-cols-1 mob:gap-y-10 tablet:m-8 grid tablet:grid-cols-2 
@@ -220,7 +220,7 @@ export default function Home() {
     <FeaturedSponsors className='pt-4' />
 
     <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-      <h1 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h1>
+      <h2 className="tablet:m-2 text-4xl text-bold">Free Coding Videos</h2>
         <Carousel>
           {viddata.map((data, id) => (
             <VideoCard
@@ -244,7 +244,7 @@ export default function Home() {
       </div> */}
     {/* )} */}
     <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-      <h1 className="tablet:m-2 text-4xl text-bold">About </h1>
+      <h2 className="tablet:m-2 text-4xl text-bold">About </h2>
       <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-4/5 pb-20">
         {data.aboutpara}
       </p>

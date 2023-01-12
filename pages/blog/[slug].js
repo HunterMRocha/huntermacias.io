@@ -50,6 +50,7 @@ const BlogPost = ({ post }) => {
         <Header isBlog={true} />
         <div className="mt-10 flex flex-col">
           <img
+            loading="lazy"
             className="w-full h-96 rounded-lg shadow-lg object-cover"
             src={post.image}
             alt={post.title}

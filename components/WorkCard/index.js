@@ -14,9 +14,10 @@ const WorkCard = ({ img, name, description, modalDescription, url }) => {
       >
         <Image
           css={{width:"fill"}}
+          loading="lazy"
+          src={img}
           alt={name}
           className="hover:scale-110 transition-all ease-in duration-600"
-          src={img}
           objectFit="cover"
         ></Image>
       </div>
@@ -31,7 +32,6 @@ const WorkCard = ({ img, name, description, modalDescription, url }) => {
       </h2>
       <div className="right-0">
         <MyModal title={name} description={description} modalDescription={modalDescription} url={url} />
-
       </div>
     </div>
   );

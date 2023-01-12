@@ -48,6 +48,7 @@ export const VideoCard = ({ title, videoLink, codeLink, videoId }) => (
             <Col span={3}>
             <MediaQuery minWidth={765}>
               <Card.Image
+                loading="lazy"
                 src="https://i.imgur.com/28Xh6rL.jpeg"
                 css={{ bg: "black", br: "50%" }}
                 height={50}
