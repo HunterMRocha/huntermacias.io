@@ -6,8 +6,10 @@ preview: >-
   This is part of this tutorial series, “Game Development with Pygame” we will
   be going over sprites in PyGame. In addition to this we will cover player
   movement and wall collision.
-image: 'https://i.ytimg.com/vi/7QX8y6R9Hi8/maxresdefault.jpg'
+image: >- 
+  https://i.ytimg.com/vi/7QX8y6R9Hi8/maxresdefault.jpg
 ---
+
 # What is a sprite?
 ---
 >>

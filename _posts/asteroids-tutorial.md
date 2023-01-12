@@ -4,12 +4,10 @@ title: Asteroids in PyGame
 tagline: >-
   Tutorial coming soon! Below you will find information regarding its each
   tutorials release
-preview: >-
-  Follow along step-by-step as we build a space shooter asteroids game. Some of
-  the things you'll learn how to do: Player Controls (keyboard), Handling
-  Collisions, Sprite Animations, Sound and Music, Ending the game (and
-  restarting)
-image: 'https://media.giphy.com/media/DyMkDYUxIwPVnPOrsb/giphy-downsized-large.gif'
+preview: >- 
+  Follow along step-by-step as we build a space shooter asteroids game. Some of the things you'll learn how to do: Player Controls (keyboard), Handling Collisions, Sprite Animations. Sound and Music, Ending the game (and restarting)
+image: >- 
+  https://i.ytimg.com/vi/dPxrdyKtG40/maxresdefault.jpg
 ---
 
 # Asteroids Tutorial Part 1: Player Sprite and Controlss

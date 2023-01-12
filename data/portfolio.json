@@ -36,7 +36,7 @@
             "title": "Minecraft Recreation",
             "description": "Game Development - PyGame 🐍",
             "modalDescription": "Minecraft is a voxel-based game. And what this truly implies is that every single block in Minecraft is a voxel. Using the Ursina engine we will be able to render these voxels. Disclaimer: This solution is not scalable for creating a big world. It is intended for educational purposes only. (MACOS - not supported)",
-            "imageSrc": "https://media-exp1.licdn.com/dms/image/C5622AQF8ubCg7oZx9A/feedshare-shrink_2048_1536/0/1670285417361?e=1673481600&v=beta&t=Fk914eQ2-n1uoDtP_R9YVEyIQ-xLOqkzXeVihg3jzNA",
+            "imageSrc": "https://i.ytimg.com/vi/IBE5h4w9RHE/maxresdefault.jpg",
             "url": "https://github.com/huntermacias/Minecraft-clone"
           
         },
@@ -45,7 +45,7 @@
             "title": "Pac-Man Recreation",
             "description": "Game Development - PyGame 🐍",
             "modalDescription": " A PyGame Implementation of the Classic Arcade game Pac-Mac. This project is part of a series of Classic Arcade Games implemented in PyGame. The Essencials: to make Pac-Man eat all available pellets, while avoiding collisions with ghosts chasing him. Ghosts: Ghosts always start at their home base. All ghosts move toward random direction. Game Levels: All levels will be generated based on the map data from the resource files.  Collection Num: 1",
-            "imageSrc": "https://i.imgur.com/w4yehQ9.jpeg",
+            "imageSrc": "https://c4.wallpaperflare.com/wallpaper/798/788/957/pac-man-video-games-wallpaper-preview.jpg",
             "url": "https://github.com/huntermacias/pacman"
         },
         {
@@ -53,36 +53,53 @@
             "title": "Spave Invaders Recreation",
             "description": "Game Development - PyGame 🐍",
             "modalDescription": "A PyGame Implementation of the popular Classic Atari and NES Arcade games. This project is part of a series of Classic Arcade Games implemented in Pygames. Collection Num: 2",
-            "imageSrc": "http://kidscancode.org/img/shmup_sample.gif",
+            "imageSrc": "https://i.ytimg.com/vi/dPxrdyKtG40/maxresdefault.jpg",
             "url": "https://www.dropbox.com/t/hmjz2SSU4XQ3SlKJ"
            
         },
         {
             "id": "4",
-            "title": "Personal Portfolio  - Next.js",
-            "description": "Web Development + TailwindCSS",
+            "title": "Snake Game + A.I",
+            "description": "Machine Learning & A.I.   - PyGame 🐍",
+            "modalDescription": "A PyGame Implementation of the popular Classic Retro Snake Game with AI. This project is part of a series of ML with PyGame Series. Collection Num: 3",
+            "imageSrc": "https://demofont.com/wp-content/uploads/2021/02/Ardhy-PreviewFonts-Cover-1200x800-1.jpg",
+            "url": "https://huntermacias.io/"
+           
+        },
+        {
+            "id": "5",
+            "title": "NextJs Portfolio",
+            "description": "Web Development -  NextJs, TailwindCSS, Amazon AWS, and Stripe Payments",
             "modalDescription": "This is my one stop tech hub - dedicated to showcasing a few of my personal projects, technical blog, and premium services.",
             "imageSrc": "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2Fq4IYtAOh.jpg",
             "url": "https://huntermacias.io/"
            
         },
         {
-            "id": "5",
-            "title": "Snake Game + A.I",
-            "description": "Machine Learning & A.I. - Snake Game - PyGame 🐍",
-            "modalDescription": "A PyGame Implementation of the popular Classic Retro Snake Game with AI. This project is part of a series of ML with PyGame Series. Collection Num: 3",
-            "imageSrc": "https://hellocodeclub.b-cdn.net/wp-content/uploads/2021/11/snake_game_bitmap.png",
-            "url": "https://huntermacias.io/"
-           
+            "id": "6",
+            "title": "Zoom Clone",
+            "description": "Web Development - ReactJs and Agora WEB",
+            "modalDescription": "A Twitch Clone Application using WebRTC.",
+            "imageSrc":"https://img.freepik.com/premium-vector/template-design-concept-video-conference-online-meeting-work-form-home-user-interface-website-applicaton_71983-2112.jpg",
+            "url": "https://lively-pastelito-3c6253.netlify.app"
         },
         {
-            "id": "6",
-            "title": "Twitch Clone",
-            "description": "Web Development - Agora WEB",
-            "modalDescription": "Create a React Twitch Clone Application using WebRTC.",
-            "imageSrc":"https://www.agora.io/en/wp-content/uploads/2022/03/create-meeting-urls-for-an-agora-video-call-with-the-react-native-uikit-1024x512.jpg",
-            "url": "https://lively-pastelito-3c6253.netlify.app"
+            "id": "7",
+            "title": "LinkedIn Clone",
+            "description": "Web Development - ReactJs, Firebase",
+            "modalDescription": "A LinkedIn Clone Application built using React.js, Firebase, Redux, TailwindCSS.",
+            "imageSrc":"https://img.freepik.com/free-vector/flat-design-linkedin-mockup_23-2149217511.jpg",
+            "url": "https://linkedin-clone-cc4d3.web.app/"
+        },
+        {
+            "id": "8",
+            "title": "WEB3.0 Crypto Lottery App",
+            "description": "Web Development - NextJs + Smart Contracts",
+            "modalDescription": "Lottery Draw App built using Next.js/TailwindCSS and Solidity Smart Contract with thirdweb's new deploy. Metamask wallet required to login.",
+            "imageSrc":"https://i.imgur.com/E4yJgh0.jpeg",
+            "url": "https://lottery-draw.netlify.app/"
         }
+
     ],
     "services": [
         {

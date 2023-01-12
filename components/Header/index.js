@@ -36,7 +36,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               >
                 <Avatar
                   size="lg"
-                  src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=medium"
+                  src="https://i.imgur.com/GQ3MeQH_d.webp?"
                   color="primary"
                   bordered
                   squared
@@ -158,7 +158,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         >
           <Avatar
             size="lg"
-            src="https://i.imgur.com/GQ3MeQH_d.webp?maxwidth=640&shape=thumb&fidelity=large"
+            src="https://i.imgur.com/GQ3MeQH_d.webp?"
             color="primary"
             bordered
             squared             

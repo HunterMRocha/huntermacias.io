@@ -103,9 +103,6 @@ export default function Home() {
         <meta property="og:title" content="My Personal Tech Hub" />
         <meta property="og:description" content="Freelance Developer - Welcome to my personal portfolio. I post content on programming and related topics in the tech world. I am looking for mentors and sponsors to team up with  " />
         <meta property="og:image" content="https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fi.imgur.com%2FGQ3MeQHh.jpg"/>
-
-        
-        
       </Head>
 
     <div className="gradient-circle"></div>
